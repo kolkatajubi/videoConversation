@@ -1,0 +1,238 @@
+body {
+  background: black;
+}
+
+.display {
+  position: relative;
+  height: 270px;
+  width: 480px;
+}
+
+.video {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+
+.display:focus,
+.display:active {
+  outline: none;
+}
+
+#myVideo {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+#playImg {
+  position: absolute;
+  width: 18%;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  margin-left: -10%;
+  margin-top: -9%;
+}
+
+.menu {
+  top: 5%;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.chat {
+  bottom: 19%;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  z-index: 1;
+}
+
+.response-button,
+.send {
+  background: white;
+  font-weight: 800;
+  margin: 5px 15px;
+  padding: 8px 47px;
+  border-radius: 16px;
+  cursor: pointer;
+  border: none;
+  height: auto;
+}
+
+.response-button:focus,
+.response-button:active {
+  outline: none;
+}
+
+.send:active {
+  background-color: #72c975;
+}
+
+.response-button:hover,
+.send:hover {
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+input {
+  padding: 5px 15px;
+  margin: 5px 15px;
+  padding: 8px 47px;
+  border-radius: 10px;
+}
+
+.response-text {
+  outline: none;
+  border: none;
+}
+
+iframe {
+  width: 400px;
+  height: 600px;
+  background: white;
+}
+
+/*================================
+            Responsive
+==================================*/
+
+@media (max-width: 480px) {
+  body {
+    margin: 0;
+  }
+
+  iframe {
+    max-width: 350px;
+    max-height: 450px;
+  }
+}
+/* 
+video::-webkit-media-controls-play-button {
+  cursor: not-allowed;
+  pointer-events: none;
+  display: none;
+}
+
+video::-webkit-media-controls-volume-slider {
+}
+
+video::-webkit-media-controls-mute-button {
+}
+
+video::-webkit-media-controls-timeline {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+video::-webkit-media-controls-current-time-display {
+} */
+/* 
+.generic,
+.generic-button {
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+  top: 100px;
+  left: 130px;
+} */
+
+/*.mainPage .demo {
+  color: #808080;
+  position: absolute;
+  font-style: normal;
+  font-weight: 400;
+  font-family: sans-serif;
+  top: 30px;
+  left: 250px;
+}*/
+
+/* .generic,
+.generic-button .slideshow {
+  margin: 0px auto;
+  overflow: hidden;
+}
+
+.generic,
+.generic-button .slidewrapper {
+  position: absolute;
+  animation-name: slide;
+  animation-duration: 10s;
+  animation-direction: normal;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+.generic .genericText,
+img {
+  position: absolute;
+  text-align: center;
+} */
+
+/*.box2 {
+  left: 280px;
+}
+
+.box3 {
+  left: 550px;
+}
+
+.box4 {
+  left: 820px;
+}
+
+.item {
+  position: absolute;
+}
+
+.item .free,
+.easy,
+.fast {
+  position: absolute;
+  top: 40px;
+  left: 100px;
+}
+
+.upgradable {
+  position: absolute;
+  top: 40px;
+  left: 75px;
+}*/
+
+/* @keyframes slide {
+  20% {
+    margin-left: 0px;
+  }
+  30% {
+    margin-left: -728px;
+  }
+  50% {
+    margin-left: -728px;
+  }
+  60% {
+    margin-left: -1456px;
+  }
+  70% {
+    margin-left: -1456px;
+  }
+  80% {
+    margin-left: -2184px;
+  }
+  90% {
+    margin-left: -2184px;
+  }
+} */
+
+/* .generic {
+  margin: 90px auto;
+  padding: 0 5%;
+  width: 80%;
+  position: relative;
+}
+
+/* fix blank or flashing items on carousel */
