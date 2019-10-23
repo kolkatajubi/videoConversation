@@ -21,7 +21,7 @@ var flow = {
           {
             data: "ULIP",
             text: " ULIP💸"
-          }
+          },
           {
             data: "Travel Insurance",
             text: " Travel  Insurance ✈️"
