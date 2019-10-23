@@ -365,6 +365,15 @@ function documentReady() {
     `);
 }
 
+function restructureData() {
+  for (i = 0; i < flow.stages.length; i++) {
+    //   var key = flow.stages[i].stage;
+    //   var value = flow.stages[i];
+    //   data[key] = value;
+    flowJSON[flow.stages[i].stage] = flow.stages[i];
+  }
+}
+
 function removeBlurBackground() {
   document.getElementById("myVideo").style.filter = "blur(0px)";
 }
