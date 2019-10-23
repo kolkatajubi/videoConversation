@@ -277,7 +277,7 @@ $(document).ready(() => {
 
   $("body").on("click", ".button", event => {
     let button = event.currentTarget;
-    let data = event.firstElementChild.value;
+    // let data = event.firstElementChild.value;
     console.log("data ==> ", data);
     //console.log(event);
     button.classList.toggle("active");
@@ -302,7 +302,7 @@ $(document).ready(() => {
 
   $("body").on("click", ".button-url", event => {
     let button = event.currentTarget;
-    let data = event.firstElementChild.value;
+    // let data = event.firstElementChild.value;
     console.log("data ==> ", data);
     //console.log(event);
     button.classList.toggle("active");
