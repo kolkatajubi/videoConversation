@@ -94,7 +94,8 @@ var flow = {
       text: [
         "Apart from the amount that you decide to invest, there are minimum charges to be paid when opening an account under National Pension Scheme. These include transaction charges, advisory charges and applicable GST. Do keep in mind that these charges are calculated basis the amount you invest. "
       ],
-      video: "https://pixie.jubi.ai/videoConversation/static/videos/dependent.mp4",
+      video:
+        "https://pixie.jubi.ai/videoConversation/static/videos/dependent.mp4",
       type: "button",
       stage: "dependent",
       next: {
@@ -134,7 +135,8 @@ var flow = {
     },
     {
       text: [" What is the name of your Firm?(Eg: ABC Associates)"],
-      video: "https://pixie.jubi.ai/videoConversation/static/videos/expense.mp4",
+      video:
+        "https://pixie.jubi.ai/videoConversation/static/videos/expense.mp4",
       type: "text",
       stage: "expense",
       next: {
@@ -321,8 +323,6 @@ $(document).ready(() => {
       });
     });
   });
-
-
 });
 
 var getSiblings = function(elem) {
@@ -646,7 +646,7 @@ function createText(pattern) {
   // );
   return (
     `<div class="text-field">
-  <input type="text" class="text-input" onkeyup='validate(this,` +
+  <input type="text" class="text-input" onkeyup='validate(` +
     pattern +
     `)' />
   <button
@@ -716,12 +716,11 @@ function replayFlow() {
   display = display + createButton(replay, replay);
 }
 
-function validate(this,pattern) {
+function validate(pattern) {
   //var pattern = /^[a-zA-Z]+$/;
   // console.log("validate...");
   // console.log(pattern);
-  // var input = $(".response-text").val();
-  var input = this.val();
+  var input = $(".response-text").val();
   // console.log("response-text.val() = ", input);
   if (input == "") {
     $(".response-text").css("border-bottom", "2px solid #F90A0A");
