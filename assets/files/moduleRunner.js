@@ -16,32 +16,32 @@ var flow = {
         data: [
           {
             data: "Health Insurance",
-            text: "Okay Lets Continue"
+            text: "Health Insurance🏥"
+          },
+          {
+            data: "ULIP",
+            text: " ULIP💸"
           }
-          // {
-          //   data: "ULIP",
-          //   text: " Skip"
-          // }
-          // {
-          //   data: "Travel Insurance",
-          //   text: " Travel  Insurance ✈️"
-          // },
-          // {
-          //   data: "Cyber Insurance",
-          //   text: "Cyber Insurance💻"
-          // },
-          // {
-          //   data: " MotorInsurance",
-          //   text: " Motor Insurance 🚗"
-          // },
-          // {
-          //   data: " pocket",
-          //   text: " Sachet Insurance👝"
-          // },
-          // {
-          //   data: "offer",
-          //   text: " Group Term Life 🎁"
-          // }
+          {
+            data: "Travel Insurance",
+            text: " Travel  Insurance ✈️"
+          },
+          {
+            data: "Cyber Insurance",
+            text: "Cyber Insurance💻"
+          },
+          {
+            data: " MotorInsurance",
+            text: " Motor Insurance 🚗"
+          },
+          {
+            data: " pocket",
+            text: " Sachet Insurance👝"
+          },
+          {
+            data: "offer",
+            text: " Group Term Life 🎁"
+          }
         ],
         expectation: {
           invalidMessage:
@@ -61,7 +61,6 @@ var flow = {
       firstMessage: "Awesome!",
       skipGhost: true
     },
-
     {
       text: [
         "Insurance is a contract, represented by a policy, in which an individual or entity receives financial protection or reimbursement against losses from an insurance company."
@@ -641,7 +640,7 @@ function createButtonWebView(data, text) {
 }
 
 function createText(pattern) {
-  // console.log("Create Text");
+  console.log("Create Text");
   // console.log(pattern);
   if (pattern == undefined) {
     pattern = /.+/;
