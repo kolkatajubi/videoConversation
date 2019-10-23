@@ -20,7 +20,7 @@ app.use(compression());
 
 // Defining IP-Address and PORT number
 const ipaddress = "127.0.0.1";
-const port = 2019;
+const port = 3000;
 
 // Listening to the IP-Address:PORT number
 app.listen(port, ipaddress, () =>
@@ -40,13 +40,6 @@ app.get("/base64", (req, res) => {
 });
 
 // ============================================================================= //
-
-app.get("/webview", (req, res) => {
-  res.sendFile(__dirname + "/assets/files/webview.html");
-});
-app.get("/webviewcss", (req, res) => {
-  res.sendFile(__dirname + "/assets/files/style.css");
-});
 
 // --------------------------------------------------------------------------------------
 //                            HOSTING FILES

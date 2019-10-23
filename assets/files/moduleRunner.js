@@ -9,7 +9,7 @@ var flow = {
       text: [
         "Choosing to insure is a great step indeed.😊 What can I assist you with specifically? "
       ],
-      video: "https://pixie.jubi.ai/videoParramato/static/videos/start.mp4",
+      video: "https://pixie.jubi.ai/videoConversation/static/videos/start.mp4",
       type: "button",
       stage: "start",
       next: {
@@ -66,7 +66,7 @@ var flow = {
       text: [
         "Insurance is a contract, represented by a policy, in which an individual or entity receives financial protection or reimbursement against losses from an insurance company."
       ],
-      video: "https://pixie.jubi.ai/videoParramato/static/videos/gender.mp4",
+      video: "https://pixie.jubi.ai/videoConversation/static/videos/gender.mp4",
       type: "quickReply",
       stage: "gender",
       next: {
@@ -86,7 +86,7 @@ var flow = {
       text: [
         "Oh even I am happy to see you happy and will do my best to make you even more happy by solving your queries"
       ],
-      video: "https://pixie.jubi.ai/videoParramato/static/videos/name.mp4",
+      video: "https://pixie.jubi.ai/videoConversation/static/videos/name.mp4",
       stage: "name",
       type: "text"
     },
@@ -94,7 +94,7 @@ var flow = {
       text: [
         "Apart from the amount that you decide to invest, there are minimum charges to be paid when opening an account under National Pension Scheme. These include transaction charges, advisory charges and applicable GST. Do keep in mind that these charges are calculated basis the amount you invest. "
       ],
-      video: "https://pixie.jubi.ai/videoParramato/static/videos/dependent.mp4",
+      video: "https://pixie.jubi.ai/videoConversation/static/videos/dependent.mp4",
       type: "button",
       stage: "dependent",
       next: {
@@ -115,7 +115,7 @@ var flow = {
       text: [
         "Apart from the amount that you decide to invest, there are minimum charges to be paid when opening an account under National Pension Scheme. These include transaction charges, advisory charges and applicable GST. Do keep in mind that these charges are calculated basis the amount you invest. "
       ],
-      video: "https://pixie.jubi.ai/videoParramato/static/videos/salary.mp4",
+      video: "https://pixie.jubi.ai/videoConversation/static/videos/salary.mp4",
       type: "button",
       stage: "salary",
       next: {
@@ -134,7 +134,7 @@ var flow = {
     },
     {
       text: [" What is the name of your Firm?(Eg: ABC Associates)"],
-      video: "https://pixie.jubi.ai/videoParramato/static/videos/expense.mp4",
+      video: "https://pixie.jubi.ai/videoConversation/static/videos/expense.mp4",
       type: "text",
       stage: "expense",
       next: {
@@ -147,14 +147,14 @@ var flow = {
     },
     {
       text: [" What is the name of your Firm?(Eg: ABC Associates)"],
-      video: "https://pixie.jubi.ai/videoParramato/static/videos/end.mp4",
+      video: "https://pixie.jubi.ai/videoConversation/static/videos/end.mp4",
       type: "generic",
       stage: "end",
       next: {
         data: [
           {
             image:
-              "https://pixie.jubi.ai/videoParramato/static/files/image.jpg",
+              "https://pixie.jubi.ai/videoConversation/static/files/image.jpg",
             title: "Carousel - 1",
             text: "sub text for carousel 1",
             buttons: [
@@ -170,7 +170,7 @@ var flow = {
           },
           {
             image:
-              "https://pixie.jubi.ai/videoParramato/static/files/image.jpg",
+              "https://pixie.jubi.ai/videoConversation/static/files/image.jpg",
             title: "Carousel - 2",
             text: "sub text for carousel 2",
             buttons: [
@@ -189,8 +189,8 @@ var flow = {
 
 var theme = {
   default: "",
-  dark: "https://pixie.jubi.ai/videoParramato/static/css/styledark.css",
-  light: "https://pixie.jubi.ai/videoParramato/static/css/stylexls.css"
+  dark: "https://pixie.jubi.ai/videoConversation/static/css/styledark.css",
+  light: "https://pixie.jubi.ai/videoConversation/static/css/stylexls.css"
 };
 var currentStageNum = -1; // Stores current stage number
 var flowJSON = {}; // Stores flow key(stage name) - value(stage data) pair
@@ -229,8 +229,34 @@ $(document).ready(() => {
     if (videoTime == videoDuration) blurBackground();
   }, 100);
 
+  // $("body").on("click", ".text-send", event => {
+  //   // console.log(event);
+  //   let btn = event.currentTarget;
+  //   btn.parentElement.classList.toggle("active");
+  //   btn.parentElement.style.padding = "0px";
+  //   btn.parentElement.addEventListener("animationend", () => {
+  //     btn.parentElement.classList.remove("active");
+  //     btn.parentElement.classList.add("remove");
+  //   });
+  // });
+
+  $(".text-send-idle").click(event => {
+    let el = event.currentTarget;
+    el.lastElementChild.style.display = "block";
+    el.firstElementChild.style.display = "none";
+    el.style.float = "right";
+    el.style["margin-right"] = "1%";
+    el.classList.add("text-send-transition");
+    el.addEventListener("animationend", () => {
+      el.classList.remove("text-send-transition");
+      el.classList.remove("text-send-idle");
+      el.classList.add("text-send");
+      el.style.width = "34px";
+    });
+  });
+
   $("body").on("click", ".text-send", event => {
-    // console.log(event);
+    console.log(event);
     let btn = event.currentTarget;
     btn.parentElement.classList.toggle("active");
     btn.parentElement.style.padding = "0px";
@@ -239,6 +265,13 @@ $(document).ready(() => {
       btn.parentElement.classList.add("remove");
     });
   });
+
+  console.log("ready");
+  let classes = document.getElementsByClassName("button");
+  for (let element of classes) {
+    console.log(element);
+    element.style.width = buttonData.length * 12 + "px";
+  }
 
   $("body").on("click", ".button", event => {
     let button = event.currentTarget;
@@ -288,6 +321,8 @@ $(document).ready(() => {
       });
     });
   });
+
+
 });
 
 var getSiblings = function(elem) {
