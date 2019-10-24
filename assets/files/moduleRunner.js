@@ -225,7 +225,7 @@ $(document).ready(() => {
         el.classList.remove("text-send");
         el.classList.add("text-send-idle");
         el.style.width = "22%";
-      }, 5000);
+      }, 2000);
     });
   });
 
