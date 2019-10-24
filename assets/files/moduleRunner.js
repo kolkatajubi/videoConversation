@@ -215,10 +215,11 @@ $(document).ready(() => {
     el.style["margin-right"] = "1%";
     el.classList.add("text-send-transition");
     el.addEventListener("animationend", () => {
-    el.classList.remove("text-send-transition");
-    el.classList.remove("text-send-idle");
-    el.classList.add("text-send");
-    el.style.width = "34px";
+      getNextStageData();
+    // el.classList.remove("text-send-transition");
+    // el.classList.remove("text-send-idle");
+    // el.classList.add("text-send");
+    // el.style.width = "34px";
   //   setTimeout(() => {
   //     console.log("revert Called......");
   //     el.style["margin-right"] = undefined;
@@ -230,7 +231,7 @@ $(document).ready(() => {
   //     el.style.width = "22%";
   //   }, 2000);
   //   });
-  // });
+   });
 
   $("body").on("click", ".text-send", event => {
     // console.log(event);
