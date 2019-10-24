@@ -313,7 +313,7 @@ function exitHandler(document) {
 
 function documentReady() {
   $(".display").append(`
-      <video autoplay muted id="myVideo" poster="https://pixie.jubi.ai/videoConversation/static/css/thumbnail.png" onclick="FS();playPause();">
+      <video id="myVideo" poster="https://pixie.jubi.ai/videoConversation/static/css/thumbnail.png" onclick="FS();playPause();">
       </video>
       <div class="box">
       </div>
@@ -378,11 +378,6 @@ function getNextStageData(nextStage) {
   status = 0;
   currentData = {}; // Stores current stage data
   display = ""; // HTML DOM elements to be displayed
-  if (currentStageNum == 1) {
-    document.getElementById("myVideo").removeAttribute("autoplay");
-    document.getElementById("myVideo").removeAttribute("poster");
-    document.getElementById("myVideo").removeAttribute("muted");
-  }
   if (nextStage == undefined) {
     currentStageNum += 1;
     // console.log("currentStageNum : ", currentStageNum);
@@ -685,9 +680,11 @@ function validate(pattern) {
     $(".text-input").css("border-bottom", "2px solid #F90A0A");
     $(".text-send").attr("disabled", true);
     $(".text-send").css("background-color: #333333c9");
+    showLoader();
   } else if (pattern.test(input) && input != "") {
     // console.log("correct input...");
     $(".text-send").attr("disabled", false);
+    hideLoader();
     $(".text-input").css("border-bottom", "2px solid #34F458");
     $(".text-send").css("background-color: #333");
   } else {
@@ -695,11 +692,18 @@ function validate(pattern) {
     $(".text-send").attr("disabled", true);
     $(".text-input").css("border-bottom", "2px solid #F90A0A");
     $(".text-send").css("background-color: #333333c9");
+    showLoader();
   }
 }
 
-// function hideLoader() {
-//   $(".loader").attr("style", "display:none");
-//   $(".loader").attr("width", "22%");
-//   $(".confirm-button").attr("style", "display :block");
-// }
+function hideLoader() {
+  $(".loader").attr("style", "display:none");
+  $(".loader").attr("width", "22%");
+  $(".confirm-button").attr("style", "display :block");
+}
+
+function showLoader() {
+  $(".loader").attr("style", "display:block");
+  $(".loader").attr("width", "34");
+  $(".confirm-button").attr("style", "display :none");
+}
