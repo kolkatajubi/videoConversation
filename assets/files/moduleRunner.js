@@ -325,6 +325,7 @@ function videoClick() {
   if (firstClick == 0) {
     FS();
     myVideo.muted = false;
+    firstClick = 1;
   } else {
     FS();
     playPause();
