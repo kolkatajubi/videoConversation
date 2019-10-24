@@ -313,7 +313,7 @@ function exitHandler(document) {
 
 function documentReady() {
   $(".display").append(`
-      <video id="myVideo" poster="https://pixie.jubi.ai/videoConversation/static/css/thumbnail.png" onclick="FS();playPause();">
+      <video autoplay muted id="myVideo" poster="https://pixie.jubi.ai/videoConversation/static/css/thumbnail.png" onclick="FS();playPause();">
       </video>
       <div class="box">
       </div>
