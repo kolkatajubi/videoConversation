@@ -230,7 +230,7 @@ $(document).ready(() => {
   });
 
   $("body").on("click", ".text-send", event => {
-    console.log(event);
+    // console.log(event);
     let btn = event.currentTarget;
     btn.parentElement.classList.toggle("active");
     btn.parentElement.style.padding = "0px";
