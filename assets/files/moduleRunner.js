@@ -265,7 +265,6 @@ $(document).ready(() => {
       btn.parentElement.classList.remove("active");
       btn.parentElement.classList.add("remove");
       getNextStageData();
-      console.log("getNextStagecallled.....");
     });
   });
 
@@ -730,18 +729,18 @@ function validate(pattern) {
   //var pattern = /^[a-zA-Z]+$/;
   // console.log("validate...");
   // console.log(pattern);
-  var input = $(".response-text").val();
+  var input = $(".text-input").val();
   // console.log("response-text.val() = ", input);
   if (input == "") {
-    $(".response-text").css("border-bottom", "2px solid #F90A0A");
+    $(".text-input").css("border-bottom", "2px solid #F90A0A");
     $(".send").attr("disabled", true);
   } else if (pattern.test(input) && input != "") {
     // console.log("correct input...");
     $(".send").attr("disabled", false);
-    $(".response-text").css("border-bottom", "2px solid #34F458");
+    $(".text-input").css("border-bottom", "2px solid #34F458");
   } else {
     // console.log("reject input...");
     $(".send").attr("disabled", true);
-    $(".response-text").css("border-bottom", "2px solid #F90A0A");
+    $(".text-input").css("border-bottom", "2px solid #F90A0A");
   }
 }
