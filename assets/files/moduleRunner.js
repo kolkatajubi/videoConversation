@@ -228,6 +228,7 @@ $(document).ready(() => {
     btn.parentElement.addEventListener("animationend", () => {
       btn.parentElement.classList.remove("active");
       btn.parentElement.classList.add("remove");
+      getNextStageData();
     });
   });
 
@@ -623,6 +624,7 @@ function createText(pattern) {
     `)' />
   <button
     type="submit"
+    disabled 
     class="text-send"
   >
     Send
@@ -692,18 +694,21 @@ function validate(pattern) {
   //var pattern = /^[a-zA-Z]+$/;
   // console.log("validate...");
   // console.log(pattern);
-  var input = $(".response-text").val();
+  var input = $(".text-input").val();
   // console.log("response-text.val() = ", input);
   if (input == "") {
-    $(".response-text").css("border-bottom", "2px solid #F90A0A");
-    $(".send").attr("disabled", true);
+    $(".text-input").css("border-bottom", "2px solid #F90A0A");
+    $(".text-send").attr("disabled", true);
+    $(".text-send").css("background-color: #333333c9");
   } else if (pattern.test(input) && input != "") {
     // console.log("correct input...");
-    $(".send").attr("disabled", false);
-    $(".response-text").css("border-bottom", "2px solid #34F458");
+    $(".text-send").attr("disabled", false);
+    $(".text-input").css("border-bottom", "2px solid #34F458");
+    $(".text-send").css("background-color: #333");
   } else {
     // console.log("reject input...");
-    $(".send").attr("disabled", true);
-    $(".response-text").css("border-bottom", "2px solid #F90A0A");
+    $(".text-send").attr("disabled", true);
+    $(".text-input").css("border-bottom", "2px solid #F90A0A");
+    $(".text-send").css("background-color: #333333c9");
   }
 }
