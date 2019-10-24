@@ -242,7 +242,7 @@ $(document).ready(() => {
   $("body").on("click", ".button", event => {
     let button = event.currentTarget;
     console.log(event);
-    let type = event.firstElementChild.getAttribute("type");
+    let type = button.firstElementChild.getAttribute("type");
     if (type != "url") {
       // console.log("data ==> ", data);
       //console.log(event);
@@ -265,7 +265,7 @@ $(document).ready(() => {
         });
       });
     } else {
-      window.open(event.firstElementChild.getAttribute("value"));
+      window.open(button.firstElementChild.getAttribute("value"));
     }
   });
 });
