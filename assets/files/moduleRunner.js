@@ -8,7 +8,8 @@ var flow = {
   stages: [
     {
       text: ["intro"],
-      video: "https://pixie.jubi.ai/videoConversation/static/videos/intro.mp4",
+      // video: "https://pixie.jubi.ai/videoConversation/static/videos/intro.mp4",
+      video: "https://pixie.jubi.ai/videoParramato/static/ui/start.mp4",
       stage: "intro",
       type: "button",
       next: {
