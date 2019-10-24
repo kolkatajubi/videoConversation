@@ -734,16 +734,16 @@ function validate(pattern) {
   // console.log("response-text.val() = ", input);
   if (input == "") {
     $(".text-input").css("border-bottom", "2px solid #F90A0A");
-    $(".send").attr("disabled", true);
+    $(".text-send").attr("disabled", true);
     $(".text-send").css("background-color: #333333c9");
   } else if (pattern.test(input) && input != "") {
     // console.log("correct input...");
-    $(".send").attr("disabled", false);
+    $(".text-send").attr("disabled", false);
     $(".text-input").css("border-bottom", "2px solid #34F458");
     $(".text-send").css("background-color: #333");
   } else {
     // console.log("reject input...");
-    $(".send").attr("disabled", true);
+    $(".text-send").attr("disabled", true);
     $(".text-input").css("border-bottom", "2px solid #F90A0A");
     $(".text-send").css("background-color: #333333c9");
   }
