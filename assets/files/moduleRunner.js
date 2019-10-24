@@ -170,7 +170,16 @@ var firstClick = 0; // First video click of the user
 restructureData();
 
 $(document).ready(() => {
-  documentReady();
+  let testExp = new RegExp(
+    "Android|iPhone|iPad|" + "BlackBerry|" + "IEMobile|Mobile",
+    "i"
+  );
+  if (testExp.test(navigator.userAgent)) {
+    documentReady();
+    getNextStageData();
+  } else {
+    console.log("Desktop user");
+  }
 
   // document.getElementById("stylesheet").href = theme[flow.theme];
   // document.addEventListener("fullscreenchange", exitHandler);
@@ -179,7 +188,6 @@ $(document).ready(() => {
   // document.addEventListener("MSFullscreenChange", exitHandler);
 
   // exitHandler(document);
-  getNextStageData();
 
   setInterval(() => {
     // console.log("setInterval...");
@@ -293,7 +301,7 @@ function exitHandler(document) {
 
 function documentReady() {
   $(".display").append(`
-      <video autoplay muted id="myVideo"  onclick="videoClick();">
+      <video autoplay muted id="myVideo"  onclick="videoClick();" playsinline>
       </video>
       <div class="box">
       </div>
