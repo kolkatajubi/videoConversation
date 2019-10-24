@@ -407,8 +407,7 @@ function videoDisplay(videoData) {
     "<source id='start' type='video/mp4' src='" +
       videoData +
       "#t=0.2," +
-      videoDuration -
-      0.8 +
+      (videoDuration - 0.8) +
       "' />"
   );
   // console.log("<source id='start' type='video/mp4' src='" + videoData + "' />");
