@@ -163,6 +163,7 @@ var currentData = {}; // Stores current stage data
 var display = ""; // HTML DOM elements to be displayed
 var status = 0; // Tracks if button is displayed or not
 var fullscreen = 0; // Tracks if the view is fullscreen or not
+var firstClick = 0; // First video click of the user
 
 //======================================================================================
 restructureData();
@@ -313,11 +314,21 @@ function exitHandler(document) {
 
 function documentReady() {
   $(".display").append(`
-      <video autoplay muted id="myVideo" poster="https://pixie.jubi.ai/videoConversation/static/css/thumbnail.png" onclick="FS();playPause();myVideo.muted=false;">
+      <video autoplay muted id="myVideo" poster="https://pixie.jubi.ai/videoConversation/static/css/thumbnail.png" onclick="videoClick();">
       </video>
       <div class="box">
       </div>
     `);
+}
+
+function videoClick() {
+  if (firstClick == 0) {
+    FS();
+    myVideo.muted = false;
+  } else {
+    FS();
+    playPause();
+  }
 }
 
 function restructureData() {
