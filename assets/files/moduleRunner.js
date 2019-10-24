@@ -660,6 +660,7 @@ function createText(pattern) {
     `)' />
   <button
     type="submit"
+    disabled 
     class="text-send"
   >
     Send
