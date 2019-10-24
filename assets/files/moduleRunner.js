@@ -305,6 +305,7 @@ function videoClick() {
   if (firstClick == 0) {
     FS();
     myVideo.muted = false;
+    document.getElementById("myVideo").removeAttribute("poster");
     firstClick = 1;
   } else {
     FS();
