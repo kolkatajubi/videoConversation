@@ -620,7 +620,7 @@ function createText(pattern) {
   <input type="text" placeholder='Type here ...' class="text-input" onkeyup="validate(` +
     pattern +
     `)">
-  <button type="submit" class="text-send">
+  <button disabled type="submit" class="text-send">
     <span class="confirm-button">Send</span>
     <div class="loader"></div>
   </button>
