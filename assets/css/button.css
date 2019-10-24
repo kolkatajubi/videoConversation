@@ -1,10 +1,12 @@
 /* 1b1f3b-715aff-fafaff-100007-30343f */
 
-video {
+#myVideo {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  height: inherit;
+  object-fit: fill;
   /* z-index: -1; */
 }
 
@@ -159,14 +161,6 @@ body {
     opacity: 1;
     transform: scale(1);
   }
-}
-
-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  /* z-index: -1; */
 }
 
 .remove {
