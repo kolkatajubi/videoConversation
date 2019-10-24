@@ -179,7 +179,6 @@ $(document).ready(() => {
   // document.addEventListener("MSFullscreenChange", exitHandler);
 
   // exitHandler(document);
-
   getNextStageData();
 
   setInterval(() => {
@@ -294,7 +293,7 @@ function exitHandler(document) {
 
 function documentReady() {
   $(".display").append(`
-      <video autoplay muted id="myVideo" poster="https://pixie.jubi.ai/videoConversation/static/css/thumbnail.png" onclick="videoClick();">
+      <video autoplay muted id="myVideo"  onclick="videoClick();">
       </video>
       <div class="box">
       </div>
@@ -412,7 +411,9 @@ function videoDisplay(videoData) {
   var video = document.getElementById("myVideo");
   // console.log(video);
   video.load();
-  if (currentStageNum != 0) video.play();
+  if (currentStageNum != 0) {
+    video.play();
+  }
 }
 
 function createUI(currentData) {
