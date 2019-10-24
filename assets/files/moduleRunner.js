@@ -691,7 +691,7 @@ function validate(pattern) {
   } else if (pattern.test(input) && input != "") {
     // console.log("correct input...");
     $(".text-send").attr("disabled", false);
-    hideLoader();
+    // hideLoader();
     $(".text-input").css("border-bottom", "2px solid #34F458");
     $(".text-send").css("background-color: #333");
   } else {
@@ -699,7 +699,7 @@ function validate(pattern) {
     $(".text-send").attr("disabled", true);
     $(".text-input").css("border-bottom", "2px solid #F90A0A");
     $(".text-send").css("background-color: #333333c9");
-    showLoader();
+    // showLoader();
   }
 }
 
