@@ -37,7 +37,7 @@ var flow = {
         expectation: {
           invalidMessage: "",
           validMessage: "",
-          val: "    [a-zA-Z\\s]+      ",
+          val: "[a-zA-Z\\s]+",
           type: "regex"
         }
       }
@@ -78,7 +78,7 @@ var flow = {
         expectation: {
           invalidMessage: "",
           validMessage: "",
-          val: "  \\d+",
+          val: "\\d+",
           type: "regex"
         }
       }
@@ -129,7 +129,7 @@ var flow = {
         expectation: {
           invalidMessage: "",
           validMessage: "",
-          val: "   \\d{10}",
+          val: "\\d{10}",
           type: "regex"
         }
       }
