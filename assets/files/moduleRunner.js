@@ -217,10 +217,10 @@ $(document).ready(() => {
     el.addEventListener("animationend", () => {
       console.log("animation END......");
       getNextStageData();
-      el.classList.remove("text-send-transition");
-      el.classList.remove("text-send-idle");
-      el.classList.add("text-send");
-      el.style.width = "34px";
+      // el.classList.remove("text-send-transition");
+      // el.classList.remove("text-send-idle");
+      // el.classList.add("text-send");
+      // el.style.width = "34px";
       // setTimeout(() => {
       //   console.log("revert Called......");
       //   el.style["margin-right"] = undefined;
