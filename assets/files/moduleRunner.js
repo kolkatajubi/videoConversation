@@ -404,11 +404,7 @@ function videoDisplay(videoData) {
   // console.log(videoData);
   $("#myVideo").empty();
   $("#myVideo").append(
-    "<source id='start' type='video/mp4' src='" +
-      videoData +
-      "#t=0.2," +
-      (videoDuration - 0.8) +
-      "' />"
+    "<source id='start' type='video/mp4' src='" + videoData + "' />"
   );
   // console.log("<source id='start' type='video/mp4' src='" + videoData + "' />");
   // $("#myVideo").attr("poster", "");
