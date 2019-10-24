@@ -184,7 +184,7 @@ $(document).ready(() => {
     // console.log("setInterval...");
     var videoDuration = document.getElementById("myVideo").duration.toFixed(2);
     var videoTime = document.getElementById("myVideo").currentTime.toFixed(2);
-    // console.log(videoTime);
+    console.log(videoTime);
     if (status == 0)
       if (videoTime >= videoDuration / 2) {
         status = 1;
