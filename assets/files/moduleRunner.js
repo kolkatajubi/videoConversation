@@ -378,6 +378,11 @@ function getNextStageData(nextStage) {
   status = 0;
   currentData = {}; // Stores current stage data
   display = ""; // HTML DOM elements to be displayed
+  if (currentStageNum == 1) {
+    document.getElementById("myVideo").removeAttribute("autoplay");
+    document.getElementById("myVideo").removeAttribute("poster");
+    document.getElementById("myVideo").removeAttribute("muted");
+  }
   if (nextStage == undefined) {
     currentStageNum += 1;
     // console.log("currentStageNum : ", currentStageNum);
