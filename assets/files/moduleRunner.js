@@ -241,6 +241,7 @@ $(document).ready(() => {
 
   $("body").on("click", ".button", event => {
     let button = event.currentTarget;
+    console.log(event);
     let type = event.firstElementChild.getAttribute("type");
     if (type != "url") {
       // console.log("data ==> ", data);
