@@ -241,51 +241,31 @@ $(document).ready(() => {
 
   $("body").on("click", ".button", event => {
     let button = event.currentTarget;
-    // let data = event.firstElementChild.value;
-    // console.log("data ==> ", data);
-    //console.log(event);
-    button.classList.toggle("active");
-    button.addEventListener("animationend", event => {
-      if (event.animationName == "Button") {
-        console.log(event);
-        button.classList.remove("active");
-        button.classList.add("remove");
-        getNextStageData();
-        console.log("nextStageCalled.....");
-      }
-    });
-    getSiblings(button).forEach(el => {
-      el.style.opacity = "0.2";
-      el.classList.toggle("inactive");
-      el.addEventListener("animationend", () => {
-        el.classList.remove("inactive");
-        el.classList.add("remove");
+    let type = event.firstElementChild.getAttribute("type");
+    if (type != "url") {
+      // console.log("data ==> ", data);
+      //console.log(event);
+      button.classList.toggle("active");
+      button.addEventListener("animationend", event => {
+        if (event.animationName == "Button") {
+          console.log(event);
+          button.classList.remove("active");
+          button.classList.add("remove");
+          getNextStageData();
+          console.log("nextStageCalled.....");
+        }
       });
-    });
-  });
-
-  $("body").on("click", ".button-url", event => {
-    let button = event.currentTarget;
-    // let data = event.firstElementChild.value;
-    // console.log("data ==> ", data);
-    //console.log(event);
-    button.classList.toggle("active");
-    button.addEventListener("animationend", event => {
-      if (event.animationName == "Button") {
-        console.log(event);
-        button.classList.remove("active");
-        button.classList.add("remove");
-        window.open(data);
-      }
-    });
-    getSiblings(button).forEach(el => {
-      el.style.opacity = "0.2";
-      el.classList.toggle("inactive");
-      el.addEventListener("animationend", () => {
-        el.classList.remove("inactive");
-        el.classList.add("remove");
+      getSiblings(button).forEach(el => {
+        el.style.opacity = "0.2";
+        el.classList.toggle("inactive");
+        el.addEventListener("animationend", () => {
+          el.classList.remove("inactive");
+          el.classList.add("remove");
+        });
       });
-    });
+    } else {
+      window.open(event.firstElementChild.getAttribute("value"));
+    }
   });
 });
 
@@ -494,7 +474,7 @@ function createUI(currentData) {
       break;
   }
 
-  if (currentStageNum == flow.stages.length - 1) replayFlow();
+  // if (currentStageNum == flow.stages.length - 1) replayFlow();
   displayChat(display);
 }
 
@@ -562,8 +542,8 @@ function createButtonURL(data, text) {
   // console.log("data", data);
   // console.log("text", text);
   return (
-    ` <div class="button-url" >
-  <span class="button-text" value='` +
+    ` <div class="button" >
+  <span class="button-text" type='url' value='` +
     data +
     `'>` +
     text +
@@ -679,16 +659,16 @@ function carouselButtons(buttons) {
   return genericButtons;
 }
 
-function replayFlow() {
-  // console.log("replayFlow()");
-  currentStageNum = -1;
-  var replay = "replay";
-  display = display + createButton(replay, replay);
-  // console.log("replayFlow()");
-  currentStageNum = -1;
-  var replay = "replay";
-  display = display + createButton(replay, replay);
-}
+// function replayFlow() {
+//   // console.log("replayFlow()");
+//   currentStageNum = -1;
+//   var replay = "replay";
+//   display = display + createButton(replay, replay);
+//   // console.log("replayFlow()");
+//   currentStageNum = -1;
+//   var replay = "replay";
+//   display = display + createButton(replay, replay);
+// }
 
 function validate(pattern) {
   //var pattern = /^[a-zA-Z]+$/;
