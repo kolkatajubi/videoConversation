@@ -1,191 +1,155 @@
 var flow = {
-  _id: "5c83c5150fff5393bdc48b4b",
-  flowId: "insurance",
-  projectId: "finservVoiceUat_111217597624559107965",
-  id: "finservVoiceUat_111217597624559107965-insurance",
-  theme: "light",
+  _id: {
+    $oid: "5db16a857a18e0fd769d0c06"
+  },
+  flowId: "getstarted",
+  projectId: "VideoPOC_191901911101",
+  id: "VideoPOC_191901911101-getstarted",
   stages: [
     {
-      text: [
-        "Choosing to insure is a great step indeed.😊 What can I assist you with specifically? "
-      ],
-      video: "https://pixie.jubi.ai/videoConversation/static/videos/start.mp4",
+      text: ["intro"],
+      video: "https://pixie.jubi.ai/videoConversation/static/videos/intro.mp4",
+      stage: "intro",
       type: "button",
-      stage: "start",
       next: {
         data: [
           {
-            data: "Health Insurance",
-            text: "Health Insurance🏥"
-          },
-          {
-            data: "ULIP",
-            text: " ULIP💸"
-          },
-          {
-            data: "Travel Insurance",
-            text: " Travel  Insurance ✈️"
-          },
-          {
-            data: "Cyber Insurance",
-            text: "Cyber Insurance💻"
-          },
-          {
-            data: " MotorInsurance",
-            text: " Motor Insurance 🚗"
-          },
-          {
-            data: " pocket",
-            text: " Sachet Insurance👝"
-          },
-          {
-            data: "offer",
-            text: " Group Term Life 🎁"
+            data: "Count me in!",
+            text: "Count me in!"
           }
         ],
         expectation: {
-          invalidMessage:
-            "Oh no, currently I can help you with Health, Cyber, Travel Insurance and ULIP only, but don’t worry, very soon I will be able to serve you with your broader financial needs as well 😊",
+          invalidMessage: "",
+          validMessage: "",
           val: {
-            travel: "",
-            cyber: "",
-            health: "",
-            ulip: "",
-            motor: "",
-            pocket: "",
-            offer: ""
+            countmein: ""
           },
           type: "wordList"
         }
-      },
-      firstMessage: "Awesome!",
-      skipGhost: true
-    },
-    {
-      text: [
-        "Insurance is a contract, represented by a policy, in which an individual or entity receives financial protection or reimbursement against losses from an insurance company."
-      ],
-      video: "https://pixie.jubi.ai/videoConversation/static/videos/gender.mp4",
-      type: "quickReply",
-      stage: "gender",
-      next: {
-        data: [
-          {
-            data: "MALE",
-            text: "MALE"
-          },
-          {
-            data: "FEMALE",
-            text: "FEMALE"
-          }
-        ]
       }
     },
     {
-      text: [
-        "Oh even I am happy to see you happy and will do my best to make you even more happy by solving your queries"
-      ],
+      text: ["name"],
       video: "https://pixie.jubi.ai/videoConversation/static/videos/name.mp4",
-      stage: "name",
-      type: "text"
-    },
-    {
-      text: [
-        "Apart from the amount that you decide to invest, there are minimum charges to be paid when opening an account under National Pension Scheme. These include transaction charges, advisory charges and applicable GST. Do keep in mind that these charges are calculated basis the amount you invest. "
-      ],
-      video:
-        "https://pixie.jubi.ai/videoConversation/static/videos/dependent.mp4",
-      type: "button",
-      stage: "dependent",
-      next: {
-        data: [
-          {
-            type: "url",
-            data: "https://www.bajajfinservmarkets.in/cust/#/?product=NPS",
-            text: "Invest in NPS"
-          },
-          {
-            data: "Skip",
-            text: "Skip"
-          }
-        ]
-      }
-    },
-    {
-      text: [
-        "Apart from the amount that you decide to invest, there are minimum charges to be paid when opening an account under National Pension Scheme. These include transaction charges, advisory charges and applicable GST. Do keep in mind that these charges are calculated basis the amount you invest. "
-      ],
-      video: "https://pixie.jubi.ai/videoConversation/static/videos/salary.mp4",
-      type: "button",
-      stage: "salary",
-      next: {
-        data: [
-          {
-            type: "webView",
-            data: "https://pixie.jubi.ai/videoParramato/webview",
-            text: "Invest in NPS"
-          },
-          {
-            data: "Skip",
-            text: "Skip"
-          }
-        ]
-      }
-    },
-    {
-      text: [" What is the name of your Firm?(Eg: ABC Associates)"],
-      video:
-        "https://pixie.jubi.ai/videoConversation/static/videos/expense.mp4",
       type: "text",
-      stage: "expense",
+      stage: "name",
       next: {
         expectation: {
           invalidMessage: "",
-          type: "regex",
-          val: "^[\\d]+$"
+          validMessage: "",
+          val: "[a-zA-Z\\s]+",
+          type: "regex"
         }
       }
     },
     {
-      text: [" What is the name of your Firm?(Eg: ABC Associates)"],
+      text: ["gender"],
+      video: "https://pixie.jubi.ai/videoConversation/static/videos/gender.mp4",
+      type: "button",
+      stage: "gender",
+      next: {
+        expectation: {
+          invalidMessage: "",
+          validMessage: "",
+          val: {
+            mr: "",
+            mrs: ""
+          },
+          type: "wordList"
+        },
+        data: [
+          {
+            data: "Mr",
+            text: "Mr"
+          },
+          {
+            data: "Miss/Mrs",
+            text: "Miss/Mrs"
+          }
+        ]
+      }
+    },
+    {
+      text: ["age"],
+      video: "https://pixie.jubi.ai/videoConversation/static/videos/age.mp4",
+      type: "text",
+      stage: "age",
+      next: {
+        expectation: {
+          invalidMessage: "",
+          validMessage: "",
+          val: "\\d+",
+          type: "regex"
+        }
+      }
+    },
+    {
+      text: ["city"],
+      video: "https://pixie.jubi.ai/videoConversation/static/videos/city.mp4",
+      type: "button",
+      stage: "city",
+      next: {
+        data: [
+          {
+            data: "Mumbai",
+            text: "Mumbai"
+          },
+          {
+            data: "Kolkata",
+            text: "Kolkata"
+          },
+          {
+            data: "Delhi",
+            text: "Delhi"
+          },
+          {
+            data: "Chennai",
+            text: "Chennai"
+          }
+        ],
+        expectation: {
+          invalidMessage: "",
+          validMessage: "",
+          val: {
+            mumbai: "",
+            kolkata: "",
+            chennai: "",
+            delhi: ""
+          },
+          type: "wordList"
+        }
+      }
+    },
+    {
+      text: ["mobile"],
+      video: "https://pixie.jubi.ai/videoConversation/static/videos/mobile.mp4",
+      type: "text",
+      stage: "mobile",
+      next: {
+        expectation: {
+          invalidMessage: "",
+          validMessage: "",
+          val: "\\d{10}",
+          type: "regex"
+        }
+      }
+    },
+    {
+      text: ["end"],
       video: "https://pixie.jubi.ai/videoConversation/static/videos/end.mp4",
-      type: "generic",
+      type: "button",
       stage: "end",
       next: {
         data: [
           {
-            image:
-              "https://pixie.jubi.ai/videoConversation/static/files/image.jpg",
-            title: "Carousel - 1",
-            text: "sub text for carousel 1",
-            buttons: [
-              {
-                text: "Button 1",
-                data: "button_1"
-              },
-              {
-                text: "Button 2",
-                data: "button_2"
-              }
-            ]
-          },
-          {
-            image:
-              "https://pixie.jubi.ai/videoConversation/static/files/image.jpg",
-            title: "Carousel - 2",
-            text: "sub text for carousel 2",
-            buttons: [
-              {
-                text: "Button",
-                data: "button"
-              }
-            ]
+            type: "url",
+            data: "https://www.policybazaar.com/",
+            text: "Compare now!"
           }
         ]
       }
     }
-  ],
-  folder: "personalLoanLending"
+  ]
 };
 
 var theme = {
@@ -220,9 +184,9 @@ $(document).ready(() => {
     // console.log("setInterval...");
     var videoDuration = document.getElementById("myVideo").duration.toFixed(2);
     var videoTime = document.getElementById("myVideo").currentTime.toFixed(2);
-    // console.log(videoTime);
+    console.log(videoTime);
     if (status == 0)
-      if (videoTime >= videoDuration - 0.5) {
+      if (videoTime >= videoDuration / 2) {
         status = 1;
         // console.log("1secs left...");
         createUI(currentData);
@@ -286,51 +250,32 @@ $(document).ready(() => {
 
   $("body").on("click", ".button", event => {
     let button = event.currentTarget;
-    // let data = event.firstElementChild.value;
-    // console.log("data ==> ", data);
-    //console.log(event);
-    button.classList.toggle("active");
-    button.addEventListener("animationend", event => {
-      if (event.animationName == "Button") {
-        console.log(event);
-        button.classList.remove("active");
-        button.classList.add("remove");
-        getNextStageData();
-        console.log("nextStageCalled.....");
-      }
-    });
-    getSiblings(button).forEach(el => {
-      el.style.opacity = "0.2";
-      el.classList.toggle("inactive");
-      el.addEventListener("animationend", () => {
-        el.classList.remove("inactive");
-        el.classList.add("remove");
+    console.log(event);
+    let type = button.firstElementChild.getAttribute("type");
+    if (type != "url") {
+      // console.log("data ==> ", data);
+      //console.log(event);
+      button.classList.toggle("active");
+      button.addEventListener("animationend", event => {
+        if (event.animationName == "Button") {
+          console.log(event);
+          button.classList.remove("active");
+          button.classList.add("remove");
+          getNextStageData();
+          console.log("nextStageCalled.....");
+        }
       });
-    });
-  });
-
-  $("body").on("click", ".button-url", event => {
-    let button = event.currentTarget;
-    // let data = event.firstElementChild.value;
-    // console.log("data ==> ", data);
-    //console.log(event);
-    button.classList.toggle("active");
-    button.addEventListener("animationend", event => {
-      if (event.animationName == "Button") {
-        console.log(event);
-        button.classList.remove("active");
-        button.classList.add("remove");
-        window.open(data);
-      }
-    });
-    getSiblings(button).forEach(el => {
-      el.style.opacity = "0.2";
-      el.classList.toggle("inactive");
-      el.addEventListener("animationend", () => {
-        el.classList.remove("inactive");
-        el.classList.add("remove");
+      getSiblings(button).forEach(el => {
+        el.style.opacity = "0.2";
+        el.classList.toggle("inactive");
+        el.addEventListener("animationend", () => {
+          el.classList.remove("inactive");
+          el.classList.add("remove");
+        });
       });
-    });
+    } else {
+      window.open(button.firstElementChild.getAttribute("value"));
+    }
   });
 });
 
@@ -388,7 +333,7 @@ function removeBlurBackground() {
 }
 
 function blurBackground() {
-  document.getElementById("myVideo").style.filter = "blur(10px)";
+  document.getElementById("myVideo").style.filter = "blur(1px)";
 }
 
 function playPause() {
@@ -539,7 +484,7 @@ function createUI(currentData) {
       break;
   }
 
-  if (currentStageNum == flow.stages.length - 1) replayFlow();
+  // if (currentStageNum == flow.stages.length - 1) replayFlow();
   displayChat(display);
 }
 
@@ -607,8 +552,8 @@ function createButtonURL(data, text) {
   // console.log("data", data);
   // console.log("text", text);
   return (
-    ` <div class="button-url" >
-  <span class="button-text" value='` +
+    ` <div class="button" >
+  <span class="button-text" type='url' value='` +
     data +
     `'>` +
     text +
@@ -713,16 +658,16 @@ function carouselButtons(buttons) {
   return genericButtons;
 }
 
-function replayFlow() {
-  // console.log("replayFlow()");
-  currentStageNum = -1;
-  var replay = "replay";
-  display = display + createButton(replay, replay);
-  // console.log("replayFlow()");
-  currentStageNum = -1;
-  var replay = "replay";
-  display = display + createButton(replay, replay);
-}
+// function replayFlow() {
+//   // console.log("replayFlow()");
+//   currentStageNum = -1;
+//   var replay = "replay";
+//   display = display + createButton(replay, replay);
+//   // console.log("replayFlow()");
+//   currentStageNum = -1;
+//   var replay = "replay";
+//   display = display + createButton(replay, replay);
+// }
 
 function validate(pattern) {
   //var pattern = /^[a-zA-Z]+$/;
