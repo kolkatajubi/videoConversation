@@ -196,43 +196,32 @@ $(document).ready(() => {
     if (videoTime == videoDuration) blurBackground();
   }, 100);
 
-  $("body").on("click", ".text-send", event => {
-    // console.log(event);
-    let btn = event.currentTarget;
-    btn.parentElement.classList.toggle("active");
-    btn.parentElement.style.padding = "0px";
-    btn.parentElement.addEventListener("animationend", () => {
-      btn.parentElement.classList.remove("active");
-      btn.parentElement.classList.add("remove");
-    });
-  });
-
-  $(".text-send-idle").click(event => {
-    let el = event.currentTarget;
-    el.lastElementChild.style.display = "block";
-    el.firstElementChild.style.display = "none";
-    el.style.float = "right";
-    el.style["margin-right"] = "1%";
-    el.classList.add("text-send-transition");
-    el.addEventListener("animationend", () => {
-      console.log("animation END......");
-      getNextStageData();
-      // el.classList.remove("text-send-transition");
-      // el.classList.remove("text-send-idle");
-      // el.classList.add("text-send");
-      // el.style.width = "34px";
-      // setTimeout(() => {
-      //   console.log("revert Called......");
-      //   el.style["margin-right"] = undefined;
-      //   el.style.float = undefined;
-      //   el.lastElementChild.style.display = "none";
-      //   el.firstElementChild.style.display = "block";
-      //   el.classList.remove("text-send");
-      //   el.classList.add("text-send-idle");
-      //   el.style.width = "22%";
-      // }, 2000);
-    });
-  });
+  // $(".text-send-idle").click(event => {
+  //   let el = event.currentTarget;
+  //   el.lastElementChild.style.display = "block";
+  //   el.firstElementChild.style.display = "none";
+  //   el.style.float = "right";
+  //   el.style["margin-right"] = "1%";
+  //   el.classList.add("text-send-transition");
+  //   el.addEventListener("animationend", () => {
+  //     console.log("animation END......");
+  //     getNextStageData();
+  // el.classList.remove("text-send-transition");
+  // el.classList.remove("text-send-idle");
+  // el.classList.add("text-send");
+  // el.style.width = "34px";
+  // setTimeout(() => {
+  //   console.log("revert Called......");
+  //   el.style["margin-right"] = undefined;
+  //   el.style.float = undefined;
+  //   el.lastElementChild.style.display = "none";
+  //   el.firstElementChild.style.display = "block";
+  //   el.classList.remove("text-send");
+  //   el.classList.add("text-send-idle");
+  //   el.style.width = "22%";
+  // }, 2000);
+  //   });
+  // });
 
   $("body").on("click", ".text-send", event => {
     // console.log(event);
