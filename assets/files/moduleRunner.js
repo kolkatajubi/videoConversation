@@ -683,11 +683,11 @@ function validate(pattern) {
   // console.log(pattern);
   var input = $(".text-input").val();
   // console.log("response-text.val() = ", input);
-  if (input == "") {
+  if (input == "" || !input) {
     $(".text-input").css("border-bottom", "2px solid #F90A0A");
     $(".text-send").attr("disabled", true);
     $(".text-send").css("background-color: #333333c9");
-    showLoader();
+    // showLoader();
   } else if (pattern.test(input) && input != "") {
     // console.log("correct input...");
     $(".text-send").attr("disabled", false);
