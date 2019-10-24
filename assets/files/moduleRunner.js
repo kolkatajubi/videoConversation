@@ -492,6 +492,19 @@ function displayChat(view) {
         element.firstElementChild.innerHTML.length * 18 + "px";
     }
 
+    // $("body").on("click", ".text-send", event => {
+    $(".text-send").click(event => {
+      // console.log(event);
+      let btn = event.currentTarget;
+      btn.style.display = "none";
+      btn.parentElement.classList.toggle("active");
+      btn.parentElement.style.padding = "0px";
+      btn.parentElement.addEventListener("animationend", () => {
+        btn.parentElement.classList.remove("active");
+        btn.parentElement.classList.add("remove");
+        getNextStageData();
+      });
+    });
     // $(".text-send-idle").click(event => {
     //   let el = event.currentTarget;
     //   el.lastElementChild.style.display = "block";
@@ -508,18 +521,6 @@ function displayChat(view) {
     // });
   });
 }
-
-$("body").on("click", ".text-send", event => {
-  // console.log(event);
-  let btn = event.currentTarget;
-  btn.parentElement.classList.toggle("active");
-  btn.parentElement.style.padding = "0px";
-  btn.parentElement.addEventListener("animationend", () => {
-    btn.parentElement.classList.remove("active");
-    btn.parentElement.classList.add("remove");
-    getNextStageData();
-  });
-});
 
 function clearChat() {
   // console.log("clearChat...");
