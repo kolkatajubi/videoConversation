@@ -174,6 +174,21 @@ $(document).ready(() => {
   if (testExp.test(navigator.userAgent)) {
     documentReady();
     getNextStageData();
+    setInterval(() => {
+      // console.log("setInterval...");
+      var videoDuration = document
+        .getElementById("myVideo")
+        .duration.toFixed(2);
+      var videoTime = document.getElementById("myVideo").currentTime.toFixed(2);
+      // console.log(videoTime);
+      if (status == 0)
+        if (videoTime >= videoDuration * 0.15) {
+          status = 1;
+          // console.log("1secs left...");
+          createUI(currentData);
+        }
+      if (videoTime == videoDuration) blurBackground();
+    }, 100);
   } else {
     console.log("Desktop user");
     document.getElementsByClassName("display")[0].innerHTML =
@@ -187,20 +202,6 @@ $(document).ready(() => {
   // document.addEventListener("MSFullscreenChange", exitHandler);
 
   // exitHandler(document);
-
-  setInterval(() => {
-    // console.log("setInterval...");
-    var videoDuration = document.getElementById("myVideo").duration.toFixed(2);
-    var videoTime = document.getElementById("myVideo").currentTime.toFixed(2);
-    // console.log(videoTime);
-    if (status == 0)
-      if (videoTime >= videoDuration * 0.15) {
-        status = 1;
-        // console.log("1secs left...");
-        createUI(currentData);
-      }
-    if (videoTime == videoDuration) blurBackground();
-  }, 100);
 
   // $(".text-send-idle").click(event => {
   //   let el = event.currentTarget;
