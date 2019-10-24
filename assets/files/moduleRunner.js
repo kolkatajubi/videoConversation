@@ -223,18 +223,6 @@ $(document).ready(() => {
   //   });
   // });
 
-  $("body").on("click", ".text-send", event => {
-    // console.log(event);
-    let btn = event.currentTarget;
-    btn.parentElement.classList.toggle("active");
-    btn.parentElement.style.padding = "0px";
-    btn.parentElement.addEventListener("animationend", () => {
-      btn.parentElement.classList.remove("active");
-      btn.parentElement.classList.add("remove");
-      getNextStageData();
-    });
-  });
-
   // console.log("ready");
   let classes = document.getElementsByClassName("button");
   for (let element of classes) {
@@ -503,22 +491,35 @@ function displayChat(view) {
       element.style.width =
         element.firstElementChild.innerHTML.length * 18 + "px";
     }
-    $(".text-send-idle").click(event => {
-      let el = event.currentTarget;
-      el.lastElementChild.style.display = "block";
-      el.firstElementChild.style.display = "none";
-      el.style.float = "right";
-      el.style["margin-right"] = "1%";
-      el.classList.add("text-send-transition");
-      el.addEventListener("animationend", () => {
-        el.classList.remove("text-send-transition");
-        el.classList.remove("text-send-idle");
-        el.classList.add("text-send");
-        el.style.width = "34px";
-      });
-    });
+
+    // $(".text-send-idle").click(event => {
+    //   let el = event.currentTarget;
+    //   el.lastElementChild.style.display = "block";
+    //   el.firstElementChild.style.display = "none";
+    //   el.style.float = "right";
+    //   el.style["margin-right"] = "1%";
+    //   el.classList.add("text-send-transition");
+    //   el.addEventListener("animationend", () => {
+    //     el.classList.remove("text-send-transition");
+    //     el.classList.remove("text-send-idle");
+    //     el.classList.add("text-send");
+    //     el.style.width = "34px";
+    //   });
+    // });
   });
 }
+
+$("body").on("click", ".text-send", event => {
+  // console.log(event);
+  let btn = event.currentTarget;
+  btn.parentElement.classList.toggle("active");
+  btn.parentElement.style.padding = "0px";
+  btn.parentElement.addEventListener("animationend", () => {
+    btn.parentElement.classList.remove("active");
+    btn.parentElement.classList.add("remove");
+    getNextStageData();
+  });
+});
 
 function clearChat() {
   // console.log("clearChat...");
@@ -617,7 +618,7 @@ function createText(pattern) {
   <input type="text" placeholder='Type here ...' class="text-input" onkeyup="validate(` +
     pattern +
     `)">
-  <button type="submit" class="text-send-idle">
+  <button type="submit" class="text-send">
     <span class="confirm-button">Send</span>
     <div class="loader"></div>
   </button>
