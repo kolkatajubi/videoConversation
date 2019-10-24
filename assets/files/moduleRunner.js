@@ -170,15 +170,14 @@ var firstClick = 0; // First video click of the user
 restructureData();
 
 $(document).ready(() => {
-  let testExp = new RegExp(
-    "Android|iPhone|iPad|" + "BlackBerry|" + "IEMobile|Mobile",
-    "i"
-  );
+  let testExp = new RegExp("Android|" + "BlackBerry|" + "IEMobile|Mobile", "i");
   if (testExp.test(navigator.userAgent)) {
     documentReady();
     getNextStageData();
   } else {
     console.log("Desktop user");
+    document.getElementsByClassName("display").innerHTML =
+      "This page only works for <b>Android</b> mobile users";
   }
 
   // document.getElementById("stylesheet").href = theme[flow.theme];
