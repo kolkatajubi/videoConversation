@@ -184,7 +184,7 @@ $(document).ready(() => {
     // console.log("setInterval...");
     var videoDuration = document.getElementById("myVideo").duration.toFixed(2);
     var videoTime = document.getElementById("myVideo").currentTime.toFixed(2);
-    console.log(videoTime);
+    // console.log(videoTime);
     if (status == 0)
       if (videoTime >= videoDuration / 2) {
         status = 1;
@@ -235,13 +235,13 @@ $(document).ready(() => {
   console.log("ready");
   let classes = document.getElementsByClassName("button");
   for (let element of classes) {
-    console.log(element);
+    // console.log(element);
     element.style.width = buttonData.length * 12 + "px";
   }
 
   $("body").on("click", ".button", event => {
     let button = event.currentTarget;
-    console.log(event);
+    // console.log(event);
     let type = button.firstElementChild.getAttribute("type");
     if (type != "url") {
       // console.log("data ==> ", data);
@@ -249,11 +249,11 @@ $(document).ready(() => {
       button.classList.toggle("active");
       button.addEventListener("animationend", event => {
         if (event.animationName == "Button") {
-          console.log(event);
+          // console.log(event);
           button.classList.remove("active");
           button.classList.add("remove");
           getNextStageData();
-          console.log("nextStageCalled.....");
+          // console.log("nextStageCalled.....");
         }
       });
       getSiblings(button).forEach(el => {
