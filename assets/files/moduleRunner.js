@@ -186,7 +186,7 @@ $(document).ready(() => {
     var videoTime = document.getElementById("myVideo").currentTime.toFixed(2);
     // console.log(videoTime);
     if (status == 0)
-      if (videoTime >= videoDuration - 0.5) {
+      if (videoTime >= videoDuration / 2) {
         status = 1;
         // console.log("1secs left...");
         createUI(currentData);
@@ -324,7 +324,7 @@ function removeBlurBackground() {
 }
 
 function blurBackground() {
-  document.getElementById("myVideo").style.filter = "blur(10px)";
+  document.getElementById("myVideo").style.filter = "blur(1px)";
 }
 
 function playPause() {
