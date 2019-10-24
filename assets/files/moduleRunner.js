@@ -163,8 +163,6 @@ var currentData = {}; // Stores current stage data
 var display = ""; // HTML DOM elements to be displayed
 var status = 0; // Tracks if button is displayed or not
 var fullscreen = 0; // Tracks if the view is fullscreen or not
-var videoDuration = 0; // Stores the total video Duration
-var videoTime = 0; // Stores the current video playback time
 
 //======================================================================================
 restructureData();
@@ -184,8 +182,8 @@ $(document).ready(() => {
 
   setInterval(() => {
     // console.log("setInterval...");
-    videoDuration = document.getElementById("myVideo").duration.toFixed(2);
-    videoTime = document.getElementById("myVideo").currentTime.toFixed(2);
+    var videoDuration = document.getElementById("myVideo").duration.toFixed(2);
+    var videoTime = document.getElementById("myVideo").currentTime.toFixed(2);
     console.log(videoTime);
     if (status == 0)
       if (videoTime >= videoDuration / 2) {
