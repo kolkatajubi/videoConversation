@@ -739,9 +739,7 @@ function validate(pattern) {
   } else if (pattern.test(input) && input != "") {
     // console.log("correct input...");
     $(".send").attr("disabled", false);
-    $(".text-input").css(
-      /*"border-bottom", "2px solid #34F458",*/ "border: none"
-    );
+    $(".text-input").css("border-bottom", "2px solid #34F458");
     $(".text-send").css("background-color: #333");
   } else {
     // console.log("reject input...");
