@@ -218,6 +218,7 @@ $(document).ready(() => {
       el.classList.add("text-send");
       el.style.width = "34px";
       setTimeout(() => {
+        console.log("revert Called......");
         el.style["margin-right"] = undefined;
         el.style.float = undefined;
         el.lastElementChild.style.display = "none";
