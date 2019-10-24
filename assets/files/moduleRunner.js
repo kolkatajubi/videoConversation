@@ -622,7 +622,7 @@ function createText(pattern) {
   // );
   return (
     `<div class="text-field">
-  <input type="text" class="text-input" onkeyup="validate(` +
+  <input type="text" placeholder='Type here ...' class="text-input" onkeyup="validate(` +
     pattern +
     `)">
   <button type="submit" class="text-send-idle">
