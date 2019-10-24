@@ -302,10 +302,10 @@ function documentReady() {
 }
 
 function videoClick() {
+  document.getElementById("myVideo").removeAttribute("poster");
   if (firstClick == 0) {
     FS();
     myVideo.muted = false;
-    document.getElementById("myVideo").removeAttribute("poster");
     firstClick = 1;
   } else {
     FS();
