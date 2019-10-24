@@ -264,6 +264,8 @@ $(document).ready(() => {
     btn.parentElement.addEventListener("animationend", () => {
       btn.parentElement.classList.remove("active");
       btn.parentElement.classList.add("remove");
+      getNextStageData();
+      console.log("getNextStagecallled.....");
     });
   });
 
