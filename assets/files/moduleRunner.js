@@ -191,8 +191,9 @@ $(document).ready(() => {
     }, 100);
   } else {
     console.log("Desktop user");
-    document.getElementsByClassName("display")[0].innerHTML =
-      "This page only works for <b>Android</b> mobile users";
+    document.getElementsByClassName(
+      "display"
+    )[0].innerHTML = `<h3>This page only works for <b>Android</b> mobile users</h3>`;
     document.getElementsByClassName("display")[0].style.color = "white";
   }
 
