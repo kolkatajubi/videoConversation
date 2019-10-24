@@ -186,7 +186,7 @@ $(document).ready(() => {
     var videoTime = document.getElementById("myVideo").currentTime.toFixed(2);
     // console.log(videoTime);
     if (status == 0)
-      if (videoTime >= videoDuration / 2) {
+      if (videoTime >= videoDuration * 0.75) {
         status = 1;
         // console.log("1secs left...");
         createUI(currentData);
