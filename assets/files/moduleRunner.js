@@ -217,6 +217,15 @@ $(document).ready(() => {
       el.classList.remove("text-send-idle");
       el.classList.add("text-send");
       el.style.width = "34px";
+      setTimeout(() => {
+        el.style["margin-right"] = undefined;
+        el.style.float = undefined;
+        el.lastElementChild.style.display = "none";
+        el.firstElementChild.style.display = "block";
+        el.classList.remove("text-send");
+        el.classList.add("text-send-idle");
+        el.style.width = "22%";
+      }, 2000);
     });
   });
 
@@ -600,27 +609,16 @@ function createText(pattern) {
   // );
   return (
     `<div class="text-field">
-  <input type="text" class="text-input" onkeyup='validate(` +
+  <input type="text" class="text-input" onkeyup="validate(` +
     pattern +
-    `)' />
-  <button
-    type="submit"
-    disabled 
-    class="text-send"
-  >
-    Send
+    `)">
+  <button type="submit" class="text-send-idle">
+    <span class="confirm-button">Send</span>
+    <div class="loader"></div>
   </button>
-  <svg
-    class="text-complete"
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 100 100"
-  >
-    <path
-      d="M34.912 50.75l10.89 10.125L67 36.75"
-      fill="none"
-      stroke="#333"
-      stroke-width="6"
-    />
+
+  <svg class="text-complete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <path d="M34.912 50.75l10.89 10.125L67 36.75" fill="none" stroke="#333" stroke-width="6"></path>
   </svg>
 </div>`
   );
@@ -693,3 +691,9 @@ function validate(pattern) {
     $(".text-send").css("background-color: #333333c9");
   }
 }
+
+// function hideLoader() {
+//   $(".loader").attr("style", "display:none");
+//   $(".loader").attr("width", "22%");
+//   $(".confirm-button").attr("style", "display :block");
+// }
