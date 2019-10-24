@@ -241,7 +241,7 @@ $(document).ready(() => {
     });
   });
 
-  console.log("ready");
+  // console.log("ready");
   let classes = document.getElementsByClassName("button");
   for (let element of classes) {
     // console.log(element);
@@ -254,7 +254,7 @@ $(document).ready(() => {
     let type = button.firstElementChild.getAttribute("type");
     if (type != "url") {
       // console.log("data ==> ", data);
-      //console.log(event);
+      // console.log(event);
       button.classList.toggle("active");
       button.addEventListener("animationend", event => {
         if (event.animationName == "Button") {
@@ -351,7 +351,7 @@ function playPause() {
 }
 
 function FS() {
-  console.log("fullscreen called...FS");
+  // console.log("fullscreen called...FS");
   if (fullscreen == 0) {
     if (document.body.requestFullscreen) document.body.requestFullscreen();
     else if (document.body.mozRequestFullScreen)
@@ -361,7 +361,7 @@ function FS() {
     else if (document.body.msRequestFullscreen)
       document.body.msRequestFullscreen();
 
-    console.log("fullscreen = ", fullscreen);
+    // console.log("fullscreen = ", fullscreen);
     // document.getElementById("fs").innerHTML = "EXIT FULLSCREEN";
     $(".display")
       .width("100%")
@@ -595,7 +595,7 @@ function createButtonWebView(data, text) {
 }
 
 function createText(pattern) {
-  console.log("Create Text");
+  // console.log("Create Text");
   // console.log(pattern);
   if (pattern == undefined) {
     pattern = /.+/;
