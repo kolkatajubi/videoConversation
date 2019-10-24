@@ -8,6 +8,10 @@ body {
   width: 480px;
 }
 
+video {
+  object-fit: fill;
+}
+
 .video {
   position: absolute;
   height: 100%;
