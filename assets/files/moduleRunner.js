@@ -176,9 +176,8 @@ $(document).ready(() => {
     getNextStageData();
   } else {
     console.log("Desktop user");
-    console.log(document.getElementsByClassName("display"));
-    // .innerHTML =
-    //   "This page only works for <b>Android</b> mobile users";
+    document.getElementsByClassName("display")[0].innerHTML =
+      "This page only works for <b>Android</b> mobile users";
   }
 
   // document.getElementById("stylesheet").href = theme[flow.theme];
