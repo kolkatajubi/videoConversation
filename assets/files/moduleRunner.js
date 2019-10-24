@@ -207,18 +207,18 @@ $(document).ready(() => {
     });
   });
 
-  // $(".text-send-idle").click(event => {
-  //   let el = event.currentTarget;
-  //   el.lastElementChild.style.display = "block";
-  //   el.firstElementChild.style.display = "none";
-  //   el.style.float = "right";
-  //   el.style["margin-right"] = "1%";
-  //   el.classList.add("text-send-transition");
-  //   el.addEventListener("animationend", () => {
-  //   el.classList.remove("text-send-transition");
-  //   el.classList.remove("text-send-idle");
-  //   el.classList.add("text-send");
-  //   el.style.width = "34px";
+  $(".text-send-idle").click(event => {
+    let el = event.currentTarget;
+    el.lastElementChild.style.display = "block";
+    el.firstElementChild.style.display = "none";
+    el.style.float = "right";
+    el.style["margin-right"] = "1%";
+    el.classList.add("text-send-transition");
+    el.addEventListener("animationend", () => {
+    el.classList.remove("text-send-transition");
+    el.classList.remove("text-send-idle");
+    el.classList.add("text-send");
+    el.style.width = "34px";
   //   setTimeout(() => {
   //     console.log("revert Called......");
   //     el.style["margin-right"] = undefined;
