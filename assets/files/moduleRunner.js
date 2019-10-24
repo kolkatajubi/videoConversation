@@ -193,6 +193,7 @@ $(document).ready(() => {
     console.log("Desktop user");
     document.getElementsByClassName("display")[0].innerHTML =
       "This page only works for <b>Android</b> mobile users";
+    document.getElementsByClassName("display")[0].style.color = "white";
   }
 
   // document.getElementById("stylesheet").href = theme[flow.theme];
