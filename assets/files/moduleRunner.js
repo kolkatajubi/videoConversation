@@ -310,11 +310,11 @@ function documentReady() {
 
 function videoClick() {
   if (firstClick == 0) {
-    //FS();
+    FS();
     myVideo.muted = false;
     firstClick = 1;
   } else {
-    //FS();
+    FS();
     playPause();
   }
 }
