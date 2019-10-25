@@ -597,7 +597,7 @@ function createButtonWebView(data, text) {
   return (
     `<button class='response-button' onclick='$("iframe").show();$(this).hide();'>WebView</button><iframe class='response-webview' src='` +
     data +
-    `' onclick='getNextStageData();' style='display:none;'>` +
+    `' onclick='getNextStageData();'style='display:none;'>` +
     text +
     `</iframe>`
   );
