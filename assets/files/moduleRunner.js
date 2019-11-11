@@ -415,10 +415,12 @@ function getNextStageData(nextStage) {
 function videoDisplay(videoData) {
   // console.log("videoDisplay...");
   // console.log(videoData);
-  $("#myVideo").empty();
-  $("#myVideo").append(videoData
-    // "<source id='start' type='video/mp4' src='" + videoData + "' />"
-  );
+  $(".display").empty();
+  $(".display").append(videoData);
+  // $("#myVideo").empty();
+  // $("#myVideo").append(
+  //   "<source id='start' type='video/mp4' src='" + videoData + "' />"
+  // );
   // console.log("<source id='start' type='video/mp4' src='" + videoData + "' />");
   // $("#myVideo").attr("poster", "");
   var video = document.getElementById("myVideo");
