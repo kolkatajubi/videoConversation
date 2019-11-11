@@ -11,7 +11,7 @@ var flow = {
       // video: "https://pixie.jubi.ai/videoConversation/static/videos/intro.mp4",
       // video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/saFRT7t6vis" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
       // video: "https://www.youtube.com/embed/saFRT7t6vis",
-      video: "https://youtu.be/saFRT7t6vis",
+      video: "https://www.youtube.com/watch?v=saFRT7t6vis&feature=youtu.be",
       stage: "intro",
       type: "button",
       next: {
