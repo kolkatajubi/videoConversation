@@ -9,7 +9,8 @@ var flow = {
     {
       text: ["intro"],
       // video: "https://pixie.jubi.ai/videoConversation/static/videos/intro.mp4",
-      video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/saFRT7t6vis" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+      // video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/saFRT7t6vis" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+      video: "https://www.youtube.com/embed/saFRT7t6vis",
       stage: "intro",
       type: "button",
       next: {
@@ -32,7 +33,8 @@ var flow = {
     {
       text: ["name"],
       // video: "https://pixie.jubi.ai/videoConversation/static/videos/name.mp4",
-      video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/DTHdcDW8lsc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+      // video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/DTHdcDW8lsc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+      video: "https://www.youtube.com/embed/DTHdcDW8lsc",
       type: "text",
       stage: "name",
       next: {
@@ -47,7 +49,8 @@ var flow = {
     {
       text: ["gender"],
       // video: "https://pixie.jubi.ai/videoConversation/static/videos/gender.mp4",
-      video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/PmEhyAWcSz0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+      // video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/PmEhyAWcSz0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+      video: "https://www.youtube.com/embed/PmEhyAWcSz0",
       type: "button",
       stage: "gender",
       next: {
@@ -75,7 +78,8 @@ var flow = {
     {
       text: ["age"],
       // video: "https://pixie.jubi.ai/videoConversation/static/videos/age.mp4",
-      video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/6dJmILRJU7E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+      // video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/6dJmILRJU7E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+      video: "https://www.youtube.com/embed/6dJmILRJU7E",
       type: "text",
       stage: "age",
       next: {
@@ -90,7 +94,8 @@ var flow = {
     {
       text: ["city"],
       // video: "https://pixie.jubi.ai/videoConversation/static/videos/city.mp4",
-      video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/nke3160rCas" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+      // video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/nke3160rCas" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+      video: "https://www.youtube.com/embed/nke3160rCas",
       type: "button",
       stage: "city",
       next: {
@@ -128,7 +133,8 @@ var flow = {
     {
       text: ["mobile"],
       // video: "https://pixie.jubi.ai/videoConversation/static/videos/mobile.mp4",
-      video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/QISY70zukng" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+      // video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/QISY70zukng" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+      video: "https://www.youtube.com/embed/QISY70zukng",
       type: "text",
       stage: "mobile",
       next: {
@@ -143,7 +149,8 @@ var flow = {
     {
       text: ["end"],
       // video: "https://pixie.jubi.ai/videoConversation/static/videos/end.mp4",
-      video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/odcGI88uPts" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+      // video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/odcGI88uPts" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+      video: "https://www.youtube.com/embed/odcGI88uPts",
       type: "button",
       stage: "end",
       next: {
@@ -415,12 +422,12 @@ function getNextStageData(nextStage) {
 function videoDisplay(videoData) {
   // console.log("videoDisplay...");
   // console.log(videoData);
-  $(".display").empty();
-  $(".display").append(videoData);
-  // $("#myVideo").empty();
-  // $("#myVideo").append(
-  //   "<source id='start' type='video/mp4' src='" + videoData + "' />"
-  // );
+  // $(".display").empty();
+  // $(".display").append(videoData);
+  $("#myVideo").empty();
+  $("#myVideo").append(
+    "<source id='start' type='video/mp4' src='" + videoData + "' />"
+  );
   // console.log("<source id='start' type='video/mp4' src='" + videoData + "' />");
   // $("#myVideo").attr("poster", "");
   var video = document.getElementById("myVideo");
