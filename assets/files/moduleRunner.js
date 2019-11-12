@@ -9,11 +9,12 @@ var flow = {
     {
       text: ["intro"],
       // video: "https://pixie.jubi.ai/videoConversation/static/videos/intro.mp4",
-      // video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/saFRT7t6vis" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
-      // video: "https://www.youtube.com/embed/saFRT7t6vis",
-      // video: "https://www.youtube.com/watch?v=saFRT7t6vis&feature=youtu.be",
+      // video:
+      //   '<iframe width="560" height="315" src="https://www.youtube.com/embed/saFRT7t6vis" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
       video:
-        "blob:https://www.youtube.com/3a27fa86-f4eb-49a4-9417-7e49e964b096",
+        '<iframe width="100%" src="https://www.youtube.com/embed/saFRT7t6vis?rel=0?version=3&autoplay=1&controls=0&&showinfo=0&loop=0" frameborder="0" ></iframe>',
+      // video: "https://www.youtube.com/embed/saFRT7t6vi",
+      // video: "https://www.youtube.com/watch?v=saFRT7t6vis&feature=youtu.be",
       stage: "intro",
       type: "button",
       next: {
@@ -426,12 +427,12 @@ function getNextStageData(nextStage) {
 function videoDisplay(videoData) {
   // console.log("videoDisplay...");
   // console.log(videoData);
-  // $(".display").empty();
-  // $(".display").append(videoData);
-  $("#myVideo").empty();
-  $("#myVideo").append(
-    "<source id='start' type='video/mp4' src='" + videoData + "' />"
-  );
+  $(".display").empty();
+  $(".display").append(videoData);
+  // $("#myVideo").empty();
+  // $("#myVideo").append(
+  //   "<source id='start' type='video/mp4' src='" + videoData + "' />"
+  // );
   // console.log("<source id='start' type='video/mp4' src='" + videoData + "' />");
   // $("#myVideo").attr("poster", "");
   var video = document.getElementById("myVideo");
