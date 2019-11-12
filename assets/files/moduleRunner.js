@@ -12,8 +12,8 @@ var flow = {
       // video:
       //   '<iframe width="560" height="315" src="https://www.youtube.com/embed/saFRT7t6vis" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
       video:
-        '<iframe width="100%" src="https://www.youtube.com/embed/saFRT7t6vis?rel=0?version=3&autoplay=1&controls=0&&showinfo=0&loop=0" frameborder="0" ></iframe>',
-      // video: "https://www.youtube.com/embed/saFRT7t6vi",
+        '<iframe width="100%" src="https://www.youtube.com/embed/saFRT7t6vis?rel=0?version=3&modestbranding=1&autohide=1&autoplay=1&controls=0&showinfo=0&loop=0" frameborder="0" ></iframe>',
+      // video: "https://www.youtube.com/embed/saFRT7t6vis",
       // video: "https://www.youtube.com/watch?v=saFRT7t6vis&feature=youtu.be",
       stage: "intro",
       type: "button",
@@ -435,9 +435,6 @@ function videoDisplay(videoData) {
   // console.log(videoData);
   $(".display").empty();
   $(".display").append(videoData);
-  $(
-    ".ytp-chrome-top ytp-show-watch-later-title ytp-share-button-visible ytp-show-share-title ytp-show-cards-title"
-  ).hide();
   // $("#myVideo").empty();
   // $("#myVideo").append(
   //   "<source id='start' type='video/mp4' src='" + videoData + "' />"
