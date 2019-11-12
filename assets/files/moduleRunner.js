@@ -12,7 +12,7 @@ var flow = {
       // video:
       //   '<iframe width="560" height="315" src="https://www.youtube.com/embed/saFRT7t6vis" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
       video:
-        '<iframe width="100%" src="https://www.youtube.com/embed/saFRT7t6vis?rel=0?version=3&modestbranding=1&autohide=1&autoplay=1&controls=0&showinfo=0&loop=0" frameborder="0" ></iframe>',
+        '<iframe width="100%" src="https://www.youtube.com/embed/saFRT7t6vis?rel=0?version=3&modestbranding=1&autohide=1&autoplay=1&controls=0&showinfo=0&loop=0&disablekb=1&iv_load_policy=3" frameborder="0" ></iframe>',
       // video: "https://www.youtube.com/embed/saFRT7t6vis",
       // video: "https://www.youtube.com/watch?v=saFRT7t6vis&feature=youtu.be",
       stage: "intro",
