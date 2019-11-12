@@ -202,7 +202,7 @@ $(document).ready(() => {
     var videoTime = document
       .getElementsByClassName("video-stream html5-main-video")[0]
       .currentTime.toFixed(2);
-    // console.log(videoTime);
+    console.log(videoTime);
     if (status == 0)
       if (videoTime >= videoDuration * 0.15) {
         status = 1;
