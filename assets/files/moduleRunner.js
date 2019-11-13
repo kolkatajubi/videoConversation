@@ -467,7 +467,7 @@ function videoDisplay(videoData) {
     videoURL =
       videoURL +
       tag[3].substring(0, tag[3].length - 1) +
-      `?rel=0?version=3&modestbranding=1&autohide=1&autoplay=1&controls=0&loop=0&disablekb=1&iv_load_policy=3&rel=0&feature=oembed&showinfo=0" `;
+      `?rel=0&modestbranding=1&autohide=1&autoplay=1&disablekb=0&controls=0&loop=0&iv_load_policy=3&rel=0&feature=oembed&showinfo=0" `; //&disablekb=1
     videoURL =
       videoURL +
       tag[4] +
