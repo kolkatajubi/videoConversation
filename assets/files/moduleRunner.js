@@ -454,7 +454,7 @@ function videoDisplay(videoData) {
   console.log("videoDisplay...");
   console.log(videoData);
   if (/www.youtube.com/.test(videoData)) {
-    $("#myVideo").remove();
+    // ---------------------------------------------------------------------------------  $("#myVideo").remove();
     // $(".display").remove("iframe");
     $(".display").append(videoData);
   } else {
