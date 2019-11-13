@@ -196,7 +196,7 @@ $(document).ready(() => {
   documentReady();
   getNextStageData();
   setInterval(() => {
-    if (/www.youtube.com/.test(videoData)) {
+    if (/www.youtube.com/.test(currentData.video)) {
       if (status == 0) {
         status = 1;
         // console.log("1secs left...");
