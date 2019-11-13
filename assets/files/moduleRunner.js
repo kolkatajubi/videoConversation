@@ -1,3 +1,5 @@
+// ?rel=0?version=3&modestbranding=1&autohide=1&autoplay=1&controls=0&loop=0&disablekb=1&iv_load_policy=3&rel=0&feature=oembed&showinfo=0
+
 var flow = {
   _id: {
     $oid: "5db16a857a18e0fd769d0c06"
@@ -12,7 +14,7 @@ var flow = {
       // video:
       //   '<iframe width="560" height="315" src="https://www.youtube.com/embed/saFRT7t6vis" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
       video:
-        '<iframe width="100%" src="https://www.youtube.com/embed/saFRT7t6vis?rel=0?version=3&modestbranding=1&autohide=1&autoplay=1&controls=0&loop=0&disablekb=1&iv_load_policy=3&rel=0&feature=oembed&showinfo=0" frameborder="0" ></iframe>',
+        '<iframe width="100%" src="https://www.youtube.com/embed/Ah0Ys50CqO8?controls=0&autoplay=1&mute=1&rel=0&modestbranding=1&showinfo=0&fs=0" frameborder="0" ></iframe>',
       // video:
       //   '<iframe width="560" height="315" src="https://www.youtube.com/embed/Ah0Ys50CqO8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
       // video: "https://www.youtube.com/embed/saFRT7t6vis",
