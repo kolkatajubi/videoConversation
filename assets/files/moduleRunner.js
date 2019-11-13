@@ -454,11 +454,12 @@ function videoDisplay(videoData) {
   console.log("videoDisplay...");
   console.log(videoData);
   if (/www.youtube.com/.test(videoData)) {
-    // ---------------------------------------------------------------------------------  $("#myVideo").remove();
+    $("#myVideo").hide();
     // $(".display").remove("iframe");
     $(".display").append(videoData);
   } else {
     $("#myVideo").empty();
+    $("#myVideo").show();
     $("#myVideo").append(
       "<source id='start' type='video/mp4' src='" + videoData + "' />"
     );
