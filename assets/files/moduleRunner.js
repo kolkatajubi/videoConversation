@@ -14,7 +14,7 @@ var flow = {
       // video:
       //   '<iframe width="560" height="315" src="https://www.youtube.com/embed/saFRT7t6vis" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
       video:
-        '<iframe  width="560" height="315" src="https://www.youtube.com/embed/Ah0Ys50CqO8?controls=0&autoplay=1&mute=1&rel=0&modestbranding=1&showinfo=0&fs=0" frameborder="0" ></iframe>',
+        '<iframe width="560" height="315" src="https://www.youtube.com/embed/Ah0Ys50CqO8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
       // video:
       //   '<iframe width="560" height="315" src="https://www.youtube.com/embed/Ah0Ys50CqO8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
       // video: "https://www.youtube.com/embed/saFRT7t6vis",
@@ -458,9 +458,11 @@ function getNextStageData(nextStage) {
 function videoDisplay(videoData) {
   console.log("videoDisplay...");
   console.log(videoData);
+  console.log(videoData.type());
   if (/www.youtube.com/.test(videoData)) {
     $("#myVideo").hide();
     // $(".display").remove("iframe");
+    console.log(videoData);
     $(".display").append(videoData);
   } else {
     $("#myVideo").empty();
