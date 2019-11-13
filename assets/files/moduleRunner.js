@@ -578,7 +578,7 @@ function displayChat(view) {
 function clearChat() {
   console.log("clearChat...");
   $(".box").empty();
-  $(".display").remove("iframe");
+  $("iframe").remove();
 }
 
 function createButton(data, text) {
