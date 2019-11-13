@@ -450,7 +450,7 @@ function videoDisplay(videoData) {
   // console.log(videoData);
   console.log(videoData);
   if (/www.youtube.com/.test(videoData)) {
-    $(".display").empty();
+    $("#myVideo").remove();
     $(".display").append(videoData);
   } else {
     $("#myVideo").empty();
