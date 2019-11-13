@@ -462,6 +462,9 @@ function videoDisplay(videoData) {
   if (/www.youtube.com/.test(videoData)) {
     $("#myVideo").hide();
     // $(".display").remove("iframe");
+    let tag = videoData.split(" ");
+    console.log(tag);
+    console.log(tag.length);
     console.log(videoData);
     $(".display").append(videoData);
   } else {
