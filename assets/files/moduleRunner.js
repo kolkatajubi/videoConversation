@@ -418,7 +418,7 @@ function getNextStageData(nextStage) {
   display = ""; // HTML DOM elements to be displayed
   if (nextStage == undefined) {
     currentStageNum += 1;
-    // console.log("currentStageNum : ", currentStageNum);
+    console.log("currentStageNum : ", currentStageNum);
     currentData = flow.stages[currentStageNum];
     // console.log(JSON.stringify(currentData, 0, 3));
     // if (base64loaded == "not yet") {
@@ -431,7 +431,7 @@ function getNextStageData(nextStage) {
     // createUI(currentData);
   } else {
     currentStageNum = Object.keys(flowJSON).indexOf(nextStage);
-    // console.log("currentStageNum : ", currentStageNum);
+    console.log("currentStageNum : ", currentStageNum);
     currentData = flowJSON[nextStage];
     // console.log(JSON.stringify(currentData, 0, 3));
     // if (base64loaded == "not yet") {
