@@ -42,7 +42,7 @@ var flow = {
       text: ["name"],
       // video: "https://pixie.jubi.ai/videoConversation/static/videos/name.mp4",
       video:
-        '<iframe width="560" height="315" src="https://www.youtube.com/embed/Ah0Ys50CqO8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+        '<iframe width="560" height="315" src="https://www.youtube.com/embed/bdPZ2Cu1vNU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
       // video:
       //   '<iframe width="560" height="315" src="https://www.youtube.com/embed/DTHdcDW8lsc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
       // video: "https://www.youtube.com/embed/DTHdcDW8lsc",
