@@ -196,23 +196,33 @@ $(document).ready(() => {
   documentReady();
   getNextStageData();
   setInterval(() => {
-    // console.log("setInterval...");
-    var videoDuration = document.getElementById("myVideo").duration.toFixed(2);
-    var videoTime = document.getElementById("myVideo").currentTime.toFixed(2);
-    // var videoDuration = document
-    //   .getElementsByClassName("video-stream html5-main-video")[0]
-    //   .duration.toFixed(2);
-    // var videoTime = document
-    //   .getElementsByClassName("video-stream html5-main-video")[0]
-    //   .currentTime.toFixed(2);
-    console.log(videoTime);
-    if (status == 0)
-      if (videoTime >= videoDuration * 0.15) {
+    if (/www.youtube.com/.test(videoData)) {
+      if (status == 0) {
         status = 1;
         // console.log("1secs left...");
         createUI(currentData);
       }
-    if (videoTime == videoDuration) blurBackground();
+    } else {
+      // console.log("setInterval...");
+      var videoDuration = document
+        .getElementById("myVideo")
+        .duration.toFixed(2);
+      var videoTime = document.getElementById("myVideo").currentTime.toFixed(2);
+      // var videoDuration = document
+      //   .getElementsByClassName("video-stream html5-main-video")[0]
+      //   .duration.toFixed(2);
+      // var videoTime = document
+      //   .getElementsByClassName("video-stream html5-main-video")[0]
+      //   .currentTime.toFixed(2);
+      // console.log(videoTime);
+      if (status == 0)
+        if (videoTime >= videoDuration * 0.15) {
+          status = 1;
+          // console.log("1secs left...");
+          createUI(currentData);
+        }
+      if (videoTime == videoDuration) blurBackground();
+    }
   }, 100);
   // } else {
   //   console.log("Desktop user");
@@ -437,17 +447,20 @@ function videoDisplay(videoData) {
   // console.log("videoDisplay...");
   // console.log(videoData);
   console.log(videoData);
-  $(".display").empty();
-  $(".display").append(videoData);
-  // $("#myVideo").empty();
-  // $("#myVideo").append(
-  //   "<source id='start' type='video/mp4' src='" + videoData + "' />"
-  // );
-  // console.log("<source id='start' type='video/mp4' src='" + videoData + "' />");
-  // $("#myVideo").attr("poster", "");
-  var video = document.getElementById("myVideo");
-  // console.log(video);
-  video.load();
+  if (/www.youtube.com/.test(videoData)) {
+    $(".display").empty();
+    $(".display").append(videoData);
+  } else {
+    $("#myVideo").empty();
+    $("#myVideo").append(
+      "<source id='start' type='video/mp4' src='" + videoData + "' />"
+    );
+    // console.log("<source id='start' type='video/mp4' src='" + videoData + "' />");
+    // $("#myVideo").attr("poster", "");
+    var video = document.getElementById("myVideo");
+    // console.log(video);
+    video.load();
+  }
   if (currentStageNum != 0) {
     video.play();
   }
