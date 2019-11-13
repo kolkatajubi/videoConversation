@@ -7,11 +7,11 @@
   width: 100%;
   height: inherit;
   object-fit: fill;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 iframe {
-  z-index: 0;
+  /* z-index: 0; */
 }
 
 /* 1b1f3b-715aff-fafaff-100007-30343f */
@@ -32,7 +32,7 @@ body {
   font-size: 18px;
   background-image: linear-gradient(0deg, #000, transparent);
   justify-content: center;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 .display {
