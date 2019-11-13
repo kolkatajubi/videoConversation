@@ -197,6 +197,7 @@ $(document).ready(() => {
   getNextStageData();
   setInterval(() => {
     if (/www.youtube.com/.test(currentData.video)) {
+      console.log("YOUTUBE video encountered...");
       if (status == 0) {
         status = 1;
         // console.log("1secs left...");
@@ -204,6 +205,7 @@ $(document).ready(() => {
       }
     } else {
       // console.log("setInterval...");
+      console.log("NORMAL video encountered...");
       var videoDuration = document
         .getElementById("myVideo")
         .duration.toFixed(2);
