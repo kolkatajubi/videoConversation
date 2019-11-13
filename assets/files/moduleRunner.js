@@ -469,7 +469,7 @@ function videoDisplay(videoData) {
 }
 
 function createUI(currentData) {
-  // console.log("createUI...");
+  console.log("createUI...");
   // console.log(currentData);
   switch (currentData.type) {
     case "text":
@@ -488,8 +488,7 @@ function createUI(currentData) {
     case "button":
     case "quickReply":
       // console.log("button / QuickReply");
-      display = `
-<div class="button-list">`;
+      display = `<div class="button-list">`;
       for (i in currentData.next.data) {
         if (!currentData.next.data[i].type) {
           display =
@@ -586,7 +585,7 @@ function createButton(data, text) {
   // console.log("data", data);
   // console.log("text", text);
   return (
-    ` <div class="button" >
+    `<div class="button" >
     <span class="button-text" value='` +
     data +
     `'>` +
