@@ -8,11 +8,11 @@ var flow = {
   stages: [
     {
       text: ["intro"],
-      video: "https://pixie.jubi.ai/videoConversation/static/videos/intro.mp4",
+      // video: "https://pixie.jubi.ai/videoConversation/static/videos/intro.mp4",
       // video:
       //   '<iframe width="560" height="315" src="https://www.youtube.com/embed/saFRT7t6vis" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
-      // video:
-      //   '<iframe width="100%" src="https://www.youtube.com/embed/saFRT7t6vis?rel=0?version=3&modestbranding=1&autohide=1&autoplay=1&controls=0&loop=0&disablekb=1&iv_load_policy=3&rel=0&feature=oembed&showinfo=0" frameborder="0" ></iframe>',
+      video:
+        '<iframe width="100%" src="https://www.youtube.com/embed/saFRT7t6vis?rel=0?version=3&modestbranding=1&autohide=1&autoplay=1&controls=0&loop=0&disablekb=1&iv_load_policy=3&rel=0&feature=oembed&showinfo=0" frameborder="0" ></iframe>',
       // video:
       //   '<iframe width="560" height="315" src="https://www.youtube.com/embed/Ah0Ys50CqO8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
       // video: "https://www.youtube.com/embed/saFRT7t6vis",
@@ -88,8 +88,9 @@ var flow = {
     },
     {
       text: ["age"],
-      video: "https://pixie.jubi.ai/videoConversation/static/videos/age.mp4",
-      // video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/6dJmILRJU7E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+      // video: "https://pixie.jubi.ai/videoConversation/static/videos/age.mp4",
+      video:
+        '<iframe width="560" height="315" src="https://www.youtube.com/embed/6dJmILRJU7E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
       // video: "https://www.youtube.com/embed/6dJmILRJU7E",
       type: "text",
       stage: "age",
@@ -144,8 +145,9 @@ var flow = {
     },
     {
       text: ["mobile"],
-      video: "https://pixie.jubi.ai/videoConversation/static/videos/mobile.mp4",
-      // video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/QISY70zukng" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+      // video: "https://pixie.jubi.ai/videoConversation/static/videos/mobile.mp4",
+      video:
+        '<iframe width="560" height="315" src="https://www.youtube.com/embed/QISY70zukng" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
       // video: "https://www.youtube.com/embed/QISY70zukng",
       type: "text",
       stage: "mobile",
@@ -160,8 +162,9 @@ var flow = {
     },
     {
       text: ["end"],
-      video: "https://pixie.jubi.ai/videoConversation/static/videos/end.mp4",
-      // video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/odcGI88uPts" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+      // video: "https://pixie.jubi.ai/videoConversation/static/videos/end.mp4",
+      video:
+        '<iframe width="560" height="315" src="https://www.youtube.com/embed/odcGI88uPts" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
       // video: "https://www.youtube.com/embed/odcGI88uPts",
       type: "button",
       stage: "end",
