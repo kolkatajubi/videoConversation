@@ -458,7 +458,7 @@ function getNextStageData(nextStage) {
 function videoDisplay(videoData) {
   console.log("videoDisplay...");
   console.log(videoData);
-  console.log(videoData.type());
+  console.log(jQuery.type(videoData));
   if (/www.youtube.com/.test(videoData)) {
     $("#myVideo").hide();
     // $(".display").remove("iframe");
