@@ -409,7 +409,7 @@ function FS() {
 }
 
 function getNextStageData(nextStage) {
-  // console.log("Next Stage ... ", nextStage);
+  console.log("Next Stage ... ", nextStage);
   clearChat();
   removeBlurBackground();
   // $("#playImg").hide();
@@ -446,8 +446,7 @@ function getNextStageData(nextStage) {
 }
 
 function videoDisplay(videoData) {
-  // console.log("videoDisplay...");
-  // console.log(videoData);
+  console.log("videoDisplay...");
   console.log(videoData);
   if (/www.youtube.com/.test(videoData)) {
     $("#myVideo").remove();
@@ -535,7 +534,7 @@ function createUI(currentData) {
 }
 
 function displayChat(view) {
-  // console.log("displayChat...");
+  console.log("displayChat...");
   $(".box").append(view);
   setTimeout(() => {
     let classes = document.getElementsByClassName("button");
@@ -576,7 +575,7 @@ function displayChat(view) {
 }
 
 function clearChat() {
-  // console.log("clearChat...");
+  console.log("clearChat...");
   $(".box").empty();
 }
 
