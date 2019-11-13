@@ -463,7 +463,7 @@ function videoDisplay(videoData) {
     $("#myVideo").hide();
     // $(".display").remove("iframe");
     let tag = videoData.split(" ");
-    let videoURL = tag[0] + ` height="100%" `;
+    let videoURL = tag[0] + ` height="100%" width="100%" `;
     videoURL =
       videoURL +
       tag[3].substring(0, tag[3].length - 1) +
