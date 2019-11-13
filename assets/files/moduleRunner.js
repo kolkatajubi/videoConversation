@@ -450,7 +450,7 @@ function videoDisplay(videoData) {
   console.log(videoData);
   if (/www.youtube.com/.test(videoData)) {
     $("#myVideo").remove();
-    $(".display").remove("iframe");
+    // $(".display").remove("iframe");
     $(".display").append(videoData);
   } else {
     $("#myVideo").empty();
@@ -578,6 +578,7 @@ function displayChat(view) {
 function clearChat() {
   console.log("clearChat...");
   $(".box").empty();
+  $(".display").remove("iframe");
 }
 
 function createButton(data, text) {
