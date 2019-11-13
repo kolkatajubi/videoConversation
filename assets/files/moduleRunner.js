@@ -463,10 +463,31 @@ function videoDisplay(videoData) {
     $("#myVideo").hide();
     // $(".display").remove("iframe");
     let tag = videoData.split(" ");
+    let videoURL = tag[0] + ` height="100%" `;
+    videoURL =
+      videoURL +
+      tag[3].substring(0, tag[3].length - 1) +
+      `?rel=0?version=3&modestbranding=1&autohide=1&autoplay=1&controls=0&loop=0&disablekb=1&iv_load_policy=3&rel=0&feature=oembed&showinfo=0" `;
+    videoURL =
+      videoURL +
+      tag[4] +
+      " " +
+      tag[5] +
+      " " +
+      tag[6] +
+      " " +
+      tag[7] +
+      " " +
+      tag[8] +
+      " " +
+      tag[9] +
+      " " +
+      tag[10];
     console.log(tag);
     console.log(tag.length);
     console.log(videoData);
-    $(".display").append(videoData);
+    console.log(videoURL);
+    $(".display").append(videoURL);
   } else {
     $("#myVideo").empty();
     $("#myVideo").show();
