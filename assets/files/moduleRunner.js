@@ -188,6 +188,7 @@ var firstClick = 0; // First video click of the user
 
 //======================================================================================
 restructureData();
+console.log(flowJSON);
 
 $(document).ready(() => {
   // let testExp = new RegExp("Android|" + "BlackBerry|" + "IEMobile|Mobile", "i");
@@ -196,14 +197,14 @@ $(document).ready(() => {
   getNextStageData();
   setInterval(() => {
     // console.log("setInterval...");
-    // var videoDuration = document.getElementById("myVideo").duration.toFixed(2);
-    // var videoTime = document.getElementById("myVideo").currentTime.toFixed(2);
-    var videoDuration = document
-      .getElementsByClassName("video-stream html5-main-video")[0]
-      .duration.toFixed(2);
-    var videoTime = document
-      .getElementsByClassName("video-stream html5-main-video")[0]
-      .currentTime.toFixed(2);
+    var videoDuration = document.getElementById("myVideo").duration.toFixed(2);
+    var videoTime = document.getElementById("myVideo").currentTime.toFixed(2);
+    // var videoDuration = document
+    //   .getElementsByClassName("video-stream html5-main-video")[0]
+    //   .duration.toFixed(2);
+    // var videoTime = document
+    //   .getElementsByClassName("video-stream html5-main-video")[0]
+    //   .currentTime.toFixed(2);
     console.log(videoTime);
     if (status == 0)
       if (videoTime >= videoDuration * 0.15) {
