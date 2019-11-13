@@ -188,7 +188,7 @@ var firstClick = 0; // First video click of the user
 
 //======================================================================================
 restructureData();
-console.log(flowJSON);
+// console.log(flowJSON);
 
 $(document).ready(() => {
   // let testExp = new RegExp("Android|" + "BlackBerry|" + "IEMobile|Mobile", "i");
@@ -436,6 +436,7 @@ function getNextStageData(nextStage) {
 function videoDisplay(videoData) {
   // console.log("videoDisplay...");
   // console.log(videoData);
+  console.log(videoData);
   $(".display").empty();
   $(".display").append(videoData);
   // $("#myVideo").empty();
