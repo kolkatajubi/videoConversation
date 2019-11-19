@@ -1,0 +1,43 @@
+/* 1b1f3b-715aff-fafaff-100007-30343f */
+
+button {
+  font-family: "Muli", sans-serif;
+  width: auto;
+  height: auto;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: #39393a;
+  outline: none;
+  background-color: rgb(255, 255, 255, 0.8);
+  cursor: pointer;
+  font-size: 15px;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.container {
+  bottom: 0px;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  background-image: linear-gradient(0deg, #222, transparent);
+  padding: 0 0 50px 0;
+}
+.display {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  overflow: hidden;
+}
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
