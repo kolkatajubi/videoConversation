@@ -25,7 +25,8 @@ var flow = {
         data: [
           {
             data: "Count me in!",
-            text: "Count me in!"
+            text: "Count me in!",
+            count:0
           }
         ],
         expectation: {
@@ -79,11 +80,13 @@ var flow = {
         data: [
           {
             data: "Mr",
-            text: "Mr"
+            text: "Mr",
+            count:0
           },
           {
             data: "Miss/Mrs",
-            text: "Miss/Mrs"
+            text: "Miss/Mrs",
+            count:0
           }
         ]
       }
@@ -117,19 +120,23 @@ var flow = {
         data: [
           {
             data: "Mumbai",
-            text: "Mumbai"
+            text: "Mumbai",
+            count:0
           },
           {
             data: "Kolkata",
-            text: "Kolkata"
+            text: "Kolkata",
+            count:0
           },
           {
             data: "Delhi",
-            text: "Delhi"
+            text: "Delhi",
+            count:0
           },
           {
             data: "Chennai",
-            text: "Chennai"
+            text: "Chennai",
+            count:0
           }
         ],
         expectation: {
@@ -287,6 +294,7 @@ $(document).ready(() => {
   }
 
   $("body").on("click", ".button", event => {
+    console.log("event trigged..........")
     let button = event.currentTarget;
     // console.log(event);
     let type = button.firstElementChild.getAttribute("type");
@@ -618,16 +626,18 @@ function clearChat() {
   $("iframe").remove();
 }
 
-function createButton(data, text) {
+function createButton(data, text,count) {
   // console.log("Create Button");
   // console.log("data", data);
   // console.log("text", text);
   return (
-    `<div class="button" >
+    `<div class="button" value="">
     <span class="button-text" value='` +
     data +
     `'>` +
     text +
+    `'>` +
+    count +
     `</span>
     <svg
       class="button-complete"
@@ -804,3 +814,28 @@ function showLoader() {
   $(".loader").attr("width", "34");
   $(".confirm-button").attr("style", "display :none");
 }
+
+function polling(){
+  console.log("pollinggg=========>");
+  var totalvote;
+  for(i in currentData.next.data){
+       currentData.next.data[i].count++;
+       totalvote++;
+     }
+      var poll=(count/totalvote)*100;
+      console.log("Polling===============>"+poll);
+}
+
+function voting(){
+  console.log("voting========>");
+  for(i in currentData.next.data){
+    if(currentData.next.data[i].data){
+      polling();
+    }
+  }
+}
+
+$('div.button').on('click', function()
+{
+    voting();
+});
