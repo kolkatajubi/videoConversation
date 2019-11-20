@@ -309,12 +309,9 @@ $(document).ready(() => {
       console.log(currentData.next.data[i].count);*/
       console.log("after button clicked count will be");
       increment=1;
-      for(i in currentData.next.data){
-        if(currentData.naxt.data[i].data==="Mr"){
-          increment=increment+currentData.next.data[i].count;
-          console.log(increment);
-        }
-      }
+      increment=increment+currentData.next.data[i].count;
+      console.log(increment);
+       
       // console.log("data ==> ", data);
       // console.log(event);
       button.classList.toggle("active");
