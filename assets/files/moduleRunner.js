@@ -837,5 +837,6 @@ function incrementCount(){
   increment=increment+currentData.next.data[i].count;
   
 }
+console.log("button clicked");
 console.log(increment)
 }
