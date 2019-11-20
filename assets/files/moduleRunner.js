@@ -26,7 +26,7 @@ var flow = {
           {
             data: "Count me in!",
             text: "Count me in!",
-            count: 0
+            count: 1
           }
         ],
         expectation: {
@@ -81,12 +81,12 @@ var flow = {
           {
             data: "Mr",
             text: "Mr",
-            count: 0
+            count: 3
           },
           {
             data: "Miss/Mrs",
             text: "Miss/Mrs",
-            count: 0
+            count: 2
           }
         ]
       }
@@ -121,22 +121,22 @@ var flow = {
           {
             data: "Mumbai",
             text: "Mumbai",
-            count:0
+            count:1
           },
           {
             data: "Kolkata",
             text: "Kolkata",
-            count:0
+            count:2
           },
           {
             data: "Delhi",
             text: "Delhi",
-            count:0
+            count:3
           },
           {
             data: "Chennai",
             text: "Chennai",
-            count:0
+            count:4
           }
         ],
         expectation: {
