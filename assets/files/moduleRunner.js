@@ -20,13 +20,13 @@ var flow = {
       // video: "https://www.youtube.com/embed/saFRT7t6vis",
       // video: "https://www.youtube.com/watch?v=saFRT7t6vis&feature=youtu.be",
       stage: "intro",
-      type: "button",
+      type: "url",
       next: {
         data: [
           {
             data: "Count me in!",
             text: "Count me in!",
-            count: 1
+            
           }
         ],
         expectation: {
