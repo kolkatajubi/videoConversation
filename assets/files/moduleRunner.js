@@ -26,7 +26,7 @@ var flow = {
           {
             data: "Count me in!",
             text: "Count me in!",
-            count:0
+            count: 0
           }
         ],
         expectation: {
@@ -81,12 +81,12 @@ var flow = {
           {
             data: "Mr",
             text: "Mr",
-            count:0
+            count: 0
           },
           {
             data: "Miss/Mrs",
             text: "Miss/Mrs",
-            count:0
+            count: 0
           }
         ]
       }
@@ -269,7 +269,7 @@ $(document).ready(() => {
   //   el.addEventListener("animationend", () => {
   //     console.log("animation END......");
   //     getNextStageData();
-  // el.classList.remove("text-send-transition");
+  // el.classList.remove("text-send-transitiFon");
   // el.classList.remove("text-send-idle");
   // el.classList.add("text-send");
   // el.style.width = "34px";
@@ -285,6 +285,13 @@ $(document).ready(() => {
   // }, 2000);
   //   });
   // });
+  var storedataforpoll =[];
+  for(i in currentData.next.data){
+    storedataforpoll[i]=currentData.next.data[i].data;
+  }
+  for(let j=0;j<storedataforpoll.length;j++){
+    console.log(storedataforpoll[i]);
+  }
 
   // console.log("ready");
   let classes = document.getElementsByClassName("button");
@@ -532,6 +539,10 @@ function createUI(currentData) {
       break;
     case "button":
     case "quickReply":
+      sum = 0
+      for (i in currentData.next.data) {
+        sum = sum + currentData.next.data[i].count;
+      }
       // console.log("button / QuickReply");
       display = `<div class="button-list">`;
       for (i in currentData.next.data) {
@@ -540,7 +551,7 @@ function createUI(currentData) {
             display +
             createButton(
               currentData.next.data[i].data,
-              currentData.next.data[i].text
+              currentData.next.data[i].text  + ((currentData.next.data[i].count / sum) * 100)
             );
         } else if (currentData.next.data[i].type === "url") {
           display =
@@ -626,7 +637,7 @@ function clearChat() {
   $("iframe").remove();
 }
 
-function createButton(data, text,count) {
+function createButton(data, text, percentage) {
   // console.log("Create Button");
   // console.log("data", data);
   // console.log("text", text);
@@ -815,27 +826,11 @@ function showLoader() {
   $(".confirm-button").attr("style", "display :none");
 }
 
-function polling(){
-  console.log("pollinggg=========>");
-  var totalvote;
-  for(i in currentData.next.data){
-       currentData.next.data[i].count++;
-       totalvote++;
-     }
-      var poll=(count/totalvote)*100;
-      console.log("Polling===============>"+poll);
-}
-
-function voting(){
-  console.log("voting========>");
-  for(i in currentData.next.data){
-    if(currentData.next.data[i].data){
-      polling();
-    }
-  }
-}
-
 $('div.button').on('click', function()
 {
-    voting();
+    for(i in currentData.next.data){
+      if(currentData.next.data[i].data===storedataforpoll[i]){
+        datacountonclick[i]=datacountonclick[i]+1;
+      }
+    }
 });
