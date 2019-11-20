@@ -300,12 +300,11 @@ $(document).ready(() => {
     console.log("event trigged..........")
     let button = event.currentTarget;
     // console.log(event);
-    console.log(currentData.next.data.count);
+    console.log(currentData.next.data[i].count);
     let type = button.firstElementChild.getAttribute("type");
     if (type != "url") {
-      /*for(i in currentData.next.data){
+      
       console.log(currentData.next.data[i].count);
-    }*/
       console.log("after button clicked count will be");
       console.log(currentData.next.data[i].count++);
       // console.log("data ==> ", data);
