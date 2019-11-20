@@ -306,7 +306,8 @@ $(document).ready(() => {
       
       console.log(currentData.next.data[i].count);
       console.log("after button clicked count will be");
-      increment=currentData.next.data[i].count++;
+      increment=1;
+      increment=increment+currentData.next.data[i].count;
       console.log(increment);
       // console.log("data ==> ", data);
       // console.log(event);
