@@ -831,12 +831,6 @@ function showLoader() {
   $(".loader").attr("width", "34");
   $(".confirm-button").attr("style", "display :none");
 }
-increment=1;
 
- $("div.button").on("click",function(){
-  increment=increment+currentData.next.data[i].count;
-  
 
-console.log("button clicked");
-console.log(increment)
-})
+ 
