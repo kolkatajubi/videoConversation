@@ -539,6 +539,7 @@ function createUI(currentData) {
       break;
     case "button":
     case "quickReply":
+      console.log("Switch case button .....")
       sum = 0
       for (i in currentData.next.data) {
         sum = sum + currentData.next.data[i].count;
@@ -637,8 +638,8 @@ function clearChat() {
   $("iframe").remove();
 }
 
-function createButton(data, text, percentage) {
-  // console.log("Create Button");
+function createButton(data, text) {
+  console.log("Create Button");
   // console.log("data", data);
   // console.log("text", text);
   return (
@@ -647,8 +648,7 @@ function createButton(data, text, percentage) {
     data +
     `'>` +
     text +
-    `'>` +
-    count +
+    `'>`
     `</span>
     <svg
       class="button-complete"
