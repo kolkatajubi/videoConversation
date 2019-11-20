@@ -313,6 +313,7 @@ $(document).ready(() => {
 
       // console.log("data ==> ", data);
       console.log("After event");
+      console.log(event);
       console.log(
         "================================================>" + event.innerText
       );
