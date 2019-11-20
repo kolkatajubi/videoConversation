@@ -313,7 +313,7 @@ $(document).ready(() => {
        
       // console.log("data ==> ", data);
       console.log("After event");
-      console.log(event);
+      console.log("event"+event);
       button.classList.toggle("active");
       button.addEventListener("animationend", event => {
         if (event.animationName == "Button") {
