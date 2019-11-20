@@ -302,6 +302,7 @@ $(document).ready(() => {
     // console.log(event);
     let type = button.firstElementChild.getAttribute("type");
     if (type != "url") {
+      console.log(currentData.next.data[i].count);
       // console.log("data ==> ", data);
       // console.log(event);
       button.classList.toggle("active");
