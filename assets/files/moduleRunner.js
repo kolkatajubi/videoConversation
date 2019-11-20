@@ -309,12 +309,9 @@ $(document).ready(() => {
       console.log(currentData.next.data[i].count);*/
       console.log("after button clicked count will be");
       increment=1;
-      for(i in currentData.next.data){
-        if(currentData.next.data[i].data==="Mr"||currentData.next.data[i].data==="Miss/Mrs"||currentData.next.data[i].data==="Chennai"||currentData.next.data[i].data==="Kolkata"||currentData.next.data[i].data==="Delhi"||currentData.next.data[i].data==="Mumbai"){
       increment=increment+currentData.next.data[i].count;
       console.log(increment);
-    }
-    }
+   
       // console.log("data ==> ", data);
       // console.log(event);
       button.classList.toggle("active");
