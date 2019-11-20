@@ -189,15 +189,17 @@ var flow = {
     }
   ]
 };
-var totalclicks = {
-  "Count me in!": 0,
-  Mr: 0,
-  "Miss/Mrs": 0,
-  Mumbai: 0,
-  Kolkata: 0,
-  Delhi: 0,
-  Chennai: 0
-};
+var totalclicks = [
+  {
+    "Count me in!": 0
+  },
+  { Mr: 0 },
+  { "Miss/Mrs": 0 },
+  { Mumbai: 0 },
+  { Kolkata: 0 },
+  { Delhi: 0 },
+  { Chennai: 0 }
+];
 console.log((totalclicks["Mr"] += 1));
 var theme = {
   default: "",
