@@ -25,7 +25,8 @@ var flow = {
         data: [
           {
             data: "Count me in!",
-            text: "Count me in!"
+            text: "Count me in!",
+            count: 0
           }
         ],
         expectation: {
