@@ -190,7 +190,7 @@ var flow = {
   ]
 };
 var totalclicks = {
-  "Count me in!": 0,
+  "Count me in!": 1,
   Mr: 0,
   "Miss/Mrs": 0,
   Mumbai: 0,
