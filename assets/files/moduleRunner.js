@@ -650,7 +650,7 @@ function createButton(data, text) {
   // console.log("data", data);
   // console.log("text", text);
   return (
-    `<div class="button" value="" onclick="incrementCount()">
+    `<div class="button" value="">
     <span class="button-text" value='` +
     data +
     `'>` +
@@ -832,11 +832,11 @@ function showLoader() {
   $(".confirm-button").attr("style", "display :none");
 }
 increment=1;
-function incrementCount(){
- 
+
+ $("div.button").on("click",function(){
   increment=increment+currentData.next.data[i].count;
   
 
 console.log("button clicked");
 console.log(increment)
-}
+})
