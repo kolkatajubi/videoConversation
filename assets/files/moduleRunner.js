@@ -311,6 +311,8 @@ $(document).ready(() => {
           increment = increment + currentData.next.data[i].count;
         } else if (currentData.next.data[i].data === "Mr") {
           increment = increment + currentData.next.data[i].count;
+        } else if (currentData.next.data[i].data === "Miss/Mr") {
+          increment = increment + currentData.next.data[i].count;
         }
       }
       console.log(increment);
