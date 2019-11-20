@@ -315,7 +315,7 @@ $(document).ready(() => {
     //console.log(count);
     console.log(value);
     if (type != "url") {
-      for (i in totalclicks) {
+      for (let i = 0; i < totalclicks.length; i++) {
         if (value === totalclicks[i]) {
           console.log("after click a button");
           console.log((totalclicks[value] += 1));
