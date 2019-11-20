@@ -307,8 +307,11 @@ $(document).ready(() => {
       console.log("after button clicked count will be");
       increment = 1;
       for (i in currentData.next.data) {
-        if (currentData.next.data === "Count me in!")
+        if (currentData.next.data[i].data === "Count me in!") {
           increment = increment + currentData.next.data[i].count;
+        } else if (currentData.next.data[i].data === "Mr") {
+          increment = increment + currentData.next.data[i].count;
+        }
       }
       console.log(increment);
 
