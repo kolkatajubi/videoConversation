@@ -297,7 +297,7 @@ $(document).ready(() => {
   }
 
   $("body").on("click", ".button", event => {
-    console.log("event trigged..........")
+    console.log("event trigered..........")
     let button = event.currentTarget;
     // console.log(event);
     for(i in currentData.next.data){
