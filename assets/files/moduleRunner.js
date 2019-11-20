@@ -312,6 +312,7 @@ $(document).ready(() => {
       // console.log(increment);
        
       // console.log("data ==> ", data);
+      console.log("After event");
       console.log(event);
       button.classList.toggle("active");
       button.addEventListener("animationend", event => {
