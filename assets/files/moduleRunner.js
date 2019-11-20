@@ -833,10 +833,10 @@ function showLoader() {
 }
 increment=1;
 function incrementCount(){
- for(i in currentData.next.data){
+ 
   increment=increment+currentData.next.data[i].count;
   
-}
+
 console.log("button clicked");
 console.log(increment)
 }
