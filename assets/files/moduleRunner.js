@@ -315,7 +315,8 @@ $(document).ready(() => {
       console.log("After event");
       console.log(event);
       console.log(
-        "================================================>" + event.innerText
+        "================================================>" +
+          event.currentTarget.innerText()
       );
       button.classList.toggle("active");
       button.addEventListener("animationend", event => {
