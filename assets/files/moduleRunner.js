@@ -825,7 +825,7 @@ function showLoader() {
 $('div.button').on('click', function()
 {
   console.log("button clicked");
-    for(i in currentData.next.data){
-      currentData.next.data[i].count++;
-    }
+    
+     console.log(currentData.next.data[i].count++);
+    
 });
