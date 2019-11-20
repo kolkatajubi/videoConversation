@@ -299,15 +299,15 @@ $(document).ready(() => {
   $("body").on("click", ".button", event => {
     console.log("event trigged..........")
     let button = event.currentTarget;
-    console.log("event.currenttarget")
-    console.log(event.currentTarget);
+    // console.log("event.currenttarget")
+    // console.log(event.currentTarget);
     
     let type = button.firstElementChild.getAttribute("type");
     if (type != "url") {
-      // for(i in currentData.next.data){
-      //   console.log(currentData.next.data[i].count);
-      //   }
-      // console.log("after button clicked count will be");
+      for(i in currentData.next.data){
+        console.log(currentData.next.data[i].count);
+        }
+      console.log("after button clicked count will be");
       // increment=1;
       // increment=increment+currentData.next.data[i].count;
       // console.log(increment);
@@ -650,7 +650,7 @@ function createButton(data, text) {
   // console.log("data", data);
   // console.log("text", text);
   return (
-    `<div class="button" value="">
+    `<div class="button" value="" onclick="incrementCount()">
     <span class="button-text" value='` +
     data +
     `'>` +
@@ -831,4 +831,11 @@ function showLoader() {
   $(".loader").attr("width", "34");
   $(".confirm-button").attr("style", "display :none");
 }
-
+increment=1;
+incrementCount() {
+ for(i in currentData.next.data){
+  increment=increment+currentData.next.data[i].count;
+  
+}
+console.log(increment)
+}
