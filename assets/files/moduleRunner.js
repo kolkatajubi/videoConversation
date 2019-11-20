@@ -27,8 +27,6 @@ var flow = {
             data: "Count me in!",
             text: "Count me in!",
             count: 1
-
-            
           }
         ],
         expectation: {
@@ -123,22 +121,22 @@ var flow = {
           {
             data: "Mumbai",
             text: "Mumbai",
-            count:1
+            count: 1
           },
           {
             data: "Kolkata",
             text: "Kolkata",
-            count:2
+            count: 2
           },
           {
             data: "Delhi",
             text: "Delhi",
-            count:3
+            count: 3
           },
           {
             data: "Chennai",
             text: "Chennai",
-            count:4
+            count: 4
           }
         ],
         expectation: {
@@ -287,7 +285,6 @@ $(document).ready(() => {
   // }, 2000);
   //   });
   // });
- 
 
   // console.log("ready");
   let classes = document.getElementsByClassName("button");
@@ -297,24 +294,28 @@ $(document).ready(() => {
   }
 
   $("body").on("click", ".button", event => {
-    console.log("event trigged..........")
+    console.log("event trigged..........");
     let button = event.currentTarget;
     // console.log("event.currenttarget")
     // console.log(event.currentTarget);
-    
+
     let type = button.firstElementChild.getAttribute("type");
     if (type != "url") {
-      for(i in currentData.next.data){
-        console.log(currentData.next.data[i].count);
-        }
-      console.log("after button clicked count will be");
+      // for(i in currentData.next.data){
+      //   console.log(currentData.next.data[i].count);
+      //   }
+      // console.log("after button clicked count will be");
       // increment=1;
+      // for(i in currentData.next.data){
       // increment=increment+currentData.next.data[i].count;
+      // }
       // console.log(increment);
-       
+
       // console.log("data ==> ", data);
       console.log("After event");
-      console.log(event);
+      console.log(
+        "================================================>" + event.innerText
+      );
       button.classList.toggle("active");
       button.addEventListener("animationend", event => {
         if (event.animationName == "Button") {
@@ -546,8 +547,8 @@ function createUI(currentData) {
       break;
     case "button":
     case "quickReply":
-      console.log("Switch case button .....")
-      sum = 0
+      console.log("Switch case button .....");
+      sum = 0;
       for (i in currentData.next.data) {
         sum = sum + currentData.next.data[i].count;
       }
@@ -559,7 +560,10 @@ function createUI(currentData) {
             display +
             createButton(
               currentData.next.data[i].data,
-              currentData.next.data[i].text + " " + ((currentData.next.data[i].count / sum) * 100) + "%"
+              currentData.next.data[i].text +
+                " " +
+                (currentData.next.data[i].count / sum) * 100 +
+                "%"
             );
         } else if (currentData.next.data[i].type === "url") {
           display =
@@ -831,6 +835,3 @@ function showLoader() {
   $(".loader").attr("width", "34");
   $(".confirm-button").attr("style", "display :none");
 }
-
-
- 
