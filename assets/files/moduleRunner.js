@@ -25,8 +25,7 @@ var flow = {
         data: [
           {
             data: "Count me in!",
-            text: "Count me in!",
-            count: 1
+            text: "Count me in!"
           }
         ],
         expectation: {
@@ -285,13 +284,7 @@ $(document).ready(() => {
   // }, 2000);
   //   });
   // });
-  var storedataforpoll =[];
-  for(i in currentData.next.data){
-    storedataforpoll[i]=currentData.next.data[i].data;
-  }
-  for(let j=0;j<storedataforpoll.length;j++){
-    console.log(storedataforpoll[i]);
-  }
+ 
 
   // console.log("ready");
   let classes = document.getElementsByClassName("button");
@@ -552,7 +545,7 @@ function createUI(currentData) {
             display +
             createButton(
               currentData.next.data[i].data,
-              currentData.next.data[i].text + " " + ((currentData.next.data[i].count / sum) * 100)
+              currentData.next.data[i].text + " " + ((currentData.next.data[i].count / sum) * 100) + "%"
             );
         } else if (currentData.next.data[i].type === "url") {
           display =
@@ -827,9 +820,5 @@ function showLoader() {
 
 $('div.button').on('click', function()
 {
-    for(i in currentData.next.data){
-      if(currentData.next.data[i].data===storedataforpoll[i]){
-        datacountonclick[i]=datacountonclick[i]+1;
-      }
-    }
+    
 });
