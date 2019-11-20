@@ -190,7 +190,7 @@ var flow = {
   ]
 };
 var totalclicks = {
-  "Count me in!": 1,
+  "Count me in!": 0,
   Mr: 0,
   "Miss/Mrs": 0,
   Mumbai: 0,
@@ -316,6 +316,7 @@ $(document).ready(() => {
     console.log(value);
     for (let i in totalclicks) {
       if (value == i) {
+        console.log(i);
         console.log("after click a button");
         console.log((totalclicks[value] += 1));
         totalclicks[value]++;
