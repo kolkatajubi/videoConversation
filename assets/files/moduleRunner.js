@@ -189,17 +189,15 @@ var flow = {
     }
   ]
 };
-var totalclicks = [
-  {
-    "Count me in!": 0
-  },
-  { Mr: 0 },
-  { "Miss/Mrs": 0 },
-  { Mumbai: 0 },
-  { Kolkata: 0 },
-  { Delhi: 0 },
-  { Chennai: 0 }
-];
+var totalclicks = {
+  "Count me in!": 0,
+  Mr: 0,
+  "Miss/Mrs": 0,
+  Mumbai: 0,
+  Kolkata: 0,
+  Delhi: 0,
+  Chennai: 0
+};
 console.log((totalclicks["Mr"] += 1));
 var theme = {
   default: "",
@@ -316,8 +314,8 @@ $(document).ready(() => {
     let value = button.firstElementChild.getAttribute("value");
     //console.log(count);
     console.log(value);
-    for (let i = 0; i < totalclicks.length; i++) {
-      if (value === totalclicks[i]) {
+    for (let i in totalclicks) {
+      if (value == i) {
         console.log("after click a button");
         console.log((totalclicks[value] += 1));
       }
