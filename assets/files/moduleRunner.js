@@ -189,7 +189,16 @@ var flow = {
     }
   ]
 };
-
+var totalclicks = {
+  "Count me in!": 0,
+  Mr: 0,
+  "Miss/Mrs": 0,
+  Mumbai: 0,
+  Kolkata: 0,
+  Delhi: 0,
+  Chennai: 0
+};
+console.log((totalclicks["Mr"] += 1));
 var theme = {
   default: "",
   dark: "https://pixie.jubi.ai/videoConversation/static/css/styledark.css",
@@ -298,25 +307,30 @@ $(document).ready(() => {
     let button = event.currentTarget;
     // console.log("event.currenttarget")
     // console.log(event.currentTarget);
+    console.log();
 
     let type = button.firstElementChild.getAttribute("type");
+    let count = button.firstElementChild.getAttribute("count");
+    let value = button.firstElementChild.getAttribute("value");
+    console.log(count);
+    console.log(value);
     if (type != "url") {
-      for (i in currentData.next.data) {
-        console.log(currentData.next.data[i].count);
-      }
-      console.log("after button clicked count will be");
+      // for (i in currentData.next.data) {
+      //   console.log(currentData.next.data[i].count);
+      // }
+      // console.log("after button clicked count will be");
 
-      for (i in currentData.next.data) {
-        increment = 1;
-        if (currentData.next.data[i].data === "Count me in!") {
-          increment = increment + currentData.next.data[i].count;
-        } else if (currentData.next.data[i].data === "Mr") {
-          increment = increment + currentData.next.data[i].count;
-        } else if (currentData.next.data[i].data === "Miss/Mr") {
-          increment = increment + currentData.next.data[i].count;
-        }
-      }
-      console.log(increment);
+      // for (i in currentData.next.data) {
+      //   increment = 1;
+      //   if (currentData.next.data[i].data === "Count me in!") {
+      //     increment = increment + currentData.next.data[i].count;
+      //   } else if (currentData.next.data[i].data === "Mr") {
+      //     increment = increment + currentData.next.data[i].count;
+      //   } else if (currentData.next.data[i].data === "Miss/Mr") {
+      //     increment = increment + currentData.next.data[i].count;
+      //   }
+      // }
+      // console.log(increment);
 
       // console.log("data ==> ", data);
       console.log("After event");
@@ -568,7 +582,8 @@ function createUI(currentData) {
               currentData.next.data[i].text +
                 " " +
                 (currentData.next.data[i].count / sum) * 100 +
-                "%"
+                "%",
+              currentData.next.data[i].count
             );
         } else if (currentData.next.data[i].type === "url") {
           display =
@@ -654,12 +669,16 @@ function clearChat() {
   $("iframe").remove();
 }
 
-function createButton(data, text) {
+function createButton(data, text, count) {
   console.log("Create Button");
   // console.log("data", data);
   // console.log("text", text);
   return (
-    `<div class="button" value="">
+    `<div class="button" count="` +
+    count +
+    `" value="` +
+    data +
+    `">
     <span class="button-text" value='` +
     data +
     `'>` +
