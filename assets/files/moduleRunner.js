@@ -299,7 +299,8 @@ $(document).ready(() => {
   $("body").on("click", ".button", event => {
     console.log("event trigged..........")
     let button = event.currentTarget;
-    // console.log(event);
+    console.log("event.currenttarget")
+    console.log(event.currentTarget);
     
     let type = button.firstElementChild.getAttribute("type");
     if (type != "url") {
