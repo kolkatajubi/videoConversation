@@ -26,7 +26,7 @@ var flow = {
           {
             data: "Count me in!",
             text: "Count me in!",
-            count: 0
+            count: 1
 
             
           }
@@ -300,6 +300,7 @@ $(document).ready(() => {
     console.log("event trigged..........")
     let button = event.currentTarget;
     // console.log(event);
+    console.log(currentData.next.data[i].count);
     let type = button.firstElementChild.getAttribute("type");
     if (type != "url") {
       for(i in currentData.next.data){
