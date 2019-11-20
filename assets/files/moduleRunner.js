@@ -832,7 +832,7 @@ function showLoader() {
   $(".confirm-button").attr("style", "display :none");
 }
 increment=1;
-incrementCount() {
+function incrementCount(){
  for(i in currentData.next.data){
   increment=increment+currentData.next.data[i].count;
   
