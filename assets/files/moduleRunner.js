@@ -303,16 +303,16 @@ $(document).ready(() => {
     
     let type = button.firstElementChild.getAttribute("type");
     if (type != "url") {
-      for(i in currentData.next.data){
-        console.log(currentData.next.data[i].count);
-        }
-      console.log("after button clicked count will be");
-      increment=1;
-      increment=increment+currentData.next.data[i].count;
-      console.log(increment);
+      // for(i in currentData.next.data){
+      //   console.log(currentData.next.data[i].count);
+      //   }
+      // console.log("after button clicked count will be");
+      // increment=1;
+      // increment=increment+currentData.next.data[i].count;
+      // console.log(increment);
        
       // console.log("data ==> ", data);
-      // console.log(event);
+      console.log(event);
       button.classList.toggle("active");
       button.addEventListener("animationend", event => {
         if (event.animationName == "Button") {
