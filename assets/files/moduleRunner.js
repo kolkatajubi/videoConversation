@@ -314,13 +314,13 @@ $(document).ready(() => {
     let value = button.firstElementChild.getAttribute("value");
     //console.log(count);
     console.log(value);
-    if (type != "url") {
-      for (let i = 0; i < totalclicks.length; i++) {
-        if (value === totalclicks[i]) {
-          console.log("after click a button");
-          console.log((totalclicks[value] += 1));
-        }
+    for (let i = 0; i < totalclicks.length; i++) {
+      if (value === totalclicks[i]) {
+        console.log("after click a button");
+        console.log((totalclicks[value] += 1));
       }
+    }
+    if (type != "url") {
       // console.log("after button clicked count will be");
 
       // for (i in currentData.next.data) {
