@@ -551,7 +551,7 @@ function createUI(currentData) {
             display +
             createButton(
               currentData.next.data[i].data,
-              currentData.next.data[i].text  + ((currentData.next.data[i].count / sum) * 100)
+              currentData.next.data[i].text + " " + ((currentData.next.data[i].count / sum) * 100)
             );
         } else if (currentData.next.data[i].type === "url") {
           display =
