@@ -318,7 +318,6 @@ $(document).ready(() => {
       if (value == i) {
         console.log("after click a button");
         console.log((totalclicks[value] += 1));
-        totalclicks[value]++;
       }
     }
     for (let i in totalclicks) {
