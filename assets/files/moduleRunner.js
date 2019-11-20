@@ -648,7 +648,6 @@ function createButton(data, text) {
     data +
     `'>` +
     text +
-    `'>`
     `</span>
     <svg
       class="button-complete"
