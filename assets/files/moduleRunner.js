@@ -198,7 +198,7 @@ var totalclicks = {
   Delhi: 0,
   Chennai: 0
 };
-console.log((totalclicks["Mr"] += 1));
+
 var theme = {
   default: "",
   dark: "https://pixie.jubi.ai/videoConversation/static/css/styledark.css",
