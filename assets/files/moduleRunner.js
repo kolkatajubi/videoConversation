@@ -316,11 +316,13 @@ $(document).ready(() => {
     console.log(value);
     for (let i in totalclicks) {
       if (value == i) {
-        console.log(i);
         console.log("after click a button");
         console.log((totalclicks[value] += 1));
         totalclicks[value]++;
       }
+    }
+    for (let i in totalclicks) {
+      console.log(i + ":" + totalclicks[i]);
     }
     if (type != "url") {
       // console.log("after button clicked count will be");
