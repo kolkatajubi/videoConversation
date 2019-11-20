@@ -310,14 +310,17 @@ $(document).ready(() => {
     console.log();
 
     let type = button.firstElementChild.getAttribute("type");
-    let count = button.firstElementChild.getAttribute("count");
+    //let count = button.firstElementChild.getAttribute("count");
     let value = button.firstElementChild.getAttribute("value");
-    console.log(count);
+    //console.log(count);
     console.log(value);
     if (type != "url") {
-      // for (i in currentData.next.data) {
-      //   console.log(currentData.next.data[i].count);
-      // }
+      for (i in currentData.next.data) {
+        if (value === currentData.next.data[i].data) {
+          console.log("after click a button");
+          console.log((totalclicks[value] += 1));
+        }
+      }
       // console.log("after button clicked count will be");
 
       // for (i in currentData.next.data) {
