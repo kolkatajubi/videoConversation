@@ -304,20 +304,17 @@ $(document).ready(() => {
       // for(i in currentData.next.data){
       //   console.log(currentData.next.data[i].count);
       //   }
-      // console.log("after button clicked count will be");
-      // increment=1;
-      // for(i in currentData.next.data){
-      // increment=increment+currentData.next.data[i].count;
-      // }
-      // console.log(increment);
+      console.log("after button clicked count will be");
+      increment = 1;
+      for (i in currentData.next.data) {
+        if (currentData.next.data === "Count me in!")
+          increment = increment + currentData.next.data[i].count;
+      }
+      console.log(increment);
 
       // console.log("data ==> ", data);
       console.log("After event");
       console.log(event);
-      console.log(
-        "================================================>" +
-          event.currentTarget.innerText()
-      );
       button.classList.toggle("active");
       button.addEventListener("animationend", event => {
         if (event.animationName == "Button") {
