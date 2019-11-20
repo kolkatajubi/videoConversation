@@ -315,8 +315,8 @@ $(document).ready(() => {
     //console.log(count);
     console.log(value);
     if (type != "url") {
-      for (i in currentData.next.data) {
-        if (value === currentData.next.data[i].data) {
+      for (i in totalclicks) {
+        if (value === totalclicks[i]) {
           console.log("after click a button");
           console.log((totalclicks[value] += 1));
         }
