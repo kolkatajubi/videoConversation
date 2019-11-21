@@ -5,7 +5,7 @@ const app = express();
 var cors = require("cors");
 const path = require("path");
 const bodyparser = require("body-parser");
-var mongoose = require("mongoose");
+/*var mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost:27017/click");
 var Schema = mongoose.Schema;
 
@@ -19,7 +19,7 @@ var Schema = mongoose.Schema;
   Chennai: Number
 })),
   (UserClick = mongoose.model("click", userSchema));
-module.exports = UserClick;
+module.exports = UserClick;*/
 app.use("/static", express.static(path.join(__dirname, "assets")));
 // app.use(express.static(__dirname + "/css"));
 // app.use(express.static(__dirname + "/videos"));
@@ -62,7 +62,7 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/assets/files/index.html");
 });
 
-app.post("/videoConversation", function(req, res) {
+/*app.post("/videoConversation", function(req, res) {
   var click = {
     "Count me in!": req.body,
     Mr: req.body,
@@ -82,7 +82,7 @@ app.post("/videoConversation", function(req, res) {
       console.log("Success");
     }
   });
-});
+});*/
 
 // --------------------------------------------------------------------------------------
 //                            END OF HOSTING

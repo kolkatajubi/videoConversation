@@ -905,7 +905,7 @@ function showLoader() {
   $(".confirm-button").attr("style", "display :none");
 }
 
-$("body").on("click", ".button", event => {
+/*$("body").on("click", ".button", event => {
   event.preventDefault();
 
   $.ajax({
@@ -913,4 +913,4 @@ $("body").on("click", ".button", event => {
     url: "/videoConversation",
     dataType: "json"
   });
-});
+});*/
