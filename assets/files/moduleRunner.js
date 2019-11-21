@@ -582,13 +582,13 @@ function createUI(currentData) {
         }
       }
       console.log("sum=" + sum);
-      count = 0;
+      number_of_button_created_perStage_count = 0;
       for (i in currentData.next.data) {
         if (!currentData.next.data[i].type) {
-          count++;
+          number_of_button_created_perStage_count++;
         }
       }
-      console.log("count=" + count);
+      console.log("count=" + number_of_button_created_perStage_count);
 
       // console.log("button / QuickReply");
       display = `<div class="button-list">`;
