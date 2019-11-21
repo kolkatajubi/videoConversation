@@ -320,7 +320,7 @@ $(document).ready(() => {
     console.log("getclick");
     console.log(localStorage.getItem("tempclick"));
     console.log("keys");
-    for (let key in localStorage) {
+    for (let key in tempclick) {
       console.log(key);
     }
 
