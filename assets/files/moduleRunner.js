@@ -25,8 +25,8 @@ var flow = {
         data: [
           {
             data: "Count me in!",
-            text: "Count me in!",
-            count: 1
+            text: "Count me in!"
+            //count: 1
           }
         ],
         expectation: {
@@ -80,13 +80,13 @@ var flow = {
         data: [
           {
             data: "Mr",
-            text: "Mr",
-            count: 3
+            text: "Mr"
+            //count: 3
           },
           {
             data: "Miss/Mrs",
-            text: "Miss/Mrs",
-            count: 2
+            text: "Miss/Mrs"
+            //count: 2
           }
         ]
       }
@@ -120,23 +120,23 @@ var flow = {
         data: [
           {
             data: "Mumbai",
-            text: "Mumbai",
-            count: 1
+            text: "Mumbai"
+            //count: 1
           },
           {
             data: "Kolkata",
-            text: "Kolkata",
-            count: 2
+            text: "Kolkata"
+            //count: 2
           },
           {
             data: "Delhi",
-            text: "Delhi",
-            count: 3
+            text: "Delhi"
+            //count: 3
           },
           {
             data: "Chennai",
-            text: "Chennai",
-            count: 4
+            text: "Chennai"
+            //count: 4
           }
         ],
         expectation: {
@@ -191,8 +191,8 @@ var flow = {
 };
 var totalclicks = {
   "Count me in!": 1,
-  Mr: 1,
-  "Miss/Mrs": 1,
+  Mr: 3,
+  "Miss/Mrs": 2,
   Mumbai: 0,
   Kolkata: 0,
   Delhi: 0,
