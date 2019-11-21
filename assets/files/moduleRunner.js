@@ -192,7 +192,7 @@ var flow = {
 var totalclicks = {
   "Count me in!": 1,
   Mr: 1,
-  "Miss/Mrs": 0,
+  "Miss/Mrs": 1,
   Mumbai: 0,
   Kolkata: 0,
   Delhi: 0,
@@ -581,7 +581,7 @@ function createUI(currentData) {
           }
         }
       }
-      console.log("sum===" + sum);
+      console.log("sum=" + sum);
       // console.log("button / QuickReply");
       display = `<div class="button-list">`;
       for (i in currentData.next.data) {
