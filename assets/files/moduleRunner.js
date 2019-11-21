@@ -324,9 +324,7 @@ $(document).ready(() => {
       console.log(i + ":" + totalclicks[i]);
     }
     localStorage.setItem("tempclick", JSON.stringify(totalclicks));
-    let getclick = JSON.parse(localStorage.getItem(tempclick));
-    console.log("temporary click");
-    console.log(getclick);
+    console.log(localStorage.getItem("tempcick"));
     if (type != "url") {
       // console.log("after button clicked count will be");
 
