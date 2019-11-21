@@ -323,9 +323,10 @@ $(document).ready(() => {
     for (let i in totalclicks) {
       console.log(i + ":" + totalclicks[i]);
     }
-    localStorage.setItem("tempclick", totalclicks);
+    localStorage.setItem("tempclick", JSON.stringify(totalclicks));
+    let getclick = JSON.parse(localStorage.getItem(tempclick));
     console.log("temporary click");
-    console.log(tempclick);
+    console.log(getclick);
     if (type != "url") {
       // console.log("after button clicked count will be");
 
@@ -908,7 +909,7 @@ function showLoader() {
   $(".confirm-button").attr("style", "display :none");
 }
 
-$("body").on("click", ".button", event => {
+/*$("body").on("click", ".button", event => {
   event.preventDefault();
 
   $.ajax({
@@ -919,4 +920,4 @@ $("body").on("click", ".button", event => {
       console.log(data);
     }
   });
-});
+});*/
