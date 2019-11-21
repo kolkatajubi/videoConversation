@@ -586,9 +586,9 @@ function createUI(currentData) {
       for (i in currentData.next.data) {
         if (!currentData.next.data[i].type) {
           count++;
-          console.log("count=" + count);
         }
       }
+      console.log("count=" + count);
 
       // console.log("button / QuickReply");
       display = `<div class="button-list">`;
