@@ -190,8 +190,8 @@ var flow = {
   ]
 };
 var totalclicks = {
-  "Count me in!": 0,
-  Mr: 0,
+  "Count me in!": 1,
+  Mr: 1,
   "Miss/Mrs": 0,
   Mumbai: 0,
   Kolkata: 0,
@@ -575,8 +575,13 @@ function createUI(currentData) {
       console.log("Switch case button .....");
       sum = 0;
       for (i in currentData.next.data) {
-        sum = sum + currentData.next.data[i].count;
+        for (j in totalclicks) {
+          if (currentData.next.data[i].data == j) {
+            sum = sum + totalclicks[j];
+          }
+        }
       }
+      console.log("sum===" + sum);
       // console.log("button / QuickReply");
       display = `<div class="button-list">`;
       for (i in currentData.next.data) {
@@ -587,7 +592,7 @@ function createUI(currentData) {
               currentData.next.data[i].data,
               currentData.next.data[i].text +
                 " " +
-                (currentData.next.data[i].count / sum) * 100 +
+                // (currentData.next.data[i].count / sum) * 100 +
                 "%",
               currentData.next.data[i].count
             );
