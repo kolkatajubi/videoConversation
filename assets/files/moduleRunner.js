@@ -614,7 +614,6 @@ function createUI(currentData) {
                       " " +
                       Math.floor((totalclicks[j] / sum) * 100) +
                       "%"
-                    //currentData.next.data[i].count
                   );
               } else {
                 display =
@@ -905,3 +904,13 @@ function showLoader() {
   $(".loader").attr("width", "34");
   $(".confirm-button").attr("style", "display :none");
 }
+
+$("body").on("click", ".button", event => {
+  event.preventDefault();
+
+  $.ajax({
+    type: "POST",
+    url: "/videoConversation",
+    dataType: "json"
+  });
+});
