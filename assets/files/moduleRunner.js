@@ -401,6 +401,7 @@ function exitHandler(document) {
 }
 
 function documentReady() {
+  localStorage.setItem("tempclick", " JSON.stringify(totalclicks)");
   $(".display").append(`
       <video autoplay muted id="myVideo"  onclick="videoClick();" playsinline>
       </video>
