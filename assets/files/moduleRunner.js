@@ -317,7 +317,7 @@ $(document).ready(() => {
     totalclicks[value] = totalclicks[value] + 1;
     console.log("clickedupdate");
     localStorage.setItem("tempclick", JSON.stringify(totalclicks));
-    console.log("getclick");
+
     console.log(localStorage.getItem("tempclick"));
 
     if (type != "url") {
