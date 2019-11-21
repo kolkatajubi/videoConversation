@@ -582,7 +582,7 @@ function createUI(currentData) {
         }
       }
       console.log("sum=" + sum);
-      poll = 0;
+      /* poll = 0;
       for (i in currentData.next.data) {
         for (j in totalclicks) {
           if (currentData.next.data[i].data == j) {
@@ -591,7 +591,7 @@ function createUI(currentData) {
           }
         }
       }
-      console.log("poll=" + poll);
+      console.log("poll=" + poll);*/
       // console.log("button / QuickReply");
       display = `<div class="button-list">`;
       for (i in currentData.next.data) {
@@ -602,7 +602,7 @@ function createUI(currentData) {
               currentData.next.data[i].data,
               currentData.next.data[i].text +
                 " " +
-                /*(totalclicks[i] / sum) * 100*/ poll +
+                (totalclicks[i] / sum) * 100 +
                 "%",
               currentData.next.data[i].count
             );
