@@ -319,6 +319,10 @@ $(document).ready(() => {
     localStorage.setItem("tempclick", JSON.stringify(totalclicks));
     console.log("getclick");
     console.log(localStorage.getItem("tempclick"));
+    console.log("keys");
+    for (let key in localStorage) {
+      console.log(key);
+    }
 
     if (type != "url") {
       // console.log("after button clicked count will be");
