@@ -605,7 +605,7 @@ function createUI(currentData) {
         if (!currentData.next.data[i].type) {
           for (j in totalclicks) {
             if (currentData.next.data[i].data == j) {
-              if (count > 1) {
+              if (number_of_button_created_perStage_count > 1) {
                 display =
                   display +
                   createButton(
