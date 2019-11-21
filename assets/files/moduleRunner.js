@@ -322,10 +322,10 @@ $(document).ready(() => {
     }
     for (let i in totalclicks) {
       console.log(i + ":" + totalclicks[i]);
-      localStorage.setItem("tempclick", JSON.stringify(totalclicks));
-      console.log("getclick");
-      console.log(localStorage.getItem("tempcick"));
     }
+    localStorage.setItem("tempclick", JSON.stringify(totalclicks));
+    console.log("getclick");
+    console.log(localStorage.getItem("tempclick"));
 
     if (type != "url") {
       // console.log("after button clicked count will be");
