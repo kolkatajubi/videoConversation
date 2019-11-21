@@ -193,10 +193,10 @@ var totalclicks = {
   "Count me in!": 1,
   Mr: 3,
   "Miss/Mrs": 2,
-  Mumbai: 0,
-  Kolkata: 0,
-  Delhi: 0,
-  Chennai: 0
+  Mumbai: 1,
+  Kolkata: 2,
+  Delhi: 3,
+  Chennai: 4
 };
 
 var theme = {
