@@ -314,14 +314,7 @@ $(document).ready(() => {
     let value = button.firstElementChild.getAttribute("value");
     //console.log(count);
     console.log(value);
-
-    for (let i in totalclicks) {
-      if (value == i) {
-        console.log("after click a button");
-        totalclicks[value] = totalclicks[value] + 1;
-        console.log(totalclicks[value] + "totalclicks[value]");
-      }
-    }
+    totalclicks[value] = totalclicks[value] + 1;
 
     localStorage.setItem("tempclick", JSON.stringify(totalclicks));
     console.log("getclick");
