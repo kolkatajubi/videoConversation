@@ -605,16 +605,29 @@ function createUI(currentData) {
         if (!currentData.next.data[i].type) {
           for (j in totalclicks) {
             if (currentData.next.data[i].data == j) {
-              display =
-                display +
-                createButton(
-                  currentData.next.data[i].data,
-                  currentData.next.data[i].text +
-                    " " +
-                    (totalclicks[j] / sum) * 100 +
-                    "%"
-                  //currentData.next.data[i].count
-                );
+              if (count > 1) {
+                display =
+                  display +
+                  createButton(
+                    currentData.next.data[i].data,
+                    currentData.next.data[i].text +
+                      " " +
+                      (totalclicks[j] / sum) * 100 +
+                      "%"
+                    //currentData.next.data[i].count
+                  );
+              }else{
+                display =
+                  display +
+                  createButton(
+                    currentData.next.data[i].data,
+                    currentData.next.data[i].text +
+                      " " /*+
+                      (totalclicks[j] / sum) * 100 +
+                      "%"
+                    //currentData.next.data[i].count*/
+
+              }
             }
           }
         } else if (currentData.next.data[i].type === "url") {
