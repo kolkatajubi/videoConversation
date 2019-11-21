@@ -192,7 +192,7 @@ var flow = {
 var totalclicks = {
   "Count me in!": 1,
   Mr: 3,
-  "Miss/Mrs": 2,
+  "Miss/Mrs": 4,
   Mumbai: 1,
   Kolkata: 2,
   Delhi: 3,
