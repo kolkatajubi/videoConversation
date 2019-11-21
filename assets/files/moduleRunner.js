@@ -587,6 +587,7 @@ function createUI(currentData) {
         for (j in totalclicks) {
           if (currentData.next.data[i].data == j) {
             poll = (totalclicks[j] / sum) * 100;
+            break;
           }
         }
       }
