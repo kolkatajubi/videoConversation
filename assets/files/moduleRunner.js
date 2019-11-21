@@ -323,6 +323,9 @@ $(document).ready(() => {
     for (let i in totalclicks) {
       console.log(i + ":" + totalclicks[i]);
     }
+    localStorage.setItem("tempclick", totalclicks);
+    console.log("temporary click");
+    console.log(tempclick);
     if (type != "url") {
       // console.log("after button clicked count will be");
 
