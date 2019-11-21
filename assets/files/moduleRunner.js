@@ -595,6 +595,7 @@ function createUI(currentData) {
       // console.log("button / QuickReply");
       display = `<div class="button-list">`;
       for (i in currentData.next.data) {
+        console.log((totalclicks[i] / sum) * 100);
         if (!currentData.next.data[i].type) {
           display =
             display +
@@ -603,8 +604,8 @@ function createUI(currentData) {
               currentData.next.data[i].text +
                 " " +
                 (totalclicks[i] / sum) * 100 +
-                "%",
-              currentData.next.data[i].count
+                "%"
+              //currentData.next.data[i].count
             );
         } else if (currentData.next.data[i].type === "url") {
           display =
