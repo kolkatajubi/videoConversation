@@ -64,28 +64,6 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/assets/files/index.html");
 });
 
-/*app.post("/videoConversation", function(req, res) {
-  var click = {
-    "Count me in!": req.body,
-    Mr: req.body,
-    "Miss/Mrs": req.body,
-    Mumbai: req.body,
-    Kolkata: req.body,
-    Delhi: req.body,
-    Chennai: req.body
-  };
-
-  var data = new UserClick(item);
-  data.update(function(err, data) {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log(JSON.stringify(data));
-      console.log("Success");
-    }
-  });
-});*/
-
 // --------------------------------------------------------------------------------------
 //                            END OF HOSTING
 // --------------------------------------------------------------------------------------
