@@ -190,7 +190,7 @@ var flow = {
   ]
 };
 var totalclicks = {
-  "Count me in!": 2,
+  "Count me in!": 1,
   Mr: 3,
   "Miss/Mrs": 4,
   Mumbai: 1,
@@ -314,10 +314,17 @@ $(document).ready(() => {
     let value = button.firstElementChild.getAttribute("value");
     //console.log(count);
     console.log(value);
-    totalclicks[value] = totalclicks[value] + 1;
-    console.log("clickedupdate");
-    localStorage.setItem("tempclick", JSON.stringify(totalclicks));
 
+    for (let i in totalclicks) {
+      if (value == i) {
+        console.log("after click a button");
+        totalclicks[value] = totalclicks[value] + 1;
+        console.log(totalclicks[value] + "totalclicks[value]");
+      }
+    }
+
+    localStorage.setItem("tempclick", JSON.stringify(totalclicks));
+    console.log("getclick");
     console.log(localStorage.getItem("tempclick"));
 
     if (type != "url") {
