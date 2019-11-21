@@ -596,7 +596,7 @@ function createUI(currentData) {
       display = `<div class="button-list">`;
       for (i in currentData.next.data) {
         for (j in totalclicks) {
-          console.log(totalclicks[i]);
+          console.log(totalclicks[j]);
           //console.log(sum);
 
           if (
@@ -609,7 +609,7 @@ function createUI(currentData) {
                 currentData.next.data[i].data,
                 currentData.next.data[i].text +
                   " " +
-                  (totalclicks[i] / sum) * 100 +
+                  (totalclicks[j] / sum) * 100 +
                   "%"
                 //currentData.next.data[i].count
               );
