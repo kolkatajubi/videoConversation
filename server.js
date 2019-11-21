@@ -5,7 +5,7 @@ const app = express();
 var cors = require("cors");
 const path = require("path");
 const bodyparser = require("body-parser");
-/*var mongoose = require("mongoose");
+var mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost:27017/click");
 var Schema = mongoose.Schema;
 
@@ -19,9 +19,9 @@ var Schema = mongoose.Schema;
   Chennai: Number
 })),
   (UserClick = mongoose.model("click", userSchema));
-module.exports = UserClick;*/
-var arr = {};
-console.log("array==" + arr);
+module.exports = UserClick;
+/*var arr = {};
+console.log("array==" + arr);*/
 app.use("/static", express.static(path.join(__dirname, "assets")));
 // app.use(express.static(__dirname + "/css"));
 // app.use(express.static(__dirname + "/videos"));
