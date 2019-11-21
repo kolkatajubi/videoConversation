@@ -582,6 +582,13 @@ function createUI(currentData) {
         }
       }
       console.log("sum=" + sum);
+      count = 0;
+      for (i in currentData.next.data) {
+        if (!currentData.next.data[i].type) {
+          count++;
+          console.log("count=" + count);
+        }
+      }
 
       // console.log("button / QuickReply");
       display = `<div class="button-list">`;
@@ -589,11 +596,11 @@ function createUI(currentData) {
         //for (j in totalclicks) {
         // console.log(totalclicks[j]);
         //console.log(sum);
-        count = 0;
+        /*count = 0;
         if (!currentData.next.data[i].type) {
           count++;
           console.log("count=" + count);
-        }
+        }*/
 
         if (!currentData.next.data[i].type) {
           for (j in totalclicks) {
