@@ -20,6 +20,8 @@ var Schema = mongoose.Schema;
 })),
   (UserClick = mongoose.model("click", userSchema));
 module.exports = UserClick;*/
+var arr = [];
+console.log(arr);
 app.use("/static", express.static(path.join(__dirname, "assets")));
 // app.use(express.static(__dirname + "/css"));
 // app.use(express.static(__dirname + "/videos"));
