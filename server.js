@@ -20,7 +20,7 @@ var Schema = mongoose.Schema;
 })),
   (UserClick = mongoose.model("click", userSchema));
 module.exports = UserClick;*/
-var arr = [];
+var arr = {};
 console.log("array==" + arr);
 app.use("/static", express.static(path.join(__dirname, "assets")));
 // app.use(express.static(__dirname + "/css"));
