@@ -582,54 +582,46 @@ function createUI(currentData) {
         }
       }
       console.log("sum=" + sum);
-      /* poll = 0;
-      for (i in currentData.next.data) {
-        for (j in totalclicks) {
-          if (currentData.next.data[i].data == j) {
-            poll = (totalclicks[j] / sum) * 100;
-            break;
-          }
-        }
-      }
-      console.log("poll=" + poll);*/
+
       // console.log("button / QuickReply");
       display = `<div class="button-list">`;
       for (i in currentData.next.data) {
-        for (j in totalclicks) {
-          console.log(totalclicks[j]);
-          //console.log(sum);
+        //for (j in totalclicks) {
+        // console.log(totalclicks[j]);
+        //console.log(sum);
 
-          if (
-            !currentData.next.data[i].type &&
-            currentData.next.data[i].data == j
-          ) {
-            display =
-              display +
-              createButton(
-                currentData.next.data[i].data,
-                currentData.next.data[i].text +
-                  " " +
-                  (totalclicks[j] / sum) * 100 +
-                  "%"
-                //currentData.next.data[i].count
-              );
-          } else if (currentData.next.data[i].type === "url") {
-            display =
-              display +
-              createButtonURL(
-                currentData.next.data[i].data,
-                currentData.next.data[i].text
-              );
-          } else if (currentData.next.data[i].type === "webView") {
-            display =
-              display +
-              createButtonWebView(
-                currentData.next.data[i].data,
-                currentData.next.data[i].text
-              );
+        if (!currentData.next.data[i].type) {
+          for (j in totalclicks) {
+            if (currentData.next.data[i].data == j) {
+              display =
+                display +
+                createButton(
+                  currentData.next.data[i].data,
+                  currentData.next.data[i].text +
+                    " " +
+                    (totalclicks[j] / sum) * 100 +
+                    "%"
+                  //currentData.next.data[i].count
+                );
+            }
           }
+        } else if (currentData.next.data[i].type === "url") {
+          display =
+            display +
+            createButtonURL(
+              currentData.next.data[i].data,
+              currentData.next.data[i].text
+            );
+        } else if (currentData.next.data[i].type === "webView") {
+          display =
+            display +
+            createButtonWebView(
+              currentData.next.data[i].data,
+              currentData.next.data[i].text
+            );
         }
       }
+
       display = display + `</div>`;
       // console.log(display);
       break;
