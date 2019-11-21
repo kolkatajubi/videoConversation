@@ -592,7 +592,7 @@ function createUI(currentData) {
               currentData.next.data[i].data,
               currentData.next.data[i].text +
                 " " +
-                // (currentData.next.data[i].count / sum) * 100 +
+                (totalclicks[i] / sum) * 100 +
                 "%",
               currentData.next.data[i].count
             );
