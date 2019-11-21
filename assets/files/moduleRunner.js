@@ -596,6 +596,7 @@ function createUI(currentData) {
       display = `<div class="button-list">`;
       for (i in currentData.next.data) {
         console.log(totalclicks[i]);
+        console.log(sum);
         if (!currentData.next.data[i].type) {
           display =
             display +
