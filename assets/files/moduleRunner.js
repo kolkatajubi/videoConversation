@@ -595,7 +595,7 @@ function createUI(currentData) {
       // console.log("button / QuickReply");
       display = `<div class="button-list">`;
       for (i in currentData.next.data) {
-        console.log((totalclicks[i] / sum) * 100);
+        console.log(totalclicks[i]);
         if (!currentData.next.data[i].type) {
           display =
             display +
