@@ -592,8 +592,8 @@ function createUI(currentData) {
         count = 0;
         if (!currentData.next.data[i].type) {
           count++;
+          console.log("count=" + count);
         }
-        console.log("count=" + count);
 
         if (!currentData.next.data[i].type) {
           for (j in totalclicks) {
