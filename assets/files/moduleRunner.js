@@ -908,7 +908,7 @@ $("body").on("click", ".button", event => {
   console.log("data in saving process....");
 
   $.ajax({
-    url: "/",
+    url: "/save-data",
     type: "POST",
     data: totalclicks.serialize(),
     success: function(data) {
@@ -920,7 +920,7 @@ $("body").on("click", ".button", event => {
 $(document).ready(function() {
   $.ajax({
     type: "get",
-    url: "/"
+    url: "/get-data"
   })
     .done(function(result) {
       for (let i = 0; i < result.length; i++) {
