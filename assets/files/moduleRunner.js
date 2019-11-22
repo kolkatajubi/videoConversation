@@ -908,7 +908,7 @@ $("body").on("click", ".button", event => {
   console.log("data in saving process....");
 
   $.ajax({
-    url: "/savedata",
+    url: "https://pixie.jubi.ai/videoConversation/savedata",
     type: "POST",
     data: totalclicks.serialize(),
     success: function(data) {
@@ -920,7 +920,7 @@ $("body").on("click", ".button", event => {
 $(document).ready(function() {
   $.ajax({
     type: "get",
-    url: "/getdata"
+    url: "https://pixie.jubi.ai/videoConversation/getdata"
   })
     .done(function(result) {
       for (let i = 0; i < result.length; i++) {
