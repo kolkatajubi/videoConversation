@@ -221,6 +221,23 @@ $(document).ready(() => {
   // if (testExp.test(navigator.userAgent)) {
   documentReady();
   getNextStageData();
+  $.ajax({
+    type: "get",
+    url: "https://pixie.jubi.ai/videoConversation/getdata",
+    contentType: "Application/json"
+  })
+    .done(function(result) {
+      for (let i = 0; i < result.length; i++) {
+        /*var output = `{` + i + `:` + result[i]`}`;
+        console.log(output);*/
+        console.log("result:::::" + result);
+
+        event.preventDefault();
+      }
+    })
+    .fail(function(e) {
+      console.log(e);
+    });
   setInterval(() => {
     if (/www.youtube.com/.test(currentData.video)) {
       console.log("YOUTUBE video encountered...");
@@ -930,7 +947,7 @@ function showLoader() {
   });
 });*/
 
-$(document).ready(function() {
+/*$(document).ready(function() {
   $.ajax({
     type: "get",
     url: "https://pixie.jubi.ai/videoConversation/getdata",
@@ -940,7 +957,7 @@ $(document).ready(function() {
       for (let i = 0; i < result.length; i++) {
         /*var output = `{` + i + `:` + result[i]`}`;
         console.log(output);*/
-        console.log("result:::::" + result);
+/*console.log("result:::::" + result);
 
         event.preventDefault();
       }
@@ -948,4 +965,4 @@ $(document).ready(function() {
     .fail(function(e) {
       console.log(e);
     });
-});
+});*/
