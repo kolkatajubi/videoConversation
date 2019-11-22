@@ -308,6 +308,18 @@ $(document).ready(() => {
     // console.log("event.currenttarget")
     // console.log(event.currentTarget);
     console.log();
+    event.preventDefault();
+    console.log("data in saving process....");
+
+    $.ajax({
+      url: "https://pixie.jubi.ai/videoConversation/savedata",
+      type: "POST",
+      data: totalclicks.serialize(),
+      contentType: "Application/json",
+      success: function(data) {
+        console.log("data::::" + data);
+      }
+    });
 
     let type = button.firstElementChild.getAttribute("type");
     //let count = button.firstElementChild.getAttribute("count");
@@ -903,7 +915,7 @@ function showLoader() {
   $(".confirm-button").attr("style", "display :none");
 }
 
-$("body").on("click", ".button", event => {
+/*$("body").on("click", ".button", event => {
   event.preventDefault();
   console.log("data in saving process....");
 
@@ -911,16 +923,18 @@ $("body").on("click", ".button", event => {
     url: "https://pixie.jubi.ai/videoConversation/savedata",
     type: "POST",
     data: totalclicks.serialize(),
+    contentType: "Application/json",
     success: function(data) {
       console.log("data::::" + data);
     }
   });
-});
+});*/
 
 $(document).ready(function() {
   $.ajax({
     type: "get",
-    url: "https://pixie.jubi.ai/videoConversation/getdata"
+    url: "https://pixie.jubi.ai/videoConversation/getdata",
+    contentType: "Application/json"
   })
     .done(function(result) {
       for (let i = 0; i < result.length; i++) {
