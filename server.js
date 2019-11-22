@@ -68,7 +68,7 @@ app.get("/", (req, res) => {
 // --------------------------------------------------------------------------------------
 
 var item = {};
-app.post("/save-data", function(req, res) {
+app.post("/videoConversation/save-data", function(req, res) {
   item = {
     "Count me in!": req.body.button,
     Mr: req.body.button,
@@ -90,7 +90,7 @@ app.post("/save-data", function(req, res) {
   });*/
 });
 
-app.get("/get-data", function(req, res) {
+app.get("/videoConversation/get-data", function(req, res) {
   /*UserClick.find({})
     .then(function(result) {
       console.log("result" + result);
