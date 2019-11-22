@@ -101,11 +101,10 @@ app.get("/getdata", function(req, res) {
   UserClick.find({})
     .then(function(result) {
       console.log("result" + result);
-      res.json(result);
+      return res.json(result);
     })
     .catch(e => {
       console.log(e);
       res.send(e);
     });
-  res.send(item);
 });
