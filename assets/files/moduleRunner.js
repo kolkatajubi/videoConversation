@@ -926,7 +926,7 @@ $(document).ready(function() {
       for (let i = 0; i < result.length; i++) {
         /*var output = `{` + i + `:` + result[i]`}`;
         console.log(output);*/
-        console.log(result);
+        console.log("result:::::" + result);
 
         event.preventDefault();
       }

@@ -67,7 +67,7 @@ app.get("/", (req, res) => {
 //                            END OF HOSTING
 // --------------------------------------------------------------------------------------
 
-var item;
+var item = {};
 app.post("/save-data", function(req, res) {
   item = {
     "Count me in!": req.body.button,
