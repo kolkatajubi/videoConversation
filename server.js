@@ -68,7 +68,8 @@ app.get("/", (req, res) => {
 // --------------------------------------------------------------------------------------
 
 var item = {};
-app.post("/videoConversation/save-data", function(req, res) {
+app.post("/savedata", function(req, res) {
+  console.log("request receive");
   item = {
     "Count me in!": req.body,
     Mr: req.body,
@@ -90,7 +91,8 @@ app.post("/videoConversation/save-data", function(req, res) {
   });*/
 });
 
-app.get("/videoConversation/get-data", function(req, res) {
+app.get("/getdata", function(req, res) {
+  console.log("get recieve");
   /*UserClick.find({})
     .then(function(result) {
       console.log("result" + result);
