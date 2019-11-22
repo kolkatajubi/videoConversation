@@ -6,7 +6,7 @@ var cors = require("cors");
 const path = require("path");
 const bodyparser = require("body-parser");
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/click");
+mongoose.connect("mongodb://localhost:27017/clicks");
 var Schema = mongoose.Schema;
 
 (buttonSchema = new Schema({
@@ -18,7 +18,7 @@ var Schema = mongoose.Schema;
   Delhi: Number,
   Chennai: Number
 })),
-  (UserClick = mongoose.model("click", userSchema));
+  (UserClick = mongoose.model("clicks", buttonSchema));
 module.exports = UserClick;
 
 app.use("/static", express.static(path.join(__dirname, "assets")));
@@ -68,13 +68,13 @@ app.get("/", (req, res) => {
 // --------------------------------------------------------------------------------------
 app.post("/videoConversation", function(req, res) {
   var item = {
-    "Count me in!": req.body,
-    Mr: req.body,
-    "Miss/Mrs": req.body,
-    Mumbai: req.body,
-    Kolkata: req.body,
-    Delhi: req.body,
-    Chennai: req.body
+    "Count me in!": req.body.button,
+    Mr: req.body.button,
+    "Miss/Mrs": req.body.button,
+    Mumbai: req.body.button,
+    Kolkata: req.body.button,
+    Delhi: req.body.button,
+    Chennai: req.body.button
   };
 
   var data = new UserClick(item);
