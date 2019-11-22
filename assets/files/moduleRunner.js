@@ -912,7 +912,7 @@ $("body").on("click", ".button", event => {
     type: "POST",
     data: totalclicks.serialize(),
     success: function(data) {
-      console.log(data);
+      console.log("data::::" + data);
     }
   });
 });
