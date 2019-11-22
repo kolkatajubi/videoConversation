@@ -905,6 +905,7 @@ function showLoader() {
 
 $("body").on("click", ".button", event => {
   event.preventDefault();
+  console.log("data in saving process....");
 
   $.ajax({
     url: "/videoConversation",
