@@ -5,8 +5,8 @@ const app = express();
 var cors = require("cors");
 const path = require("path");
 const bodyparser = require("body-parser");
-/*var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/clicks");
+var mongoose = require("mongoose");
+
 var Schema = mongoose.Schema;
 
 (buttonSchema = new Schema({
@@ -19,7 +19,7 @@ var Schema = mongoose.Schema;
   Chennai: Number
 })),
   (UserClick = mongoose.model("clicks", buttonSchema));
-module.exports = UserClick;*/
+module.exports = UserClick;
 
 app.use("/static", express.static(path.join(__dirname, "assets")));
 // app.use(express.static(__dirname + "/css"));
@@ -54,6 +54,11 @@ app.get("/base64", (req, res) => {
   });
 });
 
+mongoose.connect("mongodb://localhost:27017/clicks", err => {
+  if (err) console.log(err);
+  console.log("connected");
+});
+
 // ============================================================================= //
 
 // --------------------------------------------------------------------------------------
@@ -80,7 +85,7 @@ app.post("/savedata", function(req, res) {
     Chennai: req.body
   };
 
-  /*var data = new UserClick(item);
+  var data = new UserClick(item);
   data.save(function(err, data) {
     if (err) {
       console.log(err);
@@ -88,12 +93,12 @@ app.post("/savedata", function(req, res) {
       console.log(JSON.stringify(data));
       console.log("Success");
     }
-  });*/
+  });
 });
 
 app.get("/getdata", function(req, res) {
   console.log("get recieve");
-  /*UserClick.find({})
+  UserClick.find({})
     .then(function(result) {
       console.log("result" + result);
       res.json(result);
@@ -101,6 +106,6 @@ app.get("/getdata", function(req, res) {
     .catch(e => {
       console.log(e);
       res.send(e);
-    });*/
+    });
   res.send(item);
 });
