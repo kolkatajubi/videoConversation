@@ -319,10 +319,6 @@ $(document).ready(() => {
     localStorage.setItem("tempclick", JSON.stringify(totalclicks));
     console.log("getclick");
     console.log(localStorage.getItem("tempclick"));
-    console.log("keys");
-    for (let key in tempclick) {
-      console.log(key);
-    }
 
     if (type != "url") {
       // console.log("after button clicked count will be");
@@ -907,15 +903,34 @@ function showLoader() {
   $(".confirm-button").attr("style", "display :none");
 }
 
-/*$("body").on("click", ".button", event => {
+$("body").on("click", ".button", event => {
   event.preventDefault();
 
   $.ajax({
-    url: "server.js",
+    url: "/videoConversation",
     type: "POST",
     data: totalclicks.serialize(),
     success: function(data) {
       console.log(data);
     }
   });
-});*/
+});
+
+$(document).ready(function() {
+  $.ajax({
+    type: "get",
+    url: "/videoConversation"
+  })
+    .done(function(result) {
+      for (let i = 0; i < result.length; i++) {
+        /*var output = `{` + i + `:` + result[i]`}`;
+        console.log(output);*/
+        console.log(result);
+
+        event.preventDefault();
+      }
+    })
+    .fail(function(e) {
+      console.log(e);
+    });
+});

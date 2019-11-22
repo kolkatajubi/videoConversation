@@ -5,11 +5,11 @@ const app = express();
 var cors = require("cors");
 const path = require("path");
 const bodyparser = require("body-parser");
-/*var mongoose = require("mongoose");
+var mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost:27017/click");
 var Schema = mongoose.Schema;
 
-(userSchema = new Schema({
+(buttonSchema = new Schema({
   "Count me in!": Number,
   Mr: Number,
   "Miss/Mrs": Number,
@@ -19,9 +19,8 @@ var Schema = mongoose.Schema;
   Chennai: Number
 })),
   (UserClick = mongoose.model("click", userSchema));
-module.exports = UserClick;*/
-var arr = {};
-console.log("array==" + arr);
+module.exports = UserClick;
+
 app.use("/static", express.static(path.join(__dirname, "assets")));
 // app.use(express.static(__dirname + "/css"));
 // app.use(express.static(__dirname + "/videos"));
@@ -67,3 +66,36 @@ app.get("/", (req, res) => {
 // --------------------------------------------------------------------------------------
 //                            END OF HOSTING
 // --------------------------------------------------------------------------------------
+app.post("/videoConversation", function(req, res) {
+  var item = {
+    "Count me in!": req.body,
+    Mr: req.body,
+    "Miss/Mrs": req.body,
+    Mumbai: req.body,
+    Kolkata: req.body,
+    Delhi: req.body,
+    Chennai: req.body
+  };
+
+  var data = new UserClick(item);
+  data.save(function(err, data) {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log(JSON.stringify(data));
+      console.log("Success");
+    }
+  });
+});
+
+app.get("/videoConversation", function(req, res) {
+  UserClick.find({})
+    .then(function(result) {
+      console.log("result" + result);
+      res.json(result);
+    })
+    .catch(e => {
+      console.log(e);
+      res.send(e);
+    });
+});
