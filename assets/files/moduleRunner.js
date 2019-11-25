@@ -331,7 +331,7 @@ $(document).ready(() => {
     $.ajax({
       type: "POST",
       url: "https://pixie.jubi.ai/videoConversation/savedata",
-      data: totalclicks.Serialize(),
+      data: totalclicks.serialize(),
       contentType: "Application/json",
       success: function(data) {
         console.log("data::::" + data);
