@@ -100,7 +100,7 @@ app.get("/getdata", function(req, res) {
   console.log("get recieve");
   UserClick.find({})
     .then(function(result) {
-      console.log("result" + result);
+      console.log("result::" + result);
       return res.json(result);
     })
     .catch(e => {
