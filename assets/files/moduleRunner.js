@@ -219,24 +219,7 @@ restructureData();
 $(document).ready(() => {
   // let testExp = new RegExp("Android|" + "BlackBerry|" + "IEMobile|Mobile", "i");
   // if (testExp.test(navigator.userAgent)) {
-  $.ajax({
-    type: "get",
-    url: "https://pixie.jubi.ai/videoConversation/getdata",
-    contentType: "Application/json"
-  })
-    .done(function(result) {
-      for (let i = 0; i < result.length; i++) {
-        /*var output = `{` + i + `:` + result[i]`}`;
-          console.log(output);*/
-        totalclicks[i] = result[i];
-        console.log("result:::::" + totalclicks);
 
-        event.preventDefault();
-      }
-    })
-    .fail(function(e) {
-      console.log(e);
-    });
   documentReady();
   getNextStageData();
   /*$.ajax({
@@ -443,6 +426,24 @@ function exitHandler(document) {
 
 function documentReady() {
   // localStorage.setItem("tempclick", " JSON.stringify(totalclicks)");
+  $.ajax({
+    type: "get",
+    url: "https://pixie.jubi.ai/videoConversation/getdata",
+    contentType: "Application/json"
+  })
+    .done(function(result) {
+      for (let i = 0; i < result.length; i++) {
+        /*var output = `{` + i + `:` + result[i]`}`;
+          console.log(output);*/
+        totalclicks[i] = result[i];
+        console.log("result:::::" + totalclicks);
+
+        event.preventDefault();
+      }
+    })
+    .fail(function(e) {
+      console.log(e);
+    });
   $(".display").append(`
       <video autoplay muted id="myVideo"  onclick="videoClick();" playsinline>
       </video>
