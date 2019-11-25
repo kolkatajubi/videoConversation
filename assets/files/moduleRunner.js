@@ -329,8 +329,8 @@ $(document).ready(() => {
     console.log("data in saving process....");
 
     $.ajax({
-      url: "https://pixie.jubi.ai/videoConversation/savedata",
       type: "POST",
+      url: "https://pixie.jubi.ai/videoConversation/savedata",
       data: totalclicks,
       contentType: "Application/json",
       success: function(data) {
