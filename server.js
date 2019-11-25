@@ -104,6 +104,7 @@ app.post("/savedata", function(req, res) {
 app.get("/getdata", function(req, res) {
   console.log("get recieve");
   UserClick.findOne({})
+    .sort({ _id: -1 })
     .then(function(result) {
       console.log("result::" + result);
       return res.json(result);
