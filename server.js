@@ -54,7 +54,7 @@ app.get("/base64", (req, res) => {
   });
 });
 
-mongoose.connect("mongodb://localhost:27017/clicks", err => {
+mongoose.connect("mongodb://localhost:27017/clicks", { useMongoClient: true }, err => {
   if (err) console.log(err);
   console.log("connected");
 });
