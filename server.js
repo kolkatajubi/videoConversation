@@ -18,7 +18,7 @@ var Schema = mongoose.Schema;
   Delhi: Number,
   Chennai: Number
 })),
-  (UserClick = mongoose.model("totalclicks", buttonSchema));
+  (UserClick = mongoose.model("clicks", buttonSchema));
 module.exports = UserClick;
 
 app.use("/static", express.static(path.join(__dirname, "assets")));
@@ -54,7 +54,7 @@ app.get("/base64", (req, res) => {
   });
 });
 
-mongoose.connect("mongodb://localhost:27017/totalclicks", err => {
+mongoose.connect("mongodb://localhost:27017/clicks", err => {
   if (err) console.log(err);
   console.log("connected");
 });
