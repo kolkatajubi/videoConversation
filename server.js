@@ -89,6 +89,7 @@ app.post("/savedata", function(req, res) {
   data.save(function(err, data) {
     if (err) {
       console.log(err);
+      console.log("error while saving data");
     } else {
       console.log(JSON.stringify(data));
       console.log("Success");
