@@ -86,7 +86,7 @@ app.post("/savedata", function(req, res) {
   };
 
   var data = new UserClick(item);
-  data.save(function(err, data) {
+  data.update(function(err, data) {
     if (err) {
       console.log(err);
     } else {
