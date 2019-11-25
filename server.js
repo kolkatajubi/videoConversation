@@ -107,7 +107,7 @@ app.get("/getdata", function(req, res) {
     .sort({ _id: -1 })
     .then(function(result) {
       console.log("result::" + result);
-      return res.json(result);
+      return res.send(result);
     })
     .catch(e => {
       console.log(e);
