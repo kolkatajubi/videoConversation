@@ -103,7 +103,7 @@ app.post("/savedata", function(req, res) {
 
 app.get("/getdata", function(req, res) {
   console.log("get recieve");
-  UserClick.find({})
+  UserClick.findOne({})
     .then(function(result) {
       console.log("result::" + result);
       return res.json(result);
