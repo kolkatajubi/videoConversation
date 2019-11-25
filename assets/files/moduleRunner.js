@@ -228,8 +228,8 @@ $(document).ready(() => {
       for (let i = 0; i < result.length; i++) {
         /*var output = `{` + i + `:` + result[i]`}`;
           console.log(output);*/
-        //totalclicks[i] = result[i];
-        console.log("result:::::" + result);
+        totalclicks[i] = result[i];
+        console.log("result:::::" + totalclicks);
 
         event.preventDefault();
       }
@@ -357,8 +357,7 @@ $(document).ready(() => {
     $.ajax({
       type: "POST",
       url: "https://pixie.jubi.ai/videoConversation/savedata",
-      //data: JSON.stringify(totalclicks),
-      data: result,
+      data: JSON.stringify(totalclicks),
       contentType: "Application/json",
       success: function(data) {
         console.log("data::::" + data);
