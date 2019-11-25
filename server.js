@@ -80,13 +80,13 @@ var item = {};
 app.post("/savedata", function(req, res) {
   console.log("request receive");
   item = {
-    "Count me in!": req.body,
-    Mr: req.body,
-    "Miss/Mrs": req.body,
-    Mumbai: req.body,
-    Kolkata: req.body,
-    Delhi: req.body,
-    Chennai: req.body
+    "Count_me_in!": req.body.countmein,
+    Mr: req.body.Mr,
+    "Miss/Mrs": req.body.Miss / Mrs,
+    Mumbai: req.body.Mumbai,
+    Kolkata: req.body.Kolkata,
+    Delhi: req.body.Delhi,
+    Chennai: req.body.Chenai
   };
 
   var data = new UserClick(item);
