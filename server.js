@@ -76,13 +76,13 @@ var item = {};
 app.post("/savedata", function(req, res) {
   console.log("request receive");
   item = {
-    "Count me in!": req.body,
-    Mr: req.body,
-    "Miss/Mrs": req.body,
-    Mumbai: req.body,
-    Kolkata: req.body,
-    Delhi: req.body,
-    Chennai: req.body
+    "Count me in!": req.body.button,
+    Mr: req.body.button,
+    "Miss/Mrs": req.body.button,
+    Mumbai: req.body.button,
+    Kolkata: req.body.button,
+    Delhi: req.body.button,
+    Chennai: req.body.button
   };
 
   var data = new UserClick(item);
@@ -105,6 +105,6 @@ app.get("/getdata", function(req, res) {
     })
     .catch(e => {
       console.log(e);
-      res.send(e);
+      return res.send(e);
     });
 });
