@@ -433,6 +433,7 @@ function documentReady() {
     contentType: "Application/json"
   })
     .done(function(result) {
+      console.log("result receive.........");
       for (let i = 0; i < result.length; i++) {
         /*var output = `{` + i + `:` + result[i]`}`;
           console.log(output);*/
