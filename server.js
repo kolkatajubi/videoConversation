@@ -76,7 +76,7 @@ var item = {};
 app.post("/savedata", function(req, res) {
   console.log("request receive");
   item = {
-    "Count me in!": req.body.button,
+    "Aount me in!": req.body.button,
     Mr: req.body.button,
     "Miss/Mrs": req.body.button,
     Mumbai: req.body.button,
