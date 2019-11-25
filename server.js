@@ -90,7 +90,7 @@ app.post("/savedata", function(req, res) {
   };
 
   var data = new UserClick(item);
-  data.updateOne(function(err, data) {
+  data.updateMany(function(err, data) {
     if (err) {
       console.log(err);
       console.log("error while saving data");
