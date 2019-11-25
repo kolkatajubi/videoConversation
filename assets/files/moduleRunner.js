@@ -442,6 +442,7 @@ function documentReady() {
 
         event.preventDefault();
       }
+      console.log("result end.........");
     })
     .fail(function(e) {
       console.log(e);
