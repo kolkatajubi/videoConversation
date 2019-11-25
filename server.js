@@ -56,7 +56,7 @@ app.get("/base64", (req, res) => {
 
 mongoose.connect("mongodb://localhost:27017/clicks", err => {
   if (err) console.log(err);
-  console.log("connected....");
+  console.log("database connected....");
 });
 
 // ============================================================================= //
