@@ -10,9 +10,9 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 (buttonSchema = new Schema({
-  Countmein: Number,
+  "Count me in!": Number,
   Mr: Number,
-  Miss: Number,
+  "Miss/Mrs": Number,
   Mumbai: Number,
   Kolkata: Number,
   Delhi: Number,
@@ -80,13 +80,13 @@ var item = {};
 app.post("/savedata", function(req, res) {
   console.log("request receive");
   item = {
-    Countmein: req.body.countmein,
+    "Count me in!": req.body.countmein,
     Mr: req.body.Mr,
-    Miss: req.body.Miss,
+    "Miss/Mrs": req.body.Miss,
     Mumbai: req.body.Mumbai,
     Kolkata: req.body.Kolkata,
     Delhi: req.body.Delhi,
-    Chennai: req.body.Chenai
+    Chennai: req.body.Chennai
   };
 
   var data = new UserClick(item);
