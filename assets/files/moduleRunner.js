@@ -24,7 +24,7 @@ var flow = {
       next: {
         data: [
           {
-            data: "Countmein",
+            data: "Count_me_in",
             text: "Count me in!"
             //count: 1
           }
@@ -190,7 +190,7 @@ var flow = {
   ]
 };
 var totalclicks = {
-  Countmein: 1,
+  Count_me_in: 1,
   Mr: 3,
   Miss: 4,
   Mumbai: 1,

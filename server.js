@@ -10,7 +10,7 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 (buttonSchema = new Schema({
-  Countmein: Number,
+  Count_me_in: Number,
   Mr: Number,
   Miss: Number,
   Mumbai: Number,
@@ -80,7 +80,7 @@ var item = {};
 app.post("/savedata", function(req, res) {
   console.log("request receive");
   item = {
-    Countmein: req.body.Countmein,
+    Count_me_in: req.body.Count_me_in,
     Mr: req.body.Mr,
     Miss: req.body.Miss,
     Mumbai: req.body.Mumbai,
