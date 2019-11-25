@@ -219,6 +219,15 @@ restructureData();
 $(document).ready(() => {
   // let testExp = new RegExp("Android|" + "BlackBerry|" + "IEMobile|Mobile", "i");
   // if (testExp.test(navigator.userAgent)) {
+  var totalclicks = {
+    Countmein: 1,
+    Mr: 3,
+    Miss: 4,
+    Mumbai: 1,
+    Kolkata: 2,
+    Delhi: 3,
+    Chennai: 4
+  };
 
   documentReady();
   getNextStageData();
@@ -426,15 +435,7 @@ function exitHandler(document) {
 
 function documentReady() {
   // localStorage.setItem("tempclick", " JSON.stringify(totalclicks)");
-  var totalclicks = {
-    Countmein: 1,
-    Mr: 3,
-    Miss: 4,
-    Mumbai: 1,
-    Kolkata: 2,
-    Delhi: 3,
-    Chennai: 4
-  };
+
   $.ajax({
     type: "get",
     url: "https://pixie.jubi.ai/videoConversation/getdata",
