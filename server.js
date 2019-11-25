@@ -80,7 +80,7 @@ var item = {};
 app.post("/savedata", function(req, res) {
   console.log("request receive");
   item = {
-    Countmein: req.body.countmein,
+    Countmein: req.body.Countmein,
     Mr: req.body.Mr,
     Miss: req.body.Miss,
     Mumbai: req.body.Mumbai,
