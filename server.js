@@ -54,10 +54,14 @@ app.get("/base64", (req, res) => {
   });
 });
 
-mongoose.connect("mongodb://localhost:27017/clicks", err => {
-  if (err) console.log(err);
-  console.log("database connected....");
-});
+mongoose.connect(
+  "mongodb://localhost:27017/clicks",
+  { useNewUrlParser: true },
+  err => {
+    if (err) console.log(err);
+    console.log("database connected....");
+  }
+);
 
 // ============================================================================= //
 
