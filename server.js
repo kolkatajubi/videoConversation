@@ -82,7 +82,7 @@ app.post("/savedata", function(req, res) {
   item = {
     "Count_me_in!": req.body.countmein,
     Mr: req.body.Mr,
-    "Miss/Mrs": req.body.Miss / Mrs,
+    "Miss/Mrs": req.body.Miss,
     Mumbai: req.body.Mumbai,
     Kolkata: req.body.Kolkata,
     Delhi: req.body.Delhi,
