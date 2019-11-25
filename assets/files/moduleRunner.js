@@ -219,8 +219,6 @@ restructureData();
 $(document).ready(() => {
   // let testExp = new RegExp("Android|" + "BlackBerry|" + "IEMobile|Mobile", "i");
   // if (testExp.test(navigator.userAgent)) {
-  documentReady();
-  getNextStageData();
   $.ajax({
     type: "get",
     url: "https://pixie.jubi.ai/videoConversation/getdata",
@@ -229,7 +227,7 @@ $(document).ready(() => {
     .done(function(result) {
       for (let i = 0; i < result.length; i++) {
         /*var output = `{` + i + `:` + result[i]`}`;
-        console.log(output);*/
+          console.log(output);*/
         totalclicks[i] = result[i];
         console.log("result:::::" + totalclicks);
 
@@ -239,6 +237,26 @@ $(document).ready(() => {
     .fail(function(e) {
       console.log(e);
     });
+  documentReady();
+  getNextStageData();
+  /*$.ajax({
+    type: "get",
+    url: "https://pixie.jubi.ai/videoConversation/getdata",
+    contentType: "Application/json"
+  })
+    .done(function(result) {
+      for (let i = 0; i < result.length; i++) {
+        /*var output = `{` + i + `:` + result[i]`}`;
+        console.log(output);
+        totalclicks[i] = result[i];
+        console.log("result:::::" + totalclicks);
+
+        event.preventDefault();
+      }
+    })
+    .fail(function(e) {
+      console.log(e);
+    });*/
   setInterval(() => {
     if (/www.youtube.com/.test(currentData.video)) {
       console.log("YOUTUBE video encountered...");
