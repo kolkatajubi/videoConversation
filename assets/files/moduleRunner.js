@@ -435,8 +435,8 @@ function documentReady() {
     .done(function(result) {
       console.log("result receive.........");
       for (let i in result) {
-        //totalclicks[i] = result[i];
-        console.log(i + ":" + result[i]);
+        totalclicks[i] = result[i];
+        console.log(i + ":" + totalclicks[i]);
 
         event.preventDefault();
       }
