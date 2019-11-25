@@ -189,7 +189,7 @@ var flow = {
     }
   ]
 };
-/*var totalclicks = {
+var totalclicks = {
   Count_me_in: 1,
   Mr: 3,
   Miss: 4,
@@ -197,15 +197,6 @@ var flow = {
   Kolkata: 2,
   Delhi: 3,
   Chennai: 4
-};*/
-var totalclicks = {
-  Count_me_in: 0,
-  Mr: 0,
-  Miss: 0,
-  Mumbai: 0,
-  Kolkata: 0,
-  Delhi: 0,
-  Chennai: 0
 };
 
 var theme = {
