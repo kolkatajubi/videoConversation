@@ -326,6 +326,13 @@ $(document).ready(() => {
     // console.log(event.currentTarget);
     console.log();
     event.preventDefault();
+
+    let type = button.firstElementChild.getAttribute("type");
+    //let count = button.firstElementChild.getAttribute("count");
+    let value = button.firstElementChild.getAttribute("value");
+    //console.log(count);
+    console.log(value);
+    totalclicks[value] = totalclicks[value] + 1;
     console.log("data in saving process....");
 
     $.ajax({
@@ -337,13 +344,6 @@ $(document).ready(() => {
         console.log("data::::" + data);
       }
     });
-
-    let type = button.firstElementChild.getAttribute("type");
-    //let count = button.firstElementChild.getAttribute("count");
-    let value = button.firstElementChild.getAttribute("value");
-    //console.log(count);
-    console.log(value);
-    totalclicks[value] = totalclicks[value] + 1;
 
     localStorage.setItem("tempclick", JSON.stringify(totalclicks));
     console.log("getclick");
