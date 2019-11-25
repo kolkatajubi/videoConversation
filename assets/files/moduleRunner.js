@@ -437,7 +437,7 @@ function documentReady() {
         /*var output = `{` + i + `:` + result[i]`}`;
           console.log(output);*/
         totalclicks[i] = result[i];
-        console.log("result:::::" + totalclicks);
+        console.log("totalclicks:::::" + totalclicks);
 
         event.preventDefault();
       }
