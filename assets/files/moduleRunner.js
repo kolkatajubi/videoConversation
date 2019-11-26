@@ -385,7 +385,7 @@ $(document).ready(() => {
         }
       }
       console.log("count=" + number_of_button_created_perStage_count);
-      display = `<div class="button-list">`;
+      //display = `<div class="button-list">`;
       for (i in currentData.next.data) {
         if (!currentData.next.data[i].type) {
           for (j in totalclicks) {
@@ -411,7 +411,7 @@ $(document).ready(() => {
           }
         }
       }
-      display = display + `</div>`;
+      //display = display + `</div>`;
       //button.classList.toggle("active");
       //button.addEventListener("animationend", event => {
       //if (event.animationName == "Button") {
