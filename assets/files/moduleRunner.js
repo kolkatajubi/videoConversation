@@ -414,6 +414,7 @@ $(document).ready(() => {
                   //currentData.next.data[i].count*/
             }
             console.log(display);
+            document.getElementsByClassName("button-list").innerHTML = display;
           }
         }
         //}
@@ -428,7 +429,7 @@ $(document).ready(() => {
       //button.classList.add("remove");
       setTimeout(() => {
         getNextStageData();
-      }, 3000);
+      }, 6000);
       //getNextStageData();
       // console.log("nextStageCalled.....");
       //}
