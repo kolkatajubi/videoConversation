@@ -387,10 +387,10 @@ $(document).ready(() => {
       console.log("count=" + number_of_button_created_perStage_count);
       //display = `<div class="button-list">`;
       for (i in currentData.next.data) {
-        display = `<div class="button-list" id=` + i + `>`;
-        console.log(i);
         if (!currentData.next.data[i].type) {
           for (j in totalclicks) {
+            display = `<div class="button-list" id=` + i + `>`;
+            console.log("i:" + i);
             if (currentData.next.data[i].data == j) {
               if (number_of_button_created_perStage_count > 1 && sum > 0) {
                 console.log("button display");
