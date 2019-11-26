@@ -387,17 +387,21 @@ $(document).ready(() => {
       console.log("count=" + number_of_button_created_perStage_count);
       //display = `<div class="button-list">`;
       for (i in currentData.next.data) {
+        display = `<div class="button-list" id=` + i + `>`;
         if (!currentData.next.data[i].type) {
           for (j in totalclicks) {
             if (currentData.next.data[i].data == j) {
               if (number_of_button_created_perStage_count > 1 && sum > 0) {
                 console.log("button display");
-                display =
+                /* display =
                   display +
                   console.log(currentData.next.data[i].text) +
                   " " +
                   console.log(Math.floor((totalclicks[j] / sum) * 100)) +
-                  "%";
+                  "%";*/
+                document.getElementById(i).innerHTML = Math.floor(
+                  (totalclicks[j] / sum) * 100
+                );
               } else {
                 display =
                   display +
