@@ -397,9 +397,9 @@ $(document).ready(() => {
                   " " +
                   console.log(Math.floor((totalclicks[j] / sum) * 100)) +
                   "%";*/
-                document.getElementsById("btn").innerHTML = Math.floor(
-                  (totalclicks[j] / sum) * 100
-                );
+                document.getElementsByClassName(
+                  "button-list"
+                ).innerHTML = Math.floor((totalclicks[j] / sum) * 100);
               } else {
                 display =
                   display +
