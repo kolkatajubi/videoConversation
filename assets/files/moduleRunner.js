@@ -392,7 +392,11 @@ $(document).ready(() => {
         for (j in totalclicks) {
           console.log("j:" + j);
           if (currentData.next.data[i].data == j) {
-            if (number_of_button_created_perStage_count > 1 && sum > 0) {
+            if (
+              number_of_button_created_perStage_count > 1 &&
+              sum > 0 &&
+              i == j
+            ) {
               console.log("button display");
 
               $(".button-text").append(
