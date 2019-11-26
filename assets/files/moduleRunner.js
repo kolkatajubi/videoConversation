@@ -388,7 +388,9 @@ $(document).ready(() => {
       display = `<div class="button-list">`;
       for (i in currentData.next.data) {
         //if (!currentData.next.data[i].type) {
+        console.log("i:" + currentData.next.data[i].data);
         for (j in totalclicks) {
+          console.log("j:" + j);
           if (currentData.next.data[i].data == j) {
             if (number_of_button_created_perStage_count > 1 && sum > 0) {
               console.log("button display");
