@@ -395,7 +395,7 @@ $(document).ready(() => {
                   display +
                   currentData.next.data[i].text +
                   " " +
-                  Math.floor((totalclicks[j] / sum) * 100) +
+                  console.log(Math.floor((totalclicks[j] / sum) * 100)) +
                   "%";
               } else {
                 display =
