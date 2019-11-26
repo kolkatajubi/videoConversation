@@ -391,15 +391,15 @@ $(document).ready(() => {
           for (j in totalclicks) {
             if (currentData.next.data[i].data == j) {
               if (number_of_button_created_perStage_count > 1 && sum > 0) {
-                display =
+                /*display =
                   display +
                   currentData.next.data[i].text +
                   " " +
                   console.log(Math.floor((totalclicks[j] / sum) * 100)) +
-                  "%";
-                /*document.getElementsByClassName(
+                  "%";*/
+                document.getElementsByClassName(
                   "button-list"
-                ).innerHTML = Math.floor((totalclicks[j] / sum) * 100);*/
+                ).value = Math.floor((totalclicks[j] / sum) * 100);
               } else {
                 display =
                   display +
