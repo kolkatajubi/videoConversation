@@ -400,6 +400,7 @@ $(document).ready(() => {
                   Math.floor((totalclicks[j] / sum) * 100) +
                   "%</span><br>"
               );
+              break;
             } else {
               display =
                 display +
