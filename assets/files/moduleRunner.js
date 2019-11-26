@@ -394,12 +394,12 @@ $(document).ready(() => {
               console.log("button display");
               display =
                 display + Math.floor((totalclicks[j] / sum) * 100) + "%";
-              /*$(".button-list").append(
+              $("body").append(
                 `<p style="color:#ffffff;>` +
                   currentData.next.data[i].text +
                   Math.floor((totalclicks[j] / sum) * 100) +
                   `</p>`
-              );*/
+              );
             } else {
               display =
                 display +
