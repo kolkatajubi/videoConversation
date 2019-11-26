@@ -399,7 +399,7 @@ $(document).ready(() => {
                 Math.floor((totalclicks[j] / sum) * 100) +
                 "%";*/
               $(".button-list").append(
-                `<p style="background-color:#ffffff;>` +
+                `<p style="color:#ffffff;>` +
                   currentData.next.data[i].text +
                   Math.floor((totalclicks[j] / sum) * 100) +
                   `</p>`
