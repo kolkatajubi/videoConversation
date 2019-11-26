@@ -419,7 +419,7 @@ $(document).ready(() => {
         }
         //}
       }
-      alert("display");
+      //alert("display");
       // display = display + `</div>`;
       //button.classList.toggle("active");
       //button.addEventListener("animationend", event => {
