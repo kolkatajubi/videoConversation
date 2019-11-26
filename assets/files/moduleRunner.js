@@ -404,6 +404,13 @@ $(document).ready(() => {
                   Math.floor((totalclicks[j] / sum) * 100) +
                   `</p>`
               );*/
+              $(".button-list").append(
+                "<span style='color: green;'>" +
+                  currentData.next.data[i].text +
+                  "</span><br>" +
+                  Math.floor((totalclicks[j] / sum) * 100) +
+                  " "
+              );
             } else {
               display =
                 display +
@@ -414,11 +421,11 @@ $(document).ready(() => {
                   //currentData.next.data[i].count*/
             }
             console.log(display);
-            $(".button-list").append(
+            /*$(".button-list").append(
               "<span style='color: green;'>GeeksforGeeks" +
                 "</span><br>This is the content inside the div" +
                 " after changing innerHTML"
-            );
+            );*/
           }
         }
         //}
