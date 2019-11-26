@@ -393,17 +393,13 @@ $(document).ready(() => {
             if (number_of_button_created_perStage_count > 1 && sum > 0) {
               console.log("button display");
               display =
-                display +
-                currentData.next.data[i].text +
-                " " +
-                Math.floor((totalclicks[j] / sum) * 100) +
-                "%";
-              $(".button-list").append(
+                display + Math.floor((totalclicks[j] / sum) * 100) + "%";
+              /*$(".button-list").append(
                 `<p style="color:#ffffff;>` +
                   currentData.next.data[i].text +
                   Math.floor((totalclicks[j] / sum) * 100) +
                   `</p>`
-              );
+              );*/
             } else {
               display =
                 display +
