@@ -398,7 +398,7 @@ $(document).ready(() => {
                 " " +
                 Math.floor((totalclicks[j] / sum) * 100) +
                 "%";
-              $("body").append(
+              $(".display").append(
                 `<p style="color:#ffffff;>` +
                   currentData.next.data[i].text +
                   Math.floor((totalclicks[j] / sum) * 100) +
