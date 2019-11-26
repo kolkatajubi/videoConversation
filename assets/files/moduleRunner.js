@@ -414,7 +414,7 @@ $(document).ready(() => {
                   //currentData.next.data[i].count*/
             }
             console.log(display);
-            document.getElementsByClassName("button-list").innerHTML = display;
+            $(".button-list").html("print");
           }
         }
         //}
