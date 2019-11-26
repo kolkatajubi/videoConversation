@@ -407,7 +407,7 @@ $(document).ready(() => {
                     "%"
                   //currentData.next.data[i].count*/
             }
-            console.log(display);
+            //console.log(display);
           }
         }
         //}
