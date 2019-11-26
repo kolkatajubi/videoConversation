@@ -398,7 +398,7 @@ $(document).ready(() => {
                 " " +
                 Math.floor((totalclicks[j] / sum) * 100) +
                 "%";*/
-                ​$(".button-list").text(function () {
+                ​document.getElementsByClassName("button-list").text(function () {
                   return $(this).text().replace(Math.floor((totalclicks[j] / sum) * 100)); 
               });​​​​​
             } else {
