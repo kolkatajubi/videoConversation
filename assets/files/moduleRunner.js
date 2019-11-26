@@ -385,7 +385,7 @@ $(document).ready(() => {
         }
       }
       console.log("count=" + number_of_button_created_perStage_count);
-      display = `<div class="button-list">`;
+      display = `<span class="button-text">`;
       for (i in currentData.next.data) {
         //if (!currentData.next.data[i].type) {
         for (j in totalclicks) {
