@@ -414,7 +414,7 @@ $(document).ready(() => {
                   //currentData.next.data[i].count*/
             }
             console.log(display);
-            $(".button-list").html(
+            $(".button-list").append(
               "<h1><span style='color: green;'>GeeksforGeeks" +
                 "</span><br>This is the content inside the div" +
                 " after changing innerHTML</h1>"
