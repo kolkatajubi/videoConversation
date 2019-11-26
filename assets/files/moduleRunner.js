@@ -323,6 +323,7 @@ $(document).ready(() => {
 
   $("body").on("click", ".button", event => {
     console.log("event trigged..........");
+    console.log(this.id);
     let button = event.currentTarget;
     // console.log("event.currenttarget")
     // console.log(event.currentTarget);
@@ -393,7 +394,7 @@ $(document).ready(() => {
             if (number_of_button_created_perStage_count > 1 && sum > 0) {
               console.log("button display");
 
-              $("#" + text).append(
+              $(".button").append(
                 "<span style='color: green;'>" +
                   Math.floor((totalclicks[j] / sum) * 100) +
                   "%</span><br>"
