@@ -393,7 +393,7 @@ $(document).ready(() => {
               if (number_of_button_created_perStage_count > 1 && sum > 0) {
                 console.log("button display");
                 display =
-                  console.log(display) +
+                  display +
                   console.log(currentData.next.data[i].text) +
                   " " +
                   console.log(Math.floor((totalclicks[j] / sum) * 100)) +
