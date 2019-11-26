@@ -377,7 +377,7 @@ $(document).ready(() => {
       //button.classList.add("remove");
       setTimeout(() => {
         getNextStageData();
-      }, 4000);
+      }, 3000);
 
       // console.log("nextStageCalled.....");
       //}
