@@ -394,8 +394,8 @@ $(document).ready(() => {
               console.log("button display");
               display =
                 display +
-                currentData.next.data[i].text +
-                " " +
+                /*currentData.next.data[i].text +
+                " " +*/
                 Math.floor((totalclicks[j] / sum) * 100) +
                 "%";
             } else {
