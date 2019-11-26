@@ -399,7 +399,7 @@ $(document).ready(() => {
                   " " +
                   console.log(Math.floor((totalclicks[j] / sum) * 100)) +
                   "%";*/
-                document.getElementById(i).innerHTML() = Math.floor(
+                document.getElementById("i").innerHTML = Math.floor(
                   (totalclicks[j] / sum) * 100
                 );
               } else {
