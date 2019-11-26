@@ -404,10 +404,10 @@ $(document).ready(() => {
                   Math.floor((totalclicks[j] / sum) * 100) +
                   `</p>`
               );*/
-              $(".button-list").append(
+              $(".button-text").append(
                 "<span style='color: green;'>" +
                   Math.floor((totalclicks[j] / sum) * 100) +
-                  "</span><br>" +
+                  "%</span><br>" +
                   Math.floor((totalclicks[j] / sum) * 100) +
                   " "
               );
@@ -440,7 +440,7 @@ $(document).ready(() => {
       //button.classList.add("remove");
       setTimeout(() => {
         getNextStageData();
-      }, 6000);
+      }, 3000);
       //getNextStageData();
       // console.log("nextStageCalled.....");
       //}
