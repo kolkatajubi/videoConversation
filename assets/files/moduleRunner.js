@@ -385,22 +385,19 @@ $(document).ready(() => {
         }
       }
       console.log("count=" + number_of_button_created_perStage_count);
-      display = `<span class="button-text">`;
+
       for (i in currentData.next.data) {
         //if (!currentData.next.data[i].type) {
         for (j in totalclicks) {
           if (currentData.next.data[i].data == j) {
             if (number_of_button_created_perStage_count > 1 && sum > 0) {
               console.log("button display");
-              display =
-                display +
-                "<span style='color: green;'>" +
-                Math.floor((totalclicks[j] / sum) * 100);
-              /*$(".button-text").append(
+
+              $(".button-text").append(
                 "<span style='color: green;'>" +
                   Math.floor((totalclicks[j] / sum) * 100) +
                   "%</span><br>"
-              );*/
+              );
             } else {
               display =
                 display +
