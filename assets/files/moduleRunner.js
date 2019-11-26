@@ -394,10 +394,12 @@ $(document).ready(() => {
                 console.log("button display");
                 display =
                   display +
-                  console.log(currentData.next.data[i].text) +
-                  " " +
-                  console.log(Math.floor((totalclicks[j] / sum) * 100)) +
-                  "%";
+                  createButton(
+                    console.log(currentData.next.data[i].text) +
+                      " " +
+                      console.log(Math.floor((totalclicks[j] / sum) * 100)) +
+                      "%"
+                  );
               } else {
                 display =
                   display +
