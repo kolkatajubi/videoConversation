@@ -392,12 +392,11 @@ $(document).ready(() => {
           if (currentData.next.data[i].data == j) {
             if (number_of_button_created_perStage_count > 1 && sum > 0) {
               console.log("button display");
-              $(".button-text").click(
-                $(this).append(
-                  "<span style='color: green;'>" +
-                    Math.floor((totalclicks[j] / sum) * 100) +
-                    "%</span><br>"
-                )
+
+              $(".button-text").append(
+                "<span style='color: green;'>" +
+                  Math.floor((totalclicks[j] / sum) * 100) +
+                  "%</span><br>"
               );
             } else {
               display =
