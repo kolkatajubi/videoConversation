@@ -389,20 +389,15 @@ $(document).ready(() => {
       for (i in currentData.next.data) {
         if (!currentData.next.data[i].type) {
           for (j in totalclicks) {
-            display = `<div class="button-list" id=` + j + `>`;
-            console.log("i:" + j);
             if (currentData.next.data[i].data == j) {
               if (number_of_button_created_perStage_count > 1 && sum > 0) {
                 console.log("button display");
-                /* display =
+                display =
                   display +
                   console.log(currentData.next.data[i].text) +
                   " " +
                   console.log(Math.floor((totalclicks[j] / sum) * 100)) +
-                  "%";*/
-                document.getElementById(i).innerHTML = Math.floor(
-                  (totalclicks[j] / sum) * 100
-                );
+                  "%";
               } else {
                 display =
                   display +
@@ -412,6 +407,7 @@ $(document).ready(() => {
                     "%"
                   //currentData.next.data[i].count*/
               }
+              console.log(display);
             }
           }
         }
