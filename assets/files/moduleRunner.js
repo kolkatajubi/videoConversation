@@ -369,6 +369,47 @@ $(document).ready(() => {
       // console.log("data ==> ", data);
       console.log("After event");
       console.log(event);
+      sum = 0;
+      for (i in currentData.next.data) {
+        for (j in totalclicks) {
+          if (currentData.next.data[i].data == j) {
+            sum = sum + totalclicks[j];
+          }
+        }
+      }
+      console.log("sum=" + sum);
+      number_of_button_created_perStage_count = 0;
+      for (i in currentData.next.data) {
+        if (!currentData.next.data[i].type) {
+          number_of_button_created_perStage_count++;
+        }
+      }
+      console.log("count=" + number_of_button_created_perStage_count);
+      display = `<div class="button-list">`;
+      for (i in currentData.next.data) {
+        if (!currentData.next.data[i].type) {
+          for (j in totalclicks) {
+            if (currentData.next.data[i].data == j) {
+              if (number_of_button_created_perStage_count > 1 && sum > 0) {
+                display =
+                  display +
+                  currentData.next.data[i].text +
+                  " " +
+                  Math.floor((totalclicks[j] / sum) * 100) +
+                  "%";
+              } else {
+                display =
+                  display +
+                  currentData.next.data[i].text +
+                  " "; /*+
+                    (totalclicks[j] / sum) * 100 +
+                    "%"
+                  //currentData.next.data[i].count*/
+              }
+            }
+          }
+        }
+      }
       //button.classList.toggle("active");
       //button.addEventListener("animationend", event => {
       //if (event.animationName == "Button") {
@@ -378,7 +419,7 @@ $(document).ready(() => {
       setTimeout(() => {
         getNextStageData();
       }, 3000);
-
+      //getNextStageData();
       // console.log("nextStageCalled.....");
       //}
       //});
@@ -624,7 +665,7 @@ function createUI(currentData) {
     case "button":
     case "quickReply":
       console.log("Switch case button .....");
-      sum = 0;
+      /*sum = 0;
       for (i in currentData.next.data) {
         for (j in totalclicks) {
           if (currentData.next.data[i].data == j) {
@@ -632,14 +673,14 @@ function createUI(currentData) {
           }
         }
       }
-      console.log("sum=" + sum);
-      number_of_button_created_perStage_count = 0;
+      console.log("sum=" + sum);*/
+      /*number_of_button_created_perStage_count = 0;
       for (i in currentData.next.data) {
         if (!currentData.next.data[i].type) {
           number_of_button_created_perStage_count++;
         }
       }
-      console.log("count=" + number_of_button_created_perStage_count);
+      console.log("count=" + number_of_button_created_perStage_count);*/
 
       // console.log("button / QuickReply");
       display = `<div class="button-list">`;
@@ -654,32 +695,32 @@ function createUI(currentData) {
         }*/
 
         if (!currentData.next.data[i].type) {
-          for (j in totalclicks) {
-            if (currentData.next.data[i].data == j) {
-              if (number_of_button_created_perStage_count > 1 && sum > 0) {
-                display =
-                  display +
-                  createButton(
-                    currentData.next.data[i].data,
-                    currentData.next.data[i].text +
-                      " " +
-                      Math.floor((totalclicks[j] / sum) * 100) +
-                      "%"
-                  );
-              } else {
-                display =
-                  display +
-                  createButton(
-                    currentData.next.data[i].data,
-                    currentData.next.data[i].text +
-                      " " /*+
-                      (totalclicks[j] / sum) * 100 +
-                      "%"
-                    //currentData.next.data[i].count*/
-                  );
-              }
-            }
-          }
+          //for (j in totalclicks) {
+          //if (currentData.next.data[i].data == j) {
+          //if (number_of_button_created_perStage_count > 1 && sum > 0) {
+          display =
+            display +
+            createButton(
+              currentData.next.data[i].data,
+              currentData.next.data[i].text
+              //  " " +
+              //Math.floor((totalclicks[j] / sum) * 100) +
+              //"%"
+            );
+          //} //else {
+          //display =
+          //display +
+          //createButton(
+          //currentData.next.data[i].data,
+          //currentData.next.data[i].text +
+          //" " /*+
+          //(totalclicks[j] / sum) * 100 +
+          //"%"
+          //currentData.next.data[i].count*/
+          //);
+          //}
+          //}
+          //}
         } else if (currentData.next.data[i].type === "url") {
           display =
             display +
