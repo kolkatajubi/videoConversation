@@ -393,6 +393,7 @@ $(document).ready(() => {
           if (currentData.next.data[i].data == j) {
             if (number_of_button_created_perStage_count > 1 && sum > 0) {
               console.log("button display");
+              console.log("here" + totalclicks[j]);
 
               $("#" + value).append(
                 "<span style='color: green;'>" +
