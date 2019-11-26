@@ -824,7 +824,9 @@ function createButton(data, text, count) {
   // console.log("data", data);
   // console.log("text", text);
   return (
-    `<div class="button" count="` +
+    `<div class="button" id="` +
+    value +
+    `" count="` +
     count +
     `" value="` +
     data +
