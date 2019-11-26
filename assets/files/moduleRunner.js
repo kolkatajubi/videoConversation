@@ -323,7 +323,7 @@ $(document).ready(() => {
 
   $("body").on("click", ".button", event => {
     console.log("event trigged..........");
-    console.log(this.id);
+    console.log("here" + this.id);
     let button = event.currentTarget;
     // console.log("event.currenttarget")
     // console.log(event.currentTarget);
