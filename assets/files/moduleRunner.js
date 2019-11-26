@@ -421,7 +421,16 @@ $(document).ready(() => {
       //button.classList.remove("active");
       //button.classList.add("remove");
       setTimeout(() => {
-        getNextStageData();
+        button.classList.toggle("active");
+        button.addEventListener("animationend", event => {
+          if (event.animationName == "Button") {
+            console.log(event);
+            button.classList.remove("active");
+            button.classList.add("remove");
+            getNextStageData();
+            console.log("nextStageCalled.....");
+          }
+        });
       }, 3000);
       //getNextStageData();
       // console.log("nextStageCalled.....");
