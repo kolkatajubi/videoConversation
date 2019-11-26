@@ -385,7 +385,7 @@ $(document).ready(() => {
         }
       }
       console.log("count=" + number_of_button_created_perStage_count);
-      display = `<div class="button-list">`;
+      display = `<div class="button-list" id="btn">`;
       for (i in currentData.next.data) {
         if (!currentData.next.data[i].type) {
           for (j in totalclicks) {
@@ -397,9 +397,9 @@ $(document).ready(() => {
                   " " +
                   console.log(Math.floor((totalclicks[j] / sum) * 100)) +
                   "%";*/
-                document.getElementsByClassName(
-                  "button-list"
-                ).value = Math.floor((totalclicks[j] / sum) * 100);
+                document.getElementsById("btn").innerHTML = Math.floor(
+                  (totalclicks[j] / sum) * 100
+                );
               } else {
                 display =
                   display +
