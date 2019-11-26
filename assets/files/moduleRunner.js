@@ -406,7 +406,7 @@ $(document).ready(() => {
               );*/
               $(".button-list").append(
                 "<span style='color: green;'>" +
-                  currentData.next.data[i].text +
+                  Math.floor((totalclicks[j] / sum) * 100) +
                   "</span><br>" +
                   Math.floor((totalclicks[j] / sum) * 100) +
                   " "
