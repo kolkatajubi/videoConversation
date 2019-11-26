@@ -375,7 +375,10 @@ $(document).ready(() => {
       // console.log(event);
       //button.classList.remove("active");
       //button.classList.add("remove");
-      getNextStageData();
+      setTimeout(() => {
+        getNextStageData();
+      }, 1000);
+
       // console.log("nextStageCalled.....");
       //}
       //});
