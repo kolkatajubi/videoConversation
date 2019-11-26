@@ -390,7 +390,7 @@ $(document).ready(() => {
         //if (!currentData.next.data[i].type) {
         for (j in totalclicks) {
           if (currentData.next.data[i].data == j) {
-            if (number_of_button_created_perStage_count > 1) {
+            if (number_of_button_created_perStage_count > 1 && sum > 0) {
               console.log("button display");
               display =
                 display +
