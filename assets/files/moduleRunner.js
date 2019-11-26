@@ -399,7 +399,7 @@ $(document).ready(() => {
                 Math.floor((totalclicks[j] / sum) * 100) +
                 "%";*/
               $(".button-list").append(
-                Math.floor((totalclicks[j] / sum) * 100)
+                `<p>` + Math.floor((totalclicks[j] / sum) * 100) + `</p>`
               );
             } else {
               display =
