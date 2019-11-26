@@ -418,6 +418,7 @@ $(document).ready(() => {
         }
         //}
       }
+      alert("display");
       // display = display + `</div>`;
       //button.classList.toggle("active");
       //button.addEventListener("animationend", event => {
