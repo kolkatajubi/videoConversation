@@ -388,6 +388,7 @@ $(document).ready(() => {
       //display = `<div class="button-list">`;
       for (i in currentData.next.data) {
         display = `<div class="button-list" id=` + i + `>`;
+        console.log(i);
         if (!currentData.next.data[i].type) {
           for (j in totalclicks) {
             if (currentData.next.data[i].data == j) {
@@ -399,7 +400,7 @@ $(document).ready(() => {
                   " " +
                   console.log(Math.floor((totalclicks[j] / sum) * 100)) +
                   "%";*/
-                document.getElementById("i").innerHTML = Math.floor(
+                document.getElementById(i).innerHTML = Math.floor(
                   (totalclicks[j] / sum) * 100
                 );
               } else {
