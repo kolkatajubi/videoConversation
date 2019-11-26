@@ -402,7 +402,7 @@ $(document).ready(() => {
               display =
                 display +
                 currentData.next.data[i].text +
-                " "; /*+
+                " hello"; /*+
                     (totalclicks[j] / sum) * 100 +
                     "%"
                   //currentData.next.data[i].count*/
