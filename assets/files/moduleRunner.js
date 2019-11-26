@@ -387,30 +387,30 @@ $(document).ready(() => {
       console.log("count=" + number_of_button_created_perStage_count);
       display = `<div class="button-list">`;
       for (i in currentData.next.data) {
-        if (!currentData.next.data[i].type) {
-          for (j in totalclicks) {
-            if (currentData.next.data[i].data == j) {
-              if (number_of_button_created_perStage_count > 1) {
-                console.log("button display");
-                display =
-                  display +
-                  console.log(currentData.next.data[i].text) +
-                  " "; /*+
+        //if (!currentData.next.data[i].type) {
+        for (j in totalclicks) {
+          if (currentData.next.data[i].data == j) {
+            if (number_of_button_created_perStage_count > 1) {
+              console.log("button display");
+              display =
+                display +
+                console.log(currentData.next.data[i].text) +
+                " "; /*+
                   console.log(Math.floor((totalclicks[j] / sum) * 100)) +
                   "%";*/
-              } else {
-                display =
-                  display +
-                  currentData.next.data[i].text +
-                  " "; /*+
+            } else {
+              display =
+                display +
+                currentData.next.data[i].text +
+                " "; /*+
                     (totalclicks[j] / sum) * 100 +
                     "%"
                   //currentData.next.data[i].count*/
-              }
-              console.log(display);
             }
+            console.log(display);
           }
         }
+        //}
       }
       display = display + `</div>`;
       //button.classList.toggle("active");
