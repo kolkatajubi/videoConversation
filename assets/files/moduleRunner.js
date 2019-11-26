@@ -394,7 +394,7 @@ $(document).ready(() => {
               console.log("button display");
 
               $(".button-text").append(
-                "<span style='color: black;'>" +
+                "<span style='color: green;'>" +
                   Math.floor((totalclicks[j] / sum) * 100) +
                   "%</span><br>"
               );
