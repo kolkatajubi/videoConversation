@@ -398,18 +398,11 @@ $(document).ready(() => {
                 " " +
                 Math.floor((totalclicks[j] / sum) * 100) +
                 "%";
-              /*$(".display").append(
-                `<p style="color:#ffffff;>` +
-                  currentData.next.data[i].text +
-                  Math.floor((totalclicks[j] / sum) * 100) +
-                  `</p>`
-              );*/
+
               $(".button-text").append(
-                "<span style='color: green;'>" +
+                "<span style='color: black;'>" +
                   Math.floor((totalclicks[j] / sum) * 100) +
-                  "%</span><br>" +
-                  Math.floor((totalclicks[j] / sum) * 100) +
-                  " "
+                  "%</span><br>"
               );
             } else {
               display =
@@ -421,11 +414,6 @@ $(document).ready(() => {
                   //currentData.next.data[i].count*/
             }
             console.log(display);
-            /*$(".button-list").append(
-              "<span style='color: green;'>GeeksforGeeks" +
-                "</span><br>This is the content inside the div" +
-                " after changing innerHTML"
-            );*/
           }
         }
         //}
