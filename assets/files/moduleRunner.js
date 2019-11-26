@@ -369,16 +369,16 @@ $(document).ready(() => {
       // console.log("data ==> ", data);
       console.log("After event");
       console.log(event);
-      button.classList.toggle("active");
-      /*button.addEventListener("animationend", event => {
-        if (event.animationName == "Button") {
-          // console.log(event);
-          button.classList.remove("active");
-          button.classList.add("remove");
-          getNextStageData();
-          // console.log("nextStageCalled.....");
-        }
-      });*/
+      //button.classList.toggle("active");
+      //button.addEventListener("animationend", event => {
+      //if (event.animationName == "Button") {
+      // console.log(event);
+      //button.classList.remove("active");
+      //button.classList.add("remove");
+      getNextStageData();
+      // console.log("nextStageCalled.....");
+      //}
+      //});
       getSiblings(button).forEach(el => {
         el.style.opacity = "0.2";
         el.classList.toggle("inactive");
