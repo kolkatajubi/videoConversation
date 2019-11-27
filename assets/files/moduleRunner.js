@@ -390,12 +390,11 @@ $(document).ready(() => {
         console.log("button display");
         console.log("here" + totalclicks[value]);
 
-        /*$("#" + value).html(
+        $("#" + value).html(
           "<span style='color: green;'>" +
             Math.floor((totalclicks[value] / sum) * 100) +
             "%</span><br>"
-        );*/
-        update();
+        );
       } else {
         display =
           display +
@@ -404,21 +403,6 @@ $(document).ready(() => {
               (totalclicks[j] / sum) * 100 +
               "%"
             //currentData.next.data[i].count*/
-      }
-      function update() {
-        for (i in currentData.next.data) {
-          if (!currentData.next.data[i].type) {
-            for (j in totalclicks) {
-              if (currentData.next.data[i].data == j) {
-                $("#" + value).append(
-                  "<span style='color: green;'>" +
-                    Math.floor((totalclicks[j] / sum) * 100) +
-                    "%</span><br>"
-                );
-              }
-            }
-          }
-        }
       }
 
       /* for (i in currentData.next.data) {
