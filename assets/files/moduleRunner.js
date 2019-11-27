@@ -386,7 +386,7 @@ $(document).ready(() => {
         }
       }
       console.log("count=" + number_of_button_created_perStage_count);
-      if (number_of_button_created_perStage_count > 1 && sum > 0) {
+      /*if (number_of_button_created_perStage_count > 1 && sum > 0) {
         console.log("button display");
         console.log("here" + totalclicks[value]);
 
@@ -402,36 +402,36 @@ $(document).ready(() => {
           " "; /*+
               (totalclicks[j] / sum) * 100 +
               "%"
-            //currentData.next.data[i].count*/
-      }
+            //currentData.next.data[i].count
+      }*/
 
-      /* for (i in currentData.next.data) {
-        //if (!currentData.next.data[i].type) {
-        for (j in totalclicks) {
-          if (currentData.next.data[i].data == j) {
-           /* if (number_of_button_created_perStage_count > 1 && sum > 0) {
-              console.log("button display");
-              console.log("here" + totalclicks[j]);
+      for (i in currentData.next.data) {
+        if (!currentData.next.data[i].type) {
+          for (j in totalclicks) {
+            if (currentData.next.data[i].data == j) {
+              if (number_of_button_created_perStage_count > 1 && sum > 0) {
+                console.log("button display");
+                console.log("here" + totalclicks[j]);
 
-              $("#" + value).append(
-                "<span style='color: green;'>" +
-                  Math.floor((totalclicks[j] / sum) * 100) +
-                  "%</span><br>"
-              );
-            } else {
-              display =
-                display +
-                currentData.next.data[i].text +
-                " "; /*+
+                $("#" + i).append(
+                  "<span style='color: green;'>" +
+                    Math.floor((totalclicks[j] / sum) * 100) +
+                    "%</span><br>"
+                );
+              } else {
+                display =
+                  display +
+                  currentData.next.data[i].text +
+                  " "; /*+
                     (totalclicks[j] / sum) * 100 +
                     "%"
-                  //currentData.next.data[i].count
+                  //currentData.next.data[i].count*/
+              }
+              //console.log(display);
             }
-            //console.log(display);
           }
-       // }
         }
-      }*/
+      }
       //alert("display");
       // display = display + `</div>`;
       //button.classList.toggle("active");
