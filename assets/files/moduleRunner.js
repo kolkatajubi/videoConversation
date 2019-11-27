@@ -407,29 +407,29 @@ $(document).ready(() => {
 
       for (i in currentData.next.data) {
         if (!currentData.next.data[i].type) {
-          //for (j in totalclicks) {
-          //if (currentData.next.data[i].data == j) {
-          if (number_of_button_created_perStage_count > 1 && sum > 0) {
-            console.log("button display");
-            console.log("here" + totalclicks[j]);
+          for (j in totalclicks) {
+            if (currentData.next.data[i].data == j) {
+              if (number_of_button_created_perStage_count > 1 && sum > 0) {
+                console.log("button display");
+                console.log("here" + totalclicks[j]);
 
-            $("#" + currentData.next.data[i].data).html(
-              "<span style='color: black;'>" +
-                Math.floor((totalclicks[i] / sum) * 100) +
-                "%</span><br>"
-            );
-          } else {
-            display =
-              display +
-              currentData.next.data[i].text +
-              " "; /*+
+                $("#" + currentData.next.data[i].data).html(
+                  "<span style='color: black;'>" +
+                    Math.floor((totalclicks[j] / sum) * 100) +
+                    "%</span><br>"
+                );
+              } else {
+                display =
+                  display +
+                  currentData.next.data[i].text +
+                  " "; /*+
                     (totalclicks[j] / sum) * 100 +
                     "%"
                   //currentData.next.data[i].count*/
+              }
+              //console.log(display);
+            }
           }
-          //console.log(display);
-          //}
-          //}
         }
       }
       //alert("display");
