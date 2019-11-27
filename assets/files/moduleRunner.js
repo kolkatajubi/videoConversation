@@ -318,7 +318,7 @@ $(document).ready(() => {
   let classes = document.getElementsByClassName("button");
   for (let element of classes) {
     // console.log(element);
-    element.style.width = buttonData.length * 35 + "px";
+    element.style.width = buttonData.length * 12 + "px";
   }
 
   $("body").on("click", ".button", event => {
@@ -390,7 +390,7 @@ $(document).ready(() => {
         console.log("button display");
         console.log("here" + totalclicks[value]);
 
-        $("#" + value).append(
+        $("#" + value).html(
           "<span style='color: green;'>" +
             Math.floor((totalclicks[value] / sum) * 100) +
             "%</span><br>"
