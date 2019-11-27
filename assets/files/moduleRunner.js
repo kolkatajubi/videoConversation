@@ -318,7 +318,7 @@ $(document).ready(() => {
   let classes = document.getElementsByClassName("button");
   for (let element of classes) {
     // console.log(element);
-    element.style.width = buttonData.length * 12 + "px";
+    //element.style.width = buttonData.length * 12 + "px";
   }
 
   $("body").on("click", ".button", event => {
@@ -388,7 +388,7 @@ $(document).ready(() => {
       console.log("count=" + number_of_button_created_perStage_count);
       if (number_of_button_created_perStage_count > 1 && sum > 0) {
         console.log("button display");
-        console.log("here" + totalclicks[j]);
+        console.log("here" + totalclicks[value]);
 
         $("#" + value).append(
           "<span style='color: green;'>" +
