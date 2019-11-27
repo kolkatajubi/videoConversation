@@ -415,7 +415,7 @@ $(document).ready(() => {
 
             $("#" + currentData.next.data[i].data).html(
               "<span style='color: black;'>" +
-                Math.floor((totalclicks[j] / sum) * 100) +
+                Math.floor((totalclicks[i] / sum) * 100) +
                 "%</span><br>"
             );
           } else {
