@@ -413,8 +413,8 @@ $(document).ready(() => {
                 console.log("button display");
                 console.log("here" + totalclicks[j]);
 
-                $("#" + currentData.next.data[i].data).append(
-                  "<span style='color: green;'>" +
+                $("#" + currentData.next.data[i].data).html(
+                  "<span style='color: black;'>" +
                     Math.floor((totalclicks[j] / sum) * 100) +
                     "%</span><br>"
                 );
