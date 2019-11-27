@@ -457,7 +457,7 @@ $(document).ready(() => {
       //}
       //});
       getSiblings(button).forEach(el => {
-        el.style.opacity = "0.1";
+        el.style.opacity = "0.5";
         el.classList.toggle("inactive");
         el.addEventListener("animationend", () => {
           el.classList.remove("inactive");
