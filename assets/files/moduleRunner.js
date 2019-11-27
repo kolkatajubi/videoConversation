@@ -393,7 +393,7 @@ $(document).ready(() => {
         $("#" + value).html(
           "<span style='color: green;'>" +
             Math.floor((totalclicks[value] / sum) * 100) +
-            "% choose this</span><br>"
+            "%</span><br>"
         );
       } else {
         display =
