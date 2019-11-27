@@ -451,7 +451,7 @@ $(document).ready(() => {
             console.log("nextStageCalled.....");
           }
         });
-      }, 3000);
+      }, 2000);
       //getNextStageData();
       // console.log("nextStageCalled.....");
       //}
