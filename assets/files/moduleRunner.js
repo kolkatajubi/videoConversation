@@ -318,7 +318,7 @@ $(document).ready(() => {
   let classes = document.getElementsByClassName("button");
   for (let element of classes) {
     // console.log(element);
-    //element.style.width = buttonData.length * 12 + "px";
+    element.style.width = buttonData.length * 35 + "px";
   }
 
   $("body").on("click", ".button", event => {
