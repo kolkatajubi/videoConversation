@@ -412,7 +412,7 @@ $(document).ready(() => {
               if (currentData.next.data[i].data == j) {
                 $("#" + value).append(
                   "<span style='color: green;'>" +
-                    Math.floor((totalclicks[value] / sum) * 100) +
+                    Math.floor((totalclicks[j] / sum) * 100) +
                     "%</span><br>"
                 );
               }
