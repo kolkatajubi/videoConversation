@@ -391,7 +391,7 @@ $(document).ready(() => {
         console.log("here" + totalclicks[value]);
 
         $("#" + value).html(
-          "<span style='color: green;'>" +
+          "<span style='color: black;'>" +
             Math.floor((totalclicks[value] / sum) * 100) +
             "%</span><br>"
         );
