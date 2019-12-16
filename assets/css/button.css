@@ -171,3 +171,6 @@ body {
 .remove {
   display: none;
 }
+.vjs-progress-control {
+  pointer-events: none;
+}
