@@ -14,7 +14,7 @@ var flow = {
       // video:
       //   '<iframe width="560" height="315" src="https://www.youtube.com/embed/saFRT7t6vis" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
       video:
-        '<iframe src="https://players.brightcove.net/6115316176001/default_default/index.html?videoId=6116076976001" allowfullscreen="" allow="encrypted-media" width="960" height="540"></iframe>',
+        '<iframe src="https://players.brightcove.net/6115316176001/default_default/index.html?videoId=6116076976001" allowfullscreen="" allow="encrypted-media" width="560" height="315"></iframe>',
       // video:
       //   '<iframe width="560" height="315" src="https://www.youtube.com/embed/Ah0Ys50CqO8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
       // video: "https://www.youtube.com/embed/saFRT7t6vis",
@@ -24,9 +24,8 @@ var flow = {
       next: {
         data: [
           {
-            data: "Count_me_in",
+            data: "Count me in!",
             text: "Count me in!"
-            //count: 1
           }
         ],
         expectation: {
@@ -81,12 +80,10 @@ var flow = {
           {
             data: "Mr",
             text: "Mr"
-            //count: 3
           },
           {
-            data: "Miss",
+            data: "Miss/Mrs",
             text: "Miss/Mrs"
-            //count: 2
           }
         ]
       }
@@ -121,22 +118,18 @@ var flow = {
           {
             data: "Mumbai",
             text: "Mumbai"
-            //count: 1
           },
           {
             data: "Kolkata",
             text: "Kolkata"
-            //count: 2
           },
           {
             data: "Delhi",
             text: "Delhi"
-            //count: 3
           },
           {
             data: "Chennai",
             text: "Chennai"
-            //count: 4
           }
         ],
         expectation: {
@@ -189,15 +182,6 @@ var flow = {
     }
   ]
 };
-var totalclicks = {
-  Count_me_in: 1,
-  Mr: 3,
-  Miss: 4,
-  Mumbai: 1,
-  Kolkata: 2,
-  Delhi: 3,
-  Chennai: 4
-};
 
 var theme = {
   default: "",
@@ -219,30 +203,11 @@ restructureData();
 $(document).ready(() => {
   // let testExp = new RegExp("Android|" + "BlackBerry|" + "IEMobile|Mobile", "i");
   // if (testExp.test(navigator.userAgent)) {
-
   documentReady();
   getNextStageData();
-  /*$.ajax({
-    type: "get",
-    url: "https://pixie.jubi.ai/videoConversation/getdata",
-    contentType: "Application/json"
-  })
-    .done(function(result) {
-      for (let i = 0; i < result.length; i++) {
-        /*var output = `{` + i + `:` + result[i]`}`;
-        console.log(output);
-        totalclicks[i] = result[i];
-        console.log("result:::::" + totalclicks);
-
-        event.preventDefault();
-      }
-    })
-    .fail(function(e) {
-      console.log(e);
-    });*/
   setInterval(() => {
-    if (/www.youtube.com/.test(currentData.video)) {
-      console.log("YOUTUBE video encountered...");
+    if (/www.youtube.com|players.brightcove.net/.test(currentData.video)) {
+      console.log("iframe video encountered...");
       if (status == 0) {
         status = 1;
         // console.log("1secs left...");
@@ -297,7 +262,7 @@ $(document).ready(() => {
   //   el.addEventListener("animationend", () => {
   //     console.log("animation END......");
   //     getNextStageData();
-  // el.classList.remove("text-send-transitiFon");
+  // el.classList.remove("text-send-transition");
   // el.classList.remove("text-send-idle");
   // el.classList.add("text-send");
   // el.style.width = "34px";
@@ -322,142 +287,24 @@ $(document).ready(() => {
   }
 
   $("body").on("click", ".button", event => {
-    console.log("event trigged..........");
-    console.log("here" + this.id);
     let button = event.currentTarget;
-    // console.log("event.currenttarget")
-    // console.log(event.currentTarget);
-    console.log();
-    event.preventDefault();
-
+    // console.log(event);
     let type = button.firstElementChild.getAttribute("type");
-    //let count = button.firstElementChild.getAttribute("count");
-    let value = button.firstElementChild.getAttribute("value");
-    //console.log(count);
-    console.log(value);
-    totalclicks[value] = totalclicks[value] + 1;
-    console.log("data in saving process....");
-
-    $.ajax({
-      type: "POST",
-      url: "https://pixie.jubi.ai/videoConversation/savedata",
-      data: JSON.stringify(totalclicks),
-      contentType: "Application/json",
-      success: function(data) {
-        console.log("data::::" + data);
-      }
-    });
-
-    localStorage.setItem("tempclick", JSON.stringify(totalclicks));
-    console.log("getclick");
-    console.log(localStorage.getItem("tempclick"));
-
     if (type != "url") {
-      // console.log("after button clicked count will be");
-
-      // for (i in currentData.next.data) {
-      //   increment = 1;
-      //   if (currentData.next.data[i].data === "Count me in!") {
-      //     increment = increment + currentData.next.data[i].count;
-      //   } else if (currentData.next.data[i].data === "Mr") {
-      //     increment = increment + currentData.next.data[i].count;
-      //   } else if (currentData.next.data[i].data === "Miss/Mr") {
-      //     increment = increment + currentData.next.data[i].count;
-      //   }
-      // }
-      // console.log(increment);
-
       // console.log("data ==> ", data);
-      console.log("After event");
-      console.log(event);
-      sum = 0;
-      for (i in currentData.next.data) {
-        for (j in totalclicks) {
-          if (currentData.next.data[i].data == j) {
-            sum = sum + totalclicks[j];
-          }
-        }
-      }
-      console.log("sum=" + sum);
-      number_of_button_created_perStage_count = 0;
-      for (i in currentData.next.data) {
-        if (!currentData.next.data[i].type) {
-          number_of_button_created_perStage_count++;
-        }
-      }
-      console.log("count=" + number_of_button_created_perStage_count);
-      /*if (number_of_button_created_perStage_count > 1 && sum > 0) {
-        console.log("button display");
-        console.log("here" + totalclicks[value]);
-
-        $("#" + value).html(
-          "<span style='color: black;'>" +
-            Math.floor((totalclicks[value] / sum) * 100) +
-            "%</span><br>"
-        );
-      } else {
-        display =
-          display +
-          currentData.next.data[i].text +
-          " "; /*+
-              (totalclicks[j] / sum) * 100 +
-              "%"
-            //currentData.next.data[i].count
-      }*/
-
-      for (i in currentData.next.data) {
-        if (!currentData.next.data[i].type) {
-          for (j in totalclicks) {
-            if (currentData.next.data[i].data == j) {
-              if (number_of_button_created_perStage_count > 1 && sum > 0) {
-                console.log("button display");
-                console.log("here" + totalclicks[j]);
-
-                $("#" + currentData.next.data[i].data).html(
-                  "<span style='color: black;'>" +
-                    Math.round((totalclicks[j] / sum) * 100) +
-                    "%</span><br>"
-                );
-              } else {
-                display =
-                  display +
-                  currentData.next.data[i].text +
-                  " "; /*+
-                    (totalclicks[j] / sum) * 100 +
-                    "%"
-                  //currentData.next.data[i].count*/
-              }
-              //console.log(display);
-            }
-          }
-        }
-      }
-      //alert("display");
-      // display = display + `</div>`;
-      //button.classList.toggle("active");
-      //button.addEventListener("animationend", event => {
-      //if (event.animationName == "Button") {
       // console.log(event);
-      //button.classList.remove("active");
-      //button.classList.add("remove");
-      setTimeout(() => {
-        button.classList.toggle("active");
-        button.addEventListener("animationend", event => {
-          if (event.animationName == "Button") {
-            console.log(event);
-            button.classList.remove("active");
-            button.classList.add("remove");
-            getNextStageData();
-            console.log("nextStageCalled.....");
-          }
-        });
-      }, 2000);
-      //getNextStageData();
-      // console.log("nextStageCalled.....");
-      //}
-      //});
+      button.classList.toggle("active");
+      button.addEventListener("animationend", event => {
+        if (event.animationName == "Button") {
+          // console.log(event);
+          button.classList.remove("active");
+          button.classList.add("remove");
+          getNextStageData();
+          // console.log("nextStageCalled.....");
+        }
+      });
       getSiblings(button).forEach(el => {
-        el.style.opacity = "0.5";
+        el.style.opacity = "0.2";
         el.classList.toggle("inactive");
         el.addEventListener("animationend", () => {
           el.classList.remove("inactive");
@@ -502,26 +349,6 @@ function exitHandler(document) {
 }
 
 function documentReady() {
-  // localStorage.setItem("tempclick", " JSON.stringify(totalclicks)");
-
-  $.ajax({
-    type: "get",
-    url: "https://pixie.jubi.ai/videoConversation/getdata",
-    contentType: "Application/json"
-  })
-    .done(function(result) {
-      console.log("result receive.........");
-      for (let i in result) {
-        totalclicks[i] = result[i];
-        console.log(i + ":" + totalclicks[i]);
-
-        event.preventDefault();
-      }
-      console.log("result end.........");
-    })
-    .fail(function(e) {
-      console.log(e);
-    });
   $(".display").append(`
       <video autoplay muted id="myVideo"  onclick="videoClick();" playsinline>
       </video>
@@ -594,8 +421,7 @@ function FS() {
 function getNextStageData(nextStage) {
   console.log("Next Stage ... ", nextStage);
   clearChat();
-  if (!/www.youtube.com|players.brightcove.net/.test(currentData.video))
-    removeBlurBackground();
+  if (!/www.youtube.com/.test(currentData.video)) removeBlurBackground();
   // $("#playImg").hide();
   status = 0;
   currentData = {}; // Stores current stage data
@@ -635,6 +461,7 @@ function videoDisplay(videoData) {
   console.log(jQuery.type(videoData));
   if (/www.youtube.com/.test(videoData)) {
     $("#myVideo").hide();
+    console.log("brightcove video encountered");
     // $(".display").remove("iframe");
     let tag = videoData.split(" ");
     let videoURL = tag[0] + " " + tag[1] + " " + tag[2] + " "; //` height="100%" width="100%" `;
@@ -663,7 +490,7 @@ function videoDisplay(videoData) {
     console.log(videoURL);
     $(".display").append(videoURL);
   } else if (/players.brightcove.net/.test(videoData)) {
-    $("#myVideo").hide();
+    console.log("brightcove video encountered");
     $(".display").append(videoData);
   } else {
     $("#myVideo").empty();
@@ -701,63 +528,16 @@ function createUI(currentData) {
       break;
     case "button":
     case "quickReply":
-      console.log("Switch case button .....");
-      /*sum = 0;
-      for (i in currentData.next.data) {
-        for (j in totalclicks) {
-          if (currentData.next.data[i].data == j) {
-            sum = sum + totalclicks[j];
-          }
-        }
-      }
-      console.log("sum=" + sum);*/
-      /*number_of_button_created_perStage_count = 0;
-      for (i in currentData.next.data) {
-        if (!currentData.next.data[i].type) {
-          number_of_button_created_perStage_count++;
-        }
-      }
-      console.log("count=" + number_of_button_created_perStage_count);*/
-
       // console.log("button / QuickReply");
       display = `<div class="button-list">`;
       for (i in currentData.next.data) {
-        //for (j in totalclicks) {
-        // console.log(totalclicks[j]);
-        //console.log(sum);
-        /*count = 0;
         if (!currentData.next.data[i].type) {
-          count++;
-          console.log("count=" + count);
-        }*/
-
-        if (!currentData.next.data[i].type) {
-          //for (j in totalclicks) {
-          //if (currentData.next.data[i].data == j) {
-          //if (number_of_button_created_perStage_count > 1 && sum > 0) {
           display =
             display +
             createButton(
               currentData.next.data[i].data,
               currentData.next.data[i].text
-              //  " " +
-              //Math.floor((totalclicks[j] / sum) * 100) +
-              //"%"
             );
-          //} //else {
-          //display =
-          //display +
-          //createButton(
-          //currentData.next.data[i].data,
-          //currentData.next.data[i].text +
-          //" " /*+
-          //(totalclicks[j] / sum) * 100 +
-          //"%"
-          //currentData.next.data[i].count*/
-          //);
-          //}
-          //}
-          //}
         } else if (currentData.next.data[i].type === "url") {
           display =
             display +
@@ -774,7 +554,6 @@ function createUI(currentData) {
             );
         }
       }
-
       display = display + `</div>`;
       // console.log(display);
       break;
@@ -843,16 +622,12 @@ function clearChat() {
   $("iframe").remove();
 }
 
-function createButton(data, text, count) {
-  console.log("Create Button");
+function createButton(data, text) {
+  // console.log("Create Button");
   // console.log("data", data);
   // console.log("text", text);
   return (
-    `<div class="button" id="` +
-    data +
-    `" value="` +
-    data +
-    `">
+    `<div class="button" >
     <span class="button-text" value='` +
     data +
     `'>` +
@@ -1033,38 +808,3 @@ function showLoader() {
   $(".loader").attr("width", "34");
   $(".confirm-button").attr("style", "display :none");
 }
-
-/*$("body").on("click", ".button", event => {
-  event.preventDefault();
-  console.log("data in saving process....");
-
-  $.ajax({
-    url: "https://pixie.jubi.ai/videoConversation/savedata",
-    type: "POST",
-    data: totalclicks.serialize(),
-    contentType: "Application/json",
-    success: function(data) {
-      console.log("data::::" + data);
-    }
-  });
-});*/
-
-/*$(document).ready(function() {
-  $.ajax({
-    type: "get",
-    url: "https://pixie.jubi.ai/videoConversation/getdata",
-    contentType: "Application/json"
-  })
-    .done(function(result) {
-      for (let i = 0; i < result.length; i++) {
-        /*var output = `{` + i + `:` + result[i]`}`;
-        console.log(output);*/
-/*console.log("result:::::" + result);
-
-        event.preventDefault();
-      }
-    })
-    .fail(function(e) {
-      console.log(e);
-    });
-});*/
