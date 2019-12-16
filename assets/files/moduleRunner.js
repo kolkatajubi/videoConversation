@@ -14,7 +14,7 @@ var flow = {
       // video:
       //   '<iframe width="560" height="315" src="https://www.youtube.com/embed/saFRT7t6vis" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
       video:
-        '<iframe src="https://players.brightcove.net/6115316176001/default_default/index.html?videoId=6116076976001" allowfullscreen="" allow="encrypted-media" width="560" height="315"></iframe>',
+        '<iframe src="https://players.brightcove.net/6115316176001/default_default/index.html?videoId=6116076976001&loop" loop="1" allowfullscreen="" allow="encrypted-media" width="560" height="315"></iframe>',
       // video:
       //   '<iframe width="560" height="315" src="https://www.youtube.com/embed/Ah0Ys50CqO8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
       // video: "https://www.youtube.com/embed/saFRT7t6vis",
@@ -42,7 +42,7 @@ var flow = {
       text: ["name"],
       // video: "https://pixie.jubi.ai/videoConversation/static/videos/name.mp4",
       video:
-        '<iframe width="560" height="315" src="https://www.youtube.com/embed/bdPZ2Cu1vNU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+        '<iframe src="https://players.brightcove.net/6115316176001/default_default/index.html?videoId=6116140778001&loop" allowfullscreen="" allow="encrypted-media" width="560" height="315"></iframe>',
       // video:
       //   '<iframe width="560" height="315" src="https://www.youtube.com/embed/DTHdcDW8lsc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
       // video: "https://www.youtube.com/embed/DTHdcDW8lsc",
@@ -60,7 +60,7 @@ var flow = {
     {
       text: ["gender"],
       video:
-        '<iframe width="560" height="315" src="https://www.youtube.com/embed/Ah0Ys50CqO8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+        '<iframe src="https://players.brightcove.net/6115316176001/default_default/index.html?videoId=6116141484001&loop" allowfullscreen="" allow="encrypted-media" width="560" height="315"></iframe>',
       // video: "https://pixie.jubi.ai/videoConversation/static/videos/gender.mp4",
       // video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/PmEhyAWcSz0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
       // video: "https://www.youtube.com/embed/PmEhyAWcSz0",
