@@ -9,7 +9,7 @@ var flow = {
     {
       text: ["intro"],
       video:
-        "https://pixie.jubi.ai/videoConversationSelf/static/videos/intro.mp4",
+        "https://pixie.jubi.ai/videoConversationSelf/static/videos/start.mp4",
       // video: "https://pixie.jubi.ai/videoParramato/static/ui/start.mp4",
       stage: "intro",
       type: "button",
@@ -17,7 +17,7 @@ var flow = {
         data: [
           {
             data: "Count me in!",
-            text: "Count me in!"
+            text: "Let's Start !"
           }
         ],
         expectation: {
@@ -91,26 +91,26 @@ var flow = {
     {
       text: ["city"],
       video:
-        "https://pixie.jubi.ai/videoConversationSelf/static/videos/city.mp4",
+        "https://pixie.jubi.ai/videoConversationSelf/static/videos/dependent.mp4",
       type: "button",
       stage: "city",
       next: {
         data: [
           {
             data: "Mumbai",
-            text: "Mumbai"
+            text: "1"
           },
           {
             data: "Kolkata",
-            text: "Kolkata"
+            text: "2"
           },
           {
             data: "Delhi",
-            text: "Delhi"
+            text: "3"
           },
           {
             data: "Chennai",
-            text: "Chennai"
+            text: "4 or more"
           }
         ],
         expectation: {
@@ -129,14 +129,14 @@ var flow = {
     {
       text: ["mobile"],
       video:
-        "https://pixie.jubi.ai/videoConversationSelf/static/videos/mobile.mp4",
+        "https://pixie.jubi.ai/videoConversationSelf/static/videos/salary.mp4",
       type: "text",
       stage: "mobile",
       next: {
         expectation: {
           invalidMessage: "",
           validMessage: "",
-          val: "\\d{10}",
+          val: "\\d{3,10}",
           type: "regex"
         }
       }
