@@ -92,7 +92,7 @@ var flow = {
       text: ["age"],
       // video: "https://pixie.jubi.ai/videoConversation/static/videos/age.mp4",
       video:
-        '<iframe width="560" height="315" src="https://www.youtube.com/embed/6dJmILRJU7E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+        '<iframe src="https://players.brightcove.net/6115316176001/default_default/index.html?videoId=6116076976001&loop&controls=0" controls="0" allowfullscreen="" allow="encrypted-media" width="560" height="315"></iframe>',
       // video: "https://www.youtube.com/embed/6dJmILRJU7E",
       type: "text",
       stage: "age",
@@ -110,7 +110,9 @@ var flow = {
       // video: "https://pixie.jubi.ai/videoConversation/static/videos/city.mp4",
       // video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/nke3160rCas" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
       video:
-        '<iframe width="560" height="315" src="https://www.youtube.com/embed/nke3160rCas" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+        '<iframe src="https://players.brightcove.net/6115316176001/default_default/index.html?videoId=6116076976001&loop&controls=0" controls="0" allowfullscreen="" allow="encrypted-media" width="560" height="315"></iframe>',
+      // video:
+      //   '<iframe width="560" height="315" src="https://www.youtube.com/embed/nke3160rCas" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
       type: "button",
       stage: "city",
       next: {
@@ -149,7 +151,9 @@ var flow = {
       text: ["mobile"],
       // video: "https://pixie.jubi.ai/videoConversation/static/videos/mobile.mp4",
       video:
-        '<iframe width="560" height="315" src="https://www.youtube.com/embed/QISY70zukng" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+        '<iframe src="https://players.brightcove.net/6115316176001/default_default/index.html?videoId=6116140778001&loop" allowfullscreen="" allow="encrypted-media" width="560" height="315"></iframe>',
+      // video:
+      //   '<iframe width="560" height="315" src="https://www.youtube.com/embed/QISY70zukng" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
       // video: "https://www.youtube.com/embed/QISY70zukng",
       type: "text",
       stage: "mobile",
@@ -166,7 +170,9 @@ var flow = {
       text: ["end"],
       // video: "https://pixie.jubi.ai/videoConversation/static/videos/end.mp4",
       video:
-        '<iframe width="560" height="315" src="https://www.youtube.com/embed/odcGI88uPts" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+        '<iframe src="https://players.brightcove.net/6115316176001/default_default/index.html?videoId=6116141484001&loop" allowfullscreen="" allow="encrypted-media" width="560" height="315"></iframe>',
+      // video:
+      //   '<iframe width="560" height="315" src="https://www.youtube.com/embed/odcGI88uPts" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
       // video: "https://www.youtube.com/embed/odcGI88uPts",
       type: "button",
       stage: "end",
@@ -185,8 +191,10 @@ var flow = {
 
 var theme = {
   default: "",
-  dark: "https://pixie.jubi.ai/videoConversation/static/css/styledark.css",
-  light: "https://pixie.jubi.ai/videoConversation/static/css/stylexls.css"
+  dark:
+    "https://pixie.jubi.ai/videoConversationBrightcove/static/css/styledark.css",
+  light:
+    "https://pixie.jubi.ai/videoConversationBrightcove/static/css/stylexls.css"
 };
 var currentStageNum = -1; // Stores current stage number
 var flowJSON = {}; // Stores flow key(stage name) - value(stage data) pair
