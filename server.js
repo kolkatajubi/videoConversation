@@ -20,7 +20,7 @@ app.use(compression());
 
 // Defining IP-Address and PORT number
 const ipaddress = "127.0.0.1";
-const port = 3000;
+const port = 3002;
 
 // Listening to the IP-Address:PORT number
 app.listen(port, ipaddress, () =>

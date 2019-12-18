@@ -185,8 +185,10 @@ var flow = {
 
 var theme = {
   default: "",
-  dark: "https://pixie.jubi.ai/videoConversation/static/css/styledark.css",
-  light: "https://pixie.jubi.ai/videoConversation/static/css/stylexls.css"
+  dark:
+    "https://pixie.jubi.ai/videoConversationYoutube/static/css/styledark.css",
+  light:
+    "https://pixie.jubi.ai/videoConversationYoutube/static/css/stylexls.css"
 };
 var currentStageNum = -1; // Stores current stage number
 var flowJSON = {}; // Stores flow key(stage name) - value(stage data) pair
