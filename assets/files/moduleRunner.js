@@ -8,7 +8,8 @@ var flow = {
   stages: [
     {
       text: ["intro"],
-      video: "https://pixie.jubi.ai/videoConversation/static/videos/intro.mp4",
+      video:
+        "https://pixie.jubi.ai/videoConversationSelf/static/videos/intro.mp4",
       // video: "https://pixie.jubi.ai/videoParramato/static/ui/start.mp4",
       stage: "intro",
       type: "button",
@@ -31,7 +32,8 @@ var flow = {
     },
     {
       text: ["name"],
-      video: "https://pixie.jubi.ai/videoConversation/static/videos/name.mp4",
+      video:
+        "https://pixie.jubi.ai/videoConversationSelf/static/videos/name.mp4",
       type: "text",
       stage: "name",
       next: {
@@ -45,7 +47,8 @@ var flow = {
     },
     {
       text: ["gender"],
-      video: "https://pixie.jubi.ai/videoConversation/static/videos/gender.mp4",
+      video:
+        "https://pixie.jubi.ai/videoConversationSelf/static/videos/gender.mp4",
       type: "button",
       stage: "gender",
       next: {
@@ -72,7 +75,8 @@ var flow = {
     },
     {
       text: ["age"],
-      video: "https://pixie.jubi.ai/videoConversation/static/videos/age.mp4",
+      video:
+        "https://pixie.jubi.ai/videoConversationSelf/static/videos/age.mp4",
       type: "text",
       stage: "age",
       next: {
@@ -86,7 +90,8 @@ var flow = {
     },
     {
       text: ["city"],
-      video: "https://pixie.jubi.ai/videoConversation/static/videos/city.mp4",
+      video:
+        "https://pixie.jubi.ai/videoConversationSelf/static/videos/city.mp4",
       type: "button",
       stage: "city",
       next: {
@@ -123,7 +128,8 @@ var flow = {
     },
     {
       text: ["mobile"],
-      video: "https://pixie.jubi.ai/videoConversation/static/videos/mobile.mp4",
+      video:
+        "https://pixie.jubi.ai/videoConversationSelf/static/videos/mobile.mp4",
       type: "text",
       stage: "mobile",
       next: {
@@ -137,7 +143,8 @@ var flow = {
     },
     {
       text: ["end"],
-      video: "https://pixie.jubi.ai/videoConversation/static/videos/end.mp4",
+      video:
+        "https://pixie.jubi.ai/videoConversationSelf/static/videos/end.mp4",
       type: "button",
       stage: "end",
       next: {
@@ -155,8 +162,8 @@ var flow = {
 
 var theme = {
   default: "",
-  dark: "https://pixie.jubi.ai/videoConversation/static/css/styledark.css",
-  light: "https://pixie.jubi.ai/videoConversation/static/css/stylexls.css"
+  dark: "https://pixie.jubi.ai/videoConversationSelf/static/css/styledark.css",
+  light: "https://pixie.jubi.ai/videoConversationSelf/static/css/stylexls.css"
 };
 var currentStageNum = -1; // Stores current stage number
 var flowJSON = {}; // Stores flow key(stage name) - value(stage data) pair
