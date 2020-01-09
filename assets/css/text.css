@@ -110,3 +110,22 @@
     transform: rotate(360deg);
   }
 }
+
+.logo {
+  position: absolute;
+  right: 7px;
+  bottom: 8px;
+  background: #ededed;
+  width: auto;
+  z-index: 20;
+  padding: 3px;
+}
+
+.logo a {
+  text-decoration: none;
+  font-style: italic;
+}
+
+.logo span {
+  font-style: normal;
+}
