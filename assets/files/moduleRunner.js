@@ -314,7 +314,7 @@ function documentReady() {
       </video>
       <div class="box">
       </div>
-      <div class="logo"><span>Powered by </span><a href="https://www.jubi.ai">jubi.ai</a></div>
+      <div class="logo"><span>Powered by </span><a target="_blank" href="https://www.jubi.ai">jubi.ai</a></div>
     `);
 }
 
